@@ -13,9 +13,10 @@ Powered with India's most comprehensive and robust mapping functionalities.
 
 ## Version History
 
-| Version | Last Updated | Author |
-| ---- | ---- | ---- |
-| 4.1.1 | 17 December 2018 | MapmyIndia API Team (RK) |
+| Version | Last Updated | Author | Download |
+| ---- | ---- | ---- | ---- |
+| 4.9.0 | 11 April 2019 | MapmyIndia API Team ([RK](https://github.com/spacekingindia)) | [Download](http://downloads.mapmyindia.com/mmishare/THH6XT49Y5MO/MapmyIndia_Vector_Map_SDK_withSample_v4.9.0_10042019.zip)
+| 4.1.1 | 17 December 2018 | MapmyIndia API Team ([RK](https://github.com/spacekingindia)) | [Download](http://downloads.mapmyindia.com/mmishare/404PIHHQM24V/MapmyIndia_Vector_Map_SDK_withSample_v4.1.1_03042019.zip)
 
 ## Getting Started
 
@@ -447,12 +448,9 @@ Additionally you can also set location and restriction filters in object of `Map
 
 The Geocoding API converts real addresses into these geographic coordinates (latitude/longitude) to be placed on a map, be it for any street, area, postal code, POI or a house number etc.
 
-Class used for geocode is `MapmyIndiaGeocodeManager`. Create a `MapmyIndiaGeocodeManager` object using your rest key or alternatively, you can place your rest key in the `MapmyIndiaRestKey` key of your application's Info.plist file, then use the shared instance of `MapmyIndiaGeocodeManager` class.
+Class used for geocode is **MapmyIndiaAtlasGeocodeManager**. To create instance of `MapmyIndiaAtlasGeocodeManager` initialize using your `rest key`, `clientId`, `clientSecret` , `grantType` **or** use shared instance of MapmyIndiaAtlasGeocodeManager after setting key values `MapmyIndiaRestKey`, `MapmyIndiaAtlasClientId`, `MapmyIndiaAtlasClientSecret`, `MapmyIndiaAtlasGrantType` in your application’s Info.plist file.
 
-To perform search use `MapmyIndiaForwardGeocodeOptions` class to pass any address as query parameters to geocode with an option to pass region in parameter `withRegion`, which is an enum of type `MMIRegionTypeIdentifier`. If no value is passed for region, It will take default value which is India.
-
-`MMIRegionTypeIdentifier` is used to validate and get result for different countries. Currently five countries are supported including India which are Sri Lanka, India, Bhutan, Bangladesh, Nepal.
-For more details visit our [web documentation](https://www.mapmyindia.com/api/advanced-maps/ios/vector-map-sdk#Geocoding-Forward).
+For more details visit our [web documentation]().
 
 #### Reverse Geocoding
 
@@ -497,12 +495,32 @@ For more details visit our [web documentation](https://www.mapmyindia.com/api/ad
 
 The Driving Distance provides driving distance and estimated time to go from a start point to multiple destination points, based on recommended routes from MapmyIndia Maps and traffic flow conditions.
 
+Class used for driving distance is `MapmyIndiaDrivingDistanceMatrixManager`. Create a `MapmyIndiaDrivingDistanceMatrixManager` object using your rest key or alternatively, you can place your rest key in the `MapmyIndiaRestKey` key of your application’s `info.plist` file, then use the shared instance of `MapmyIndiaDrivingDistanceMatrixManager` class.
+
+To perform this operation use `MapmyIndiaDrivingDistanceMatrixOptions` class to pass center location and points parameters.
+
+For more details visit our [web documentation]().
+
+#### Routing
+
+This will help to calculates driving routes between specified locations including via points based on route type(optimal or shortest), includes delays for traffic congestion. Supported `region` (countries) are India, Sri Lanka, Nepal, Bangladesh and Bhutan.
+
+Use `Directions` to get route between locations. You can use it either by creating object using your rest key **or** use shared instance of `Directions` class by setting rest key in the `MapmyIndiaRestKey` key of your application’s Info.plist file.
+
+To perform this operation use object of `RouteOptions` class as request to pass source location and destination locations and other parameters.
+
+For more details visit our [web documentation]().
+
+#### Driving Distance-Time Matrix (Legacy)
+
+The Driving Distance provides driving distance and estimated time to go from a start point to multiple destination points, based on recommended routes from MapmyIndia Maps and traffic flow conditions.
+
 Class used for driving distance is `MapmyIndiaDrivingDistanceManager`. Create a `MapmyIndiaDrivingDistanceManager` object using your rest key or alternatively, you can place your rest key in the `MapmyIndiaRestKey` key of your application's Info.plist file, then use the shared instance of `MapmyIndiaDrivingDistanceManager` class.
 
 To perform distance matrix calculation use `MapmyIndiaDrivingDistanceOptions` class to pass center location and points parameters. Where Driving distance will give distance for each point to center location.
 For more details visit our [web documentation](https://www.mapmyindia.com/api/advanced-maps/ios/vector-map-sdk#DrivingDistance).
 
-#### Routing
+#### Routing (Legacy)
 
 This will help to calculates driving routes between specified locations including via points based on route type(fastest or shortest), includes delays for traffic congestion , and is capable of handling additional route parameters like: type of roads to avoid, travelling vehicle type etc.
 
@@ -511,6 +529,16 @@ Class used for routing is `MapmyIndiaRouteTripManager`. Create a `MapmyIndiaRout
 To perform routing use `MapmyIndiaRouteTripOptions` class to pass start location and destination location parameters.
 For more details visit our [web documentation](https://www.mapmyindia.com/api/advanced-maps/ios/vector-map-sdk#Route).
 
+#### Geocoding (Legacy)
+
+The Geocoding API converts real addresses into these geographic coordinates (latitude/longitude) to be placed on a map, be it for any street, area, postal code, POI or a house number etc.
+
+Class used for geocode is `MapmyIndiaGeocodeManager`. Create a `MapmyIndiaGeocodeManager` object using your rest key or alternatively, you can place your rest key in the `MapmyIndiaRestKey` key of your application's Info.plist file, then use the shared instance of `MapmyIndiaGeocodeManager` class.
+
+To perform search use `MapmyIndiaForwardGeocodeOptions` class to pass any address as query parameters to geocode with an option to pass region in parameter `withRegion`, which is an enum of type `MMIRegionTypeIdentifier`. If no value is passed for region, It will take default value which is India.
+
+`MMIRegionTypeIdentifier` is used to validate and get result for different countries. Currently five countries are supported including India which are Sri Lanka, India, Bhutan, Bangladesh, Nepal.
+For more details visit our [web documentation](https://www.mapmyindia.com/api/advanced-maps/ios/vector-map-sdk#Geocoding-Forward).
 
 For any queries and support, please contact: 
 
@@ -530,6 +558,6 @@ Need support? contact us!
 Read about the latest updates & customer stories
 
 
-> © Copyright 2018. CE Info Systems Pvt. Ltd. All Rights Reserved. | [Terms & Conditions](http://www.mapmyindia.com/api/terms-&-conditions)
-> mapbox-gl-native copyright (c) 2014-2018 Mapbox.
+> © Copyright 2019. CE Info Systems Pvt. Ltd. All Rights Reserved. | [Terms & Conditions](http://www.mapmyindia.com/api/terms-&-conditions)
+> mapbox-gl-native copyright (c) 2014-2019 Mapbox.
 >  Written with [StackEdit](https://stackedit.io/) by MapmyIndia.
