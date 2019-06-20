@@ -37,7 +37,7 @@ shared between platforms, so the API hits you make from a web application, Andro
 
 -   Drag and drop the MapmyIndia Map SDK Framework (Mapbox.framework) to your project. It must be added in embedded binaries.
 -   Drag and drop the `MapmyIndiaAPIKit` Framework to your project. It must be added in embedded binaries. It is a dependent framework.
--   In the Build Phases tab of the project editor, click the + button at the top and select .New Run Script Phase.. Enter the following code into the script text field: bash `${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/ Mapbox.framework/strip-frameworks.sh`
+-   In the Build Phases tab of the project editor, click the + button at the top and select .New Run Script Phase.. Enter the following code into the script text field: bash `${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mapbox.framework/strip-frameworks.sh`
 -   For iOS9 or later, make this change to your  
     info.plist (Project target > info.plist > Add row and set key `NSLocationWhenInUseUsageDescription`,     `NSLocationAlwaysUsageDescription`)
 
