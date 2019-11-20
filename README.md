@@ -454,7 +454,7 @@ The Geocoding API converts real addresses into these geographic coordinates (lat
 
 Class used for geocode is **MapmyIndiaAtlasGeocodeManager**. To create instance of `MapmyIndiaAtlasGeocodeManager` initialize using your `rest key`, `clientId`, `clientSecret` , `grantType` **or** use shared instance of MapmyIndiaAtlasGeocodeManager after setting key values `MapmyIndiaRestKey`, `MapmyIndiaAtlasClientId`, `MapmyIndiaAtlasClientSecret`, `MapmyIndiaAtlasGrantType` in your application’s Info.plist file.
 
-For more details visit our [web documentation]().
+For more details visit our [web documentation](https://www.mapmyindia.com/api/advanced-maps/ios/vector-map-sdk#AtlasGeocod).
 
 #### Reverse Geocoding
 
@@ -503,7 +503,7 @@ Class used for driving distance is `MapmyIndiaDrivingDistanceMatrixManager`. Cre
 
 To perform this operation use `MapmyIndiaDrivingDistanceMatrixOptions` class to pass center location and points parameters.
 
-For more details visit our [web documentation]().
+For more details visit our [web documentation](https://www.mapmyindia.com/api/advanced-maps/ios/vector-map-sdk#dsistancematrix).
 
 #### Routing
 
@@ -513,7 +513,7 @@ Use `Directions` to get route between locations. You can use it either by creati
 
 To perform this operation use object of `RouteOptions` class as request to pass source location and destination locations and other parameters.
 
-For more details visit our [web documentation]().
+For more details visit our [web documentation](https://www.mapmyindia.com/api/advanced-maps/ios/vector-map-sdk#Routing).
 
 #### Driving Distance-Time Matrix (Legacy)
 
@@ -564,4 +564,3 @@ Read about the latest updates & customer stories
 
 > © Copyright 2019. CE Info Systems Pvt. Ltd. All Rights Reserved. | [Terms & Conditions](http://www.mapmyindia.com/api/terms-&-conditions)
 > mapbox-gl-native copyright (c) 2014-2019 Mapbox.
->  Written with [StackEdit](https://stackedit.io/) by MapmyIndia.
