@@ -15,6 +15,7 @@ Powered with India's most comprehensive and robust mapping functionalities.
 
 | Version | Last Updated | Author | Download | Compatibility |
 | ---- | ---- | ---- | ---- | ---- |
+| 4.9.0 | 06 December 2019 | MapmyIndia API Team ([RK](https://github.com/spacekingindia)) | [Download](http://downloads.mapmyindia.com/mmishare/1L7X63FPJU5K/Maps-SDK-iOS-Demo.zip.html) | XCode 11.2.1; Introducing Text Search API & Indoor Mapping Feature. Adding feedback module again with latest SDK
 | 4.9.0 | 20 November 2019 | MapmyIndia API Team ([RK](https://github.com/spacekingindia)) | [Download](http://downloads.mapmyindia.com/mmishare/LC7CJ4J2JQR3/MapmyIndia_Vector_Map_SDK_withSample_v4.9.0_20112019.zip) | XCode 11.1 to 11.2.1; removed feedback module for now.
 | 4.9.0 | 30 October 2019 | MapmyIndia API Team ([RK](https://github.com/spacekingindia)) | ~~Download~~ | XCode 11; Myanmar added as region
 | 4.9.0 | 09 October 2019 | MapmyIndia API Team ([RK](https://github.com/spacekingindia)) | [Download](http://downloads.mapmyindia.com/mmishare/55BZL282FLV6/MapmyIndia_Vector_Map_SDK_withSample_v4.9.0_09102019.zip) | XCode 11
@@ -441,13 +442,32 @@ mapView.removeAnnotation(polygon)
 
 #### Autosuggest
 
-Class used for Autosuggest search is `MapmyIndiaAutoSuggestManager`. Create a `MapmyIndiaAutoSuggestManager` object using your rest key or alternatively, you can place your rest key in the `MapmyIndiaRestKey` key of your application's Info.plist file, then use the shared instance of `MapmyIndiaAutoSuggestManager` class.
+The Autosuggest API helps users to complete queries faster by adding intelligent search capabilities to your web or mobile app. This API returns a list of results as well as suggested queries as the user types in the search field.
 
-To perform auto suggest use `MapmyIndiaAutoSearchAtlasOptions` class to pass query parameter to get auto suggest search with an option to pass region in parameter `withRegion`, which is an enum of type `MMIRegionTypeIdentifier`. If no value is passed for region, It will take default value which is India.
+Class used for Autosuggest search is `MapmyIndiaAtlasAutoSuggestManager`.  To create instance of `MapmyIndiaAtlasAutoSuggestManager` initialize using your `rest key`, `clientId`, `clientSecret` , `grantType` **or** use shared instance of `MapmyIndiaAtlasAutoSuggestManager` after setting key values `MapmyIndiaRestKey`, `MapmyIndiaAtlasClientId`, `MapmyIndiaAtlasClientSecret`, `MapmyIndiaAtlasGrantType` in your application’s Info.plist file.
+
+To perform auto suggest use `MapmyIndiaAtlasAutoSearchAtlasOptions` class to pass query parameter to get auto suggest search with an option to pass region in parameter `withRegion`, which is an enum of type `MMIRegionTypeIdentifier`. If no value is passed for region, It will take default value which is India.
 
 `MMIRegionTypeIdentifier` is used to validate and get result for different countries. Currently five countries are supported including India which are Sri Lanka, India, Bhutan, Bangladesh, Nepal.
 
 Additionally you can also set location and restriction filters in object of `MapmyIndiaAutoSearchAtlasOptions`. For more details visit our [web documentation](https://www.mapmyindia.com/api/advanced-maps/ios/vector-map-sdk#Autosuggest).
+
+#### Text Search
+The Text Search API is a service that aims to provide information about a list of places on the basis of a text string entered by the user. It uses the location information that is provided along with the query to try to understand the request.
+
+Class used for Text Search is `MapmyIndiaAtlasTextSearchManager`. To create instance of `MapmyIndiaAtlasTextSearchManager` initialize using your `rest key`, `clientId`, `clientSecret` , `grantType` **or** use shared instance of `MapmyIndiaAtlasTextSearchManager` after setting key values `MapmyIndiaRestKey`, `MapmyIndiaAtlasClientId`, `MapmyIndiaAtlasClientSecret`, `MapmyIndiaAtlasGrantType` in your application’s Info.plist file.
+
+To perform text search use `MapmyIndiaTextSearchAtlasOptions` class to
+pass query parameter to get text search with an option to pass region in
+parameter withRegion, which is an enum of type `MMIRegionTypeIdentifier`.
+If no value is passed for region, It will take default value which is India.
+
+`MMIRegionTypeIdentifier` is used to validate and get result for different countries. Currently five countries are supported including India which are Sri Lanka, India, Bhutan, Bangladesh, Nepal.
+
+Additionally you can also set location and restriction filters in object
+of `MapmyIndiaTextSearchAtlasOptions`.
+
+For more details visit our [web documentation](https://www.mapmyindia.com/api/advanced-maps/ios/vector-map-sdk#AtlasGeocod).
 
 #### Geocoding
 
@@ -565,4 +585,3 @@ Read about the latest updates & customer stories
 
 > © Copyright 2019. CE Info Systems Pvt. Ltd. All Rights Reserved. | [Terms & Conditions](http://www.mapmyindia.com/api/terms-&-conditions)
 > mapbox-gl-native copyright (c) 2014-2019 Mapbox.
-> Written with [StackEdit](https://stackedit.io/) by MapmyIndia.
