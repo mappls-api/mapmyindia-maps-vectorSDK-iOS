@@ -15,6 +15,7 @@ Powered with India's most comprehensive and robust mapping functionalities.
 
 | Version | Last Updated | Author | Download | Compatibility |
 | ---- | ---- | ---- | ---- | ---- |
+| 4.9.0 | 29 January 2020 | MapmyIndia API Team ([RK](https://github.com/spacekingindia)) | [Download](http://downloads.mapmyindia.com/mmishare/GFECUS5KIZTA/MapmyIndia_Vector_Map_SDK_withSample_v4.9.0_29012020.zip) | XCode 11.2.1+;
 | 4.9.0 | 06 December 2019 | MapmyIndia API Team ([RK](https://github.com/spacekingindia)) | [Download](http://downloads.mapmyindia.com/mmishare/XQE4GJ9SJE96/MapmyIndia_Vector_Map_SDK_withSample_v4.9.0_20112019.zip) | XCode 11.2.1; Introducing Text Search API & Indoor Mapping Feature. Adding feedback module again with latest SDK
 | 4.9.0 | 20 November 2019 | MapmyIndia API Team ([RK](https://github.com/spacekingindia)) | [Download](http://downloads.mapmyindia.com/mmishare/LC7CJ4J2JQR3/MapmyIndia_Vector_Map_SDK_withSample_v4.9.0_20112019.zip) | XCode 11.1 to 11.2.1; removed feedback module for now.
 | 4.9.0 | 30 October 2019 | MapmyIndia API Team ([RK](https://github.com/spacekingindia)) | ~~Download~~ | XCode 11; Myanmar added as region
