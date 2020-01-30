@@ -2,6 +2,9 @@
 
 # MapmyIndia Vector Maps Sample App (with SDK - Native) for iOS
 
+**This is sample application created to demonstrate features of different libraries available on iOS plaform. Such as MapmyIndiaMaps, MapmyIndiaAPIKit, MapmyIndiaDirections, MapmyIndiaFeedbackKit. To use this sample download latest frameworks from Versions list below and copy them in "Dependencies" folder of application**
+<br/>
+
 **Easy To Integrate Maps & Location APIs & SDKs For Web & Mobile Applications**
 
 Powered with India's most comprehensive and robust mapping functionalities.
