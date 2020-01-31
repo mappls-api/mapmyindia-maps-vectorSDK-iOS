@@ -92,9 +92,11 @@ MapmyIndiaAccountManager.setAtlasAPIVersion("1.3.11") // Optional; deprecated
 
 ```
 
-<br/>
+For more information click [Wiki](https://github.com/MapmyIndia/mapmyindia-maps-vectorSDK-iOS-sample-withREST-beta/wiki)
 
-### For any queries and support, please contact: 
+OR
+
+ For any queries and support, please contact: 
 
 ![Email](https://www.google.com/a/cpanel/mapmyindia.co.in/images/logo.gif?service=google_gsuite) 
 Email us at [apisupport@mapmyindia.com](mailto:apisupport@mapmyindia.com)
