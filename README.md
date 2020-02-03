@@ -14,7 +14,7 @@ Powered with India's most comprehensive and robust mapping functionalities.
 
 2. The sample code is provided to help you understand the basic functionality of MapmyIndia maps & REST APIs working on iOS native development platform. 
 
-## Version History
+## [Version History](#Version-History)
 
 | Version | Last Updated | Author | Download | Compatibility |
 | ---- | ---- | ---- | ---- | ---- |
@@ -28,17 +28,17 @@ Powered with India's most comprehensive and robust mapping functionalities.
 | 4.1.1 | 17 December 2018 | MapmyIndia API Team ([RK](https://github.com/spacekingindia)) | [Download](http://downloads.mapmyindia.com/mmishare/404PIHHQM24V/MapmyIndia_Vector_Map_SDK_withSample_v4.1.1_03042019.zip) | XCode 10.1
 
 
-## Getting Started
+## [Getting Started](#Getting-Started)
 
 MapmyIndia Maps SDK for IOS lets you easily add MapmyIndia Maps and web services to your own iOS app. MapmyIndia Maps SDK for iOS supports iOS SDK 9.0 and above and Xcode 10.1 or later. You can have a look at the map and features you will get in your own app by using the MapmyIndia Maps app for iOS. The SDK handles map tiles download and their display along with a bunch of controls and native gestures.
 
-## API Usage
+## [API Usage](#API-Usage)
 Your MapmyIndia Maps SDK usage needs a set of license keys ([get them here](http://www.mapmyindia.com/api/signup) ) and is governed by the API [terms and conditions](https://www.mapmyindia.com/api/terms-&-conditions). 
 As part of the terms and conditions, you cannot remove or hide the MapmyIndia logo and copyright information in your project. 
 Please see [branding guidelines](https://www.mapmyindia.com/api/advanced-maps/API-Branding-Guidelines.pdf) on MapmyIndia [website](https://www.mapmyindia.com/api) for more details.
 The allowed SDK hits are described on the [plans](https://www.mapmyindia.com/api) page. Note that your usage is shared between platforms, so the API hits you make from a web application, Android app or an iOS app all add up to your allowed daily limit.
 
-## Setup your Project
+## [Setup your Project](#Setup-your-Project)
 
 #### Create a new project in Xcode.
 
