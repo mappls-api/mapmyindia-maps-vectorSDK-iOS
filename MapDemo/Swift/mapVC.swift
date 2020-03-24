@@ -75,7 +75,7 @@ class mapVC: UIViewController, MapmyIndiaMapViewDelegate,AutoSuggestDelegates {
     }
     
     @IBAction func btn_Instruction(_ sender: UIButton) {
-        let vctrl = storyboard?.instantiateViewController(withIdentifier: "InstructionTable") as! InstructionTable
+        let vctrl = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "InstructionTableVC") as! InstructionTableVC
         vctrl.requiredRoute = selectedRoute
         self.navigationController?.pushViewController(vctrl, animated: true)
     }
@@ -664,8 +664,8 @@ class mapVC: UIViewController, MapmyIndiaMapViewDelegate,AutoSuggestDelegates {
     }
     
     func callRouteUsingDirectionsFramework(isETA: Bool) {
-        let origin = Waypoint(coordinate: CLLocationCoordinate2DMake(28.551054, 77.268894))
-        let destination = Waypoint(coordinate: CLLocationCoordinate2DMake(28.6129, 77.2295))
+        let origin = Waypoint(coordinate: CLLocationCoordinate2DMake(19.072919845581055,72.98474884033203), name: "MapmyIndia")
+        let destination = Waypoint(coordinate: CLLocationCoordinate2DMake(19.036991119384766,73.01266479492188), name: "")
         origin.allowsArrivingOnOppositeSide = false
        destination.allowsArrivingOnOppositeSide = false
         

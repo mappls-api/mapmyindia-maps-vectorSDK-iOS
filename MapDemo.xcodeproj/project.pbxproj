@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		181F97752429CEA300D996EA /* Mapbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18994BB523F556D100CB5B65 /* Mapbox.framework */; };
+		181F97762429CEA300D996EA /* Mapbox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 18994BB523F556D100CB5B65 /* Mapbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		181F97772429CEA300D996EA /* MapmyIndiaFeedbackKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18994BB623F556D100CB5B65 /* MapmyIndiaFeedbackKit.framework */; };
+		181F97782429CEA300D996EA /* MapmyIndiaFeedbackKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 18994BB623F556D100CB5B65 /* MapmyIndiaFeedbackKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		181F97792429CEA300D996EA /* MapmyIndiaAPIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18994BB723F556D100CB5B65 /* MapmyIndiaAPIKit.framework */; };
+		181F977A2429CEA300D996EA /* MapmyIndiaAPIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 18994BB723F556D100CB5B65 /* MapmyIndiaAPIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		181F977B2429CEA300D996EA /* Polyline.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18994BB823F556D100CB5B65 /* Polyline.framework */; };
+		181F977C2429CEA300D996EA /* Polyline.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 18994BB823F556D100CB5B65 /* Polyline.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		181F977D2429CEA300D996EA /* MapboxDirections.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18994BB923F556D100CB5B65 /* MapboxDirections.framework */; };
+		181F977E2429CEA300D996EA /* MapboxDirections.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 18994BB923F556D100CB5B65 /* MapboxDirections.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		183207B822FAC5A900C738FF /* HighlightPointExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183207B722FAC5A900C738FF /* HighlightPointExample.swift */; };
 		18404BD52303C435001D8DC0 /* DashedPolylineExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18404BD42303C435001D8DC0 /* DashedPolylineExample.swift */; };
 		18404BD72303C974001D8DC0 /* GeodesicPolylineExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18404BD62303C974001D8DC0 /* GeodesicPolylineExample.swift */; };
@@ -31,6 +41,8 @@
 		18E87E4B21400FE700F1C866 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E87E4621400FE700F1C866 /* Extensions.swift */; };
 		18E87E4E2140100300F1C866 /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18E87E4D2140100300F1C866 /* Image.xcassets */; };
 		18E87E502140100F00F1C866 /* MapmyIndiaFeedbackUIKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E87E4F2140100F00F1C866 /* MapmyIndiaFeedbackUIKitManager.swift */; };
+		18F576D023FEA83B0009A2D9 /* TextInstructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F576CF23FEA83B0009A2D9 /* TextInstructions.swift */; };
+		18F576D223FEAA880009A2D9 /* TextInstructions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18F576D123FEAA880009A2D9 /* TextInstructions.plist */; };
 		68417CC5210B329100424A00 /* InitialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68417CC4210B329100424A00 /* InitialVC.swift */; };
 		68417CC7210B32A700424A00 /* ListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68417CC6210B32A700424A00 /* ListVC.swift */; };
 		68417CCD210B48FB00424A00 /* MainC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68417CCC210B48FB00424A00 /* MainC.storyboard */; };
@@ -46,29 +58,17 @@
 		A41DFAC9239906CE00D39EF9 /* AutoSuggestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41DFAC8239906CE00D39EF9 /* AutoSuggestVC.swift */; };
 		A45C2997239A157100EC81F6 /* CustomIndoorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45C2995239A157000EC81F6 /* CustomIndoorVC.swift */; };
 		A45C2998239A157100EC81F6 /* DefaultIndoorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45C2996239A157100EC81F6 /* DefaultIndoorVC.swift */; };
-		A464438123E2A7D10089E7CE /* MapmyIndiaFeedbackKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A45C299D239A7F1D00EC81F6 /* MapmyIndiaFeedbackKit.framework */; };
-		A464438223E2A7D10089E7CE /* MapmyIndiaFeedbackKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A45C299D239A7F1D00EC81F6 /* MapmyIndiaFeedbackKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A464438423E2A8F50089E7CE /* MapmyIndiaFeedbackKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A45C299D239A7F1D00EC81F6 /* MapmyIndiaFeedbackKit.framework */; };
-		A464438523E2A8F50089E7CE /* MapmyIndiaFeedbackKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A45C299D239A7F1D00EC81F6 /* MapmyIndiaFeedbackKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A464438623E2A8F50089E7CE /* Mapbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A41DFACE2399398A00D39EF9 /* Mapbox.framework */; };
-		A464438723E2A8F50089E7CE /* Mapbox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A41DFACE2399398A00D39EF9 /* Mapbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A464438823E2A8F50089E7CE /* MapmyIndiaAPIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 681AF29C21104E7D00C42450 /* MapmyIndiaAPIKit.framework */; };
-		A464438923E2A8F50089E7CE /* MapmyIndiaAPIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 681AF29C21104E7D00C42450 /* MapmyIndiaAPIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A464438A23E2A8F50089E7CE /* MapboxDirections.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18318427225331E70055C714 /* MapboxDirections.framework */; };
-		A464438B23E2A8F50089E7CE /* MapboxDirections.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 18318427225331E70055C714 /* MapboxDirections.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A464438C23E2A8F50089E7CE /* Polyline.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1831842B2253355A0055C714 /* Polyline.framework */; };
-		A464438D23E2A8F50089E7CE /* Polyline.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1831842B2253355A0055C714 /* Polyline.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A464439023E2A9D60089E7CE /* PointOnMapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A464438F23E2A9D60089E7CE /* PointOnMapVC.swift */; };
 		A49EB60923DC00EB00A08E42 /* InstructionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49EB60823DC00EB00A08E42 /* InstructionTableViewCell.swift */; };
 		A49EB60F23DEC56A00A08E42 /* CustomCalloutViewForPolyline.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49EB60E23DEC56A00A08E42 /* CustomCalloutViewForPolyline.swift */; };
 		A49EB61323E004BA00A08E42 /* InteractiveMarkerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49EB61223E004BA00A08E42 /* InteractiveMarkerVC.swift */; };
-		A4ACEA4D23D80C6400447644 /* InstructionTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4ACEA4C23D80C6400447644 /* InstructionTable.swift */; };
+		A4ACEA4D23D80C6400447644 /* InstructionTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4ACEA4C23D80C6400447644 /* InstructionTableVC.swift */; };
 		A4DA1E9523DB16BF0010743F /* DirectionIndicationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DA1E9323DB16BE0010743F /* DirectionIndicationView.swift */; };
 		A4DA1E9623DB16BF0010743F /* DirectionIndicationViewStyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DA1E9423DB16BE0010743F /* DirectionIndicationViewStyleKit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		A45C29A1239A805300EC81F6 /* PBXContainerItemProxy */ = {
+		18F576CB23FEA3780009A2D9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 68A6BF0B2106E03C00547929 /* Project object */;
 			proxyType = 1;
@@ -78,28 +78,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		A464438323E2A7D10089E7CE /* Embed Frameworks */ = {
+		181F977F2429CEA300D996EA /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				A464438223E2A7D10089E7CE /* MapmyIndiaFeedbackKit.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A464438E23E2A8F50089E7CE /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				A464438523E2A8F50089E7CE /* MapmyIndiaFeedbackKit.framework in Embed Frameworks */,
-				A464438D23E2A8F50089E7CE /* Polyline.framework in Embed Frameworks */,
-				A464438B23E2A8F50089E7CE /* MapboxDirections.framework in Embed Frameworks */,
-				A464438923E2A8F50089E7CE /* MapmyIndiaAPIKit.framework in Embed Frameworks */,
-				A464438723E2A8F50089E7CE /* Mapbox.framework in Embed Frameworks */,
+				181F97762429CEA300D996EA /* Mapbox.framework in Embed Frameworks */,
+				181F977E2429CEA300D996EA /* MapboxDirections.framework in Embed Frameworks */,
+				181F977A2429CEA300D996EA /* MapmyIndiaAPIKit.framework in Embed Frameworks */,
+				181F977C2429CEA300D996EA /* Polyline.framework in Embed Frameworks */,
+				181F97782429CEA300D996EA /* MapmyIndiaFeedbackKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -107,8 +96,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		18318427225331E70055C714 /* MapboxDirections.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MapboxDirections.framework; sourceTree = "<group>"; };
-		1831842B2253355A0055C714 /* Polyline.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Polyline.framework; sourceTree = "<group>"; };
 		183207B722FAC5A900C738FF /* HighlightPointExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightPointExample.swift; sourceTree = "<group>"; };
 		18404BD42303C435001D8DC0 /* DashedPolylineExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashedPolylineExample.swift; sourceTree = "<group>"; };
 		18404BD62303C974001D8DC0 /* GeodesicPolylineExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeodesicPolylineExample.swift; sourceTree = "<group>"; };
@@ -125,6 +112,11 @@
 		188AE97B21C7DAF500D2C866 /* CustomInfoWindowView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomInfoWindowView.h; sourceTree = "<group>"; };
 		188AE97C21C7DAF500D2C866 /* CustomInfoWindowView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomInfoWindowView.m; sourceTree = "<group>"; };
 		188AE98121C8B27600D2C866 /* CustomAnnotationModels.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomAnnotationModels.h; sourceTree = "<group>"; };
+		18994BB523F556D100CB5B65 /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Mapbox.framework; sourceTree = "<group>"; };
+		18994BB623F556D100CB5B65 /* MapmyIndiaFeedbackKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MapmyIndiaFeedbackKit.framework; sourceTree = "<group>"; };
+		18994BB723F556D100CB5B65 /* MapmyIndiaAPIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MapmyIndiaAPIKit.framework; sourceTree = "<group>"; };
+		18994BB823F556D100CB5B65 /* Polyline.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Polyline.framework; sourceTree = "<group>"; };
+		18994BB923F556D100CB5B65 /* MapboxDirections.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MapboxDirections.framework; sourceTree = "<group>"; };
 		189D0B7E230AA3E2005C8390 /* MMILocationPuckView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMILocationPuckView.h; sourceTree = "<group>"; };
 		189D0B7F230AA3E2005C8390 /* MMILocationPuckView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMILocationPuckView.m; sourceTree = "<group>"; };
 		189D0BC3230CFDC5005C8390 /* HighlightPointExample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HighlightPointExample.h; sourceTree = "<group>"; };
@@ -141,7 +133,8 @@
 		18E87E4621400FE700F1C866 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		18E87E4D2140100300F1C866 /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Image.xcassets; sourceTree = "<group>"; };
 		18E87E4F2140100F00F1C866 /* MapmyIndiaFeedbackUIKitManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapmyIndiaFeedbackUIKitManager.swift; sourceTree = "<group>"; };
-		681AF29C21104E7D00C42450 /* MapmyIndiaAPIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MapmyIndiaAPIKit.framework; sourceTree = "<group>"; };
+		18F576CF23FEA83B0009A2D9 /* TextInstructions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInstructions.swift; sourceTree = "<group>"; };
+		18F576D123FEAA880009A2D9 /* TextInstructions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TextInstructions.plist; sourceTree = "<group>"; };
 		68417CC4210B329100424A00 /* InitialVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialVC.swift; sourceTree = "<group>"; };
 		68417CC6210B32A700424A00 /* ListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVC.swift; sourceTree = "<group>"; };
 		68417CC8210B330D00424A00 /* MapDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MapDemo-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -161,15 +154,13 @@
 		68A6BF202106E03F00547929 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		68A6BF222106E03F00547929 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A41DFAC8239906CE00D39EF9 /* AutoSuggestVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoSuggestVC.swift; sourceTree = "<group>"; };
-		A41DFACE2399398A00D39EF9 /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Mapbox.framework; sourceTree = "<group>"; };
 		A45C2995239A157000EC81F6 /* CustomIndoorVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomIndoorVC.swift; sourceTree = "<group>"; };
 		A45C2996239A157100EC81F6 /* DefaultIndoorVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultIndoorVC.swift; sourceTree = "<group>"; };
-		A45C299D239A7F1D00EC81F6 /* MapmyIndiaFeedbackKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MapmyIndiaFeedbackKit.framework; sourceTree = "<group>"; };
 		A464438F23E2A9D60089E7CE /* PointOnMapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointOnMapVC.swift; sourceTree = "<group>"; };
 		A49EB60823DC00EB00A08E42 /* InstructionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionTableViewCell.swift; sourceTree = "<group>"; };
 		A49EB60E23DEC56A00A08E42 /* CustomCalloutViewForPolyline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCalloutViewForPolyline.swift; sourceTree = "<group>"; };
 		A49EB61223E004BA00A08E42 /* InteractiveMarkerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractiveMarkerVC.swift; sourceTree = "<group>"; };
-		A4ACEA4C23D80C6400447644 /* InstructionTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionTable.swift; sourceTree = "<group>"; };
+		A4ACEA4C23D80C6400447644 /* InstructionTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionTableVC.swift; sourceTree = "<group>"; };
 		A4DA1E9323DB16BE0010743F /* DirectionIndicationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionIndicationView.swift; sourceTree = "<group>"; };
 		A4DA1E9423DB16BE0010743F /* DirectionIndicationViewStyleKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionIndicationViewStyleKit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -179,7 +170,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A464438123E2A7D10089E7CE /* MapmyIndiaFeedbackKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,17 +177,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A464438423E2A8F50089E7CE /* MapmyIndiaFeedbackKit.framework in Frameworks */,
-				A464438C23E2A8F50089E7CE /* Polyline.framework in Frameworks */,
-				A464438A23E2A8F50089E7CE /* MapboxDirections.framework in Frameworks */,
-				A464438823E2A8F50089E7CE /* MapmyIndiaAPIKit.framework in Frameworks */,
-				A464438623E2A8F50089E7CE /* Mapbox.framework in Frameworks */,
+				181F97752429CEA300D996EA /* Mapbox.framework in Frameworks */,
+				181F977D2429CEA300D996EA /* MapboxDirections.framework in Frameworks */,
+				181F97792429CEA300D996EA /* MapmyIndiaAPIKit.framework in Frameworks */,
+				181F977B2429CEA300D996EA /* Polyline.framework in Frameworks */,
+				181F97772429CEA300D996EA /* MapmyIndiaFeedbackKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18994BB423F556D100CB5B65 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				18994BB523F556D100CB5B65 /* Mapbox.framework */,
+				18994BB623F556D100CB5B65 /* MapmyIndiaFeedbackKit.framework */,
+				18994BB723F556D100CB5B65 /* MapmyIndiaAPIKit.framework */,
+				18994BB823F556D100CB5B65 /* Polyline.framework */,
+				18994BB923F556D100CB5B65 /* MapboxDirections.framework */,
+			);
+			path = Dependencies;
+			sourceTree = "<group>";
+		};
 		18DE80F02140FEDD004B52FE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -253,6 +255,15 @@
 			path = KitResources;
 			sourceTree = "<group>";
 		};
+		18F576CE23FEA8100009A2D9 /* InstructionFormatterHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				18F576D123FEAA880009A2D9 /* TextInstructions.plist */,
+				18F576CF23FEA83B0009A2D9 /* TextInstructions.swift */,
+			);
+			path = InstructionFormatterHelpers;
+			sourceTree = "<group>";
+		};
 		68417CC2210B2DB800424A00 /* Objective C */ = {
 			isa = PBXGroup;
 			children = (
@@ -293,7 +304,7 @@
 				A41DFAC8239906CE00D39EF9 /* AutoSuggestVC.swift */,
 				A45C2995239A157000EC81F6 /* CustomIndoorVC.swift */,
 				A45C2996239A157100EC81F6 /* DefaultIndoorVC.swift */,
-				A4ACEA4C23D80C6400447644 /* InstructionTable.swift */,
+				A4ACEA4C23D80C6400447644 /* InstructionTableVC.swift */,
 				A49EB60823DC00EB00A08E42 /* InstructionTableViewCell.swift */,
 				A4DA1E9323DB16BE0010743F /* DirectionIndicationView.swift */,
 				A4DA1E9423DB16BE0010743F /* DirectionIndicationViewStyleKit.swift */,
@@ -317,7 +328,7 @@
 			isa = PBXGroup;
 			children = (
 				18894B8D230438B3005DC142 /* ReverseGPX.gpx */,
-				A464437A23E29ED60089E7CE /* Dependencies */,
+				18994BB423F556D100CB5B65 /* Dependencies */,
 				68A6BF152106E03C00547929 /* MapDemo */,
 				18E87E3421400FAD00F1C866 /* MapmyIndiaFeedbackUIKit */,
 				68A6BF142106E03C00547929 /* Products */,
@@ -337,6 +348,7 @@
 		68A6BF152106E03C00547929 /* MapDemo */ = {
 			isa = PBXGroup;
 			children = (
+				18F576CE23FEA8100009A2D9 /* InstructionFormatterHelpers */,
 				185B7FBD214B8333000785FC /* metro-line.geojson */,
 				6844DDB521116907007FCD61 /* Polyline */,
 				68417CC3210B2DCE00424A00 /* Swift */,
@@ -351,18 +363,6 @@
 				68417CC4210B329100424A00 /* InitialVC.swift */,
 			);
 			path = MapDemo;
-			sourceTree = "<group>";
-		};
-		A464437A23E29ED60089E7CE /* Dependencies */ = {
-			isa = PBXGroup;
-			children = (
-				A45C299D239A7F1D00EC81F6 /* MapmyIndiaFeedbackKit.framework */,
-				A41DFACE2399398A00D39EF9 /* Mapbox.framework */,
-				681AF29C21104E7D00C42450 /* MapmyIndiaAPIKit.framework */,
-				18318427225331E70055C714 /* MapboxDirections.framework */,
-				1831842B2253355A0055C714 /* Polyline.framework */,
-			);
-			path = Dependencies;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -387,7 +387,6 @@
 				18E87E2F21400FAD00F1C866 /* Frameworks */,
 				18E87E3021400FAD00F1C866 /* Headers */,
 				18E87E3121400FAD00F1C866 /* Resources */,
-				A464438323E2A7D10089E7CE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -405,12 +404,12 @@
 				68A6BF0F2106E03C00547929 /* Sources */,
 				68A6BF102106E03C00547929 /* Frameworks */,
 				68A6BF112106E03C00547929 /* Resources */,
-				A464438E23E2A8F50089E7CE /* Embed Frameworks */,
+				181F977F2429CEA300D996EA /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				A45C29A2239A805300EC81F6 /* PBXTargetDependency */,
+				18F576CC23FEA3780009A2D9 /* PBXTargetDependency */,
 			);
 			name = MapDemo;
 			productName = MapDemo;
@@ -472,6 +471,7 @@
 			files = (
 				68A6BF212106E03F00547929 /* LaunchScreen.storyboard in Resources */,
 				68A6BF1E2106E03F00547929 /* Assets.xcassets in Resources */,
+				18F576D223FEAA880009A2D9 /* TextInstructions.plist in Resources */,
 				68A6BF1C2106E03C00547929 /* Main.storyboard in Resources */,
 				185B7FBE214B8333000785FC /* metro-line.geojson in Resources */,
 				68417CCD210B48FB00424A00 /* MainC.storyboard in Resources */,
@@ -512,11 +512,12 @@
 				183207B822FAC5A900C738FF /* HighlightPointExample.swift in Sources */,
 				A49EB61323E004BA00A08E42 /* InteractiveMarkerVC.swift in Sources */,
 				A464439023E2A9D60089E7CE /* PointOnMapVC.swift in Sources */,
-				A4ACEA4D23D80C6400447644 /* InstructionTable.swift in Sources */,
+				A4ACEA4D23D80C6400447644 /* InstructionTableVC.swift in Sources */,
 				18404BD92303D44D001D8DC0 /* ClusterMarkersExample.swift in Sources */,
 				68A6BF192106E03C00547929 /* ViewController.swift in Sources */,
 				A4DA1E9523DB16BF0010743F /* DirectionIndicationView.swift in Sources */,
 				18BA17E3229E8FF000B0B135 /* GreatCircle.swift in Sources */,
+				18F576D023FEA83B0009A2D9 /* TextInstructions.swift in Sources */,
 				188AE97821C7D66800D2C866 /* CustomAnnotationModels.swift in Sources */,
 				18BDD84E22F4005D00239CDC /* InteriorPolygonExample.swift in Sources */,
 				18404BD52303C435001D8DC0 /* DashedPolylineExample.swift in Sources */,
@@ -535,10 +536,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		A45C29A2239A805300EC81F6 /* PBXTargetDependency */ = {
+		18F576CC23FEA3780009A2D9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 18E87E3221400FAD00F1C866 /* MapmyIndiaFeedbackUIKit */;
-			targetProxy = A45C29A1239A805300EC81F6 /* PBXContainerItemProxy */;
+			targetProxy = 18F576CB23FEA3780009A2D9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -755,7 +756,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 12;
+				CURRENT_PROJECT_VERSION = 13;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 22L95D5KTZ;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -770,7 +771,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.4.2;
+				MARKETING_VERSION = 1.4.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mmi.MapDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "MapDemo/Objective C/MapDemo-Bridging-Header.h";
@@ -786,7 +787,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 12;
+				CURRENT_PROJECT_VERSION = 13;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 22L95D5KTZ;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -801,7 +802,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.4.2;
+				MARKETING_VERSION = 1.4.3;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mmi.MapDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
