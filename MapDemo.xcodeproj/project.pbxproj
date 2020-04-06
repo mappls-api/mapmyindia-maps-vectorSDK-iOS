@@ -17,6 +17,9 @@
 		181F977C2429CEA300D996EA /* Polyline.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 18994BB823F556D100CB5B65 /* Polyline.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		181F977D2429CEA300D996EA /* MapboxDirections.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18994BB923F556D100CB5B65 /* MapboxDirections.framework */; };
 		181F977E2429CEA300D996EA /* MapboxDirections.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 18994BB923F556D100CB5B65 /* MapboxDirections.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		182AEADD243B36B800EDC300 /* temp.json in Resources */ = {isa = PBXBuildFile; fileRef = 182AEADC243B36B800EDC300 /* temp.json */; };
+		182AEADE243B381D00EDC300 /* MapmyIndiaFeedbackKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18994BB623F556D100CB5B65 /* MapmyIndiaFeedbackKit.framework */; };
+		182AEADF243B381D00EDC300 /* MapmyIndiaFeedbackKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 18994BB623F556D100CB5B65 /* MapmyIndiaFeedbackKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		183207B822FAC5A900C738FF /* HighlightPointExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183207B722FAC5A900C738FF /* HighlightPointExample.swift */; };
 		18404BD52303C435001D8DC0 /* DashedPolylineExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18404BD42303C435001D8DC0 /* DashedPolylineExample.swift */; };
 		18404BD72303C974001D8DC0 /* GeodesicPolylineExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18404BD62303C974001D8DC0 /* GeodesicPolylineExample.swift */; };
@@ -93,9 +96,21 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		182AEAE0243B381D00EDC300 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				182AEADF243B381D00EDC300 /* MapmyIndiaFeedbackKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		182AEADC243B36B800EDC300 /* temp.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = temp.json; sourceTree = "<group>"; };
 		183207B722FAC5A900C738FF /* HighlightPointExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightPointExample.swift; sourceTree = "<group>"; };
 		18404BD42303C435001D8DC0 /* DashedPolylineExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashedPolylineExample.swift; sourceTree = "<group>"; };
 		18404BD62303C974001D8DC0 /* GeodesicPolylineExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeodesicPolylineExample.swift; sourceTree = "<group>"; };
@@ -170,6 +185,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				182AEADE243B381D00EDC300 /* MapmyIndiaFeedbackKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,6 +207,7 @@
 		18994BB423F556D100CB5B65 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
+				182AEADC243B36B800EDC300 /* temp.json */,
 				18994BB523F556D100CB5B65 /* Mapbox.framework */,
 				18994BB623F556D100CB5B65 /* MapmyIndiaFeedbackKit.framework */,
 				18994BB723F556D100CB5B65 /* MapmyIndiaAPIKit.framework */,
@@ -387,6 +404,7 @@
 				18E87E2F21400FAD00F1C866 /* Frameworks */,
 				18E87E3021400FAD00F1C866 /* Headers */,
 				18E87E3121400FAD00F1C866 /* Resources */,
+				182AEAE0243B381D00EDC300 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -475,6 +493,7 @@
 				68A6BF1C2106E03C00547929 /* Main.storyboard in Resources */,
 				185B7FBE214B8333000785FC /* metro-line.geojson in Resources */,
 				68417CCD210B48FB00424A00 /* MainC.storyboard in Resources */,
+				182AEADD243B36B800EDC300 /* temp.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
