@@ -110,7 +110,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		182AEADC243B36B800EDC300 /* temp.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = temp.json; sourceTree = "<group>"; };
+		182AEADC243B36B800EDC300 /* temp.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = temp.json; path = Dependencies/temp.json; sourceTree = SOURCE_ROOT; };
 		183207B722FAC5A900C738FF /* HighlightPointExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightPointExample.swift; sourceTree = "<group>"; };
 		18404BD42303C435001D8DC0 /* DashedPolylineExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashedPolylineExample.swift; sourceTree = "<group>"; };
 		18404BD62303C974001D8DC0 /* GeodesicPolylineExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeodesicPolylineExample.swift; sourceTree = "<group>"; };
@@ -127,11 +127,11 @@
 		188AE97B21C7DAF500D2C866 /* CustomInfoWindowView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomInfoWindowView.h; sourceTree = "<group>"; };
 		188AE97C21C7DAF500D2C866 /* CustomInfoWindowView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomInfoWindowView.m; sourceTree = "<group>"; };
 		188AE98121C8B27600D2C866 /* CustomAnnotationModels.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomAnnotationModels.h; sourceTree = "<group>"; };
-		18994BB523F556D100CB5B65 /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Mapbox.framework; sourceTree = "<group>"; };
-		18994BB623F556D100CB5B65 /* MapmyIndiaFeedbackKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MapmyIndiaFeedbackKit.framework; sourceTree = "<group>"; };
-		18994BB723F556D100CB5B65 /* MapmyIndiaAPIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MapmyIndiaAPIKit.framework; sourceTree = "<group>"; };
-		18994BB823F556D100CB5B65 /* Polyline.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Polyline.framework; sourceTree = "<group>"; };
-		18994BB923F556D100CB5B65 /* MapboxDirections.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MapboxDirections.framework; sourceTree = "<group>"; };
+		18994BB523F556D100CB5B65 /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mapbox.framework; path = Dependencies/Mapbox.framework; sourceTree = SOURCE_ROOT; };
+		18994BB623F556D100CB5B65 /* MapmyIndiaFeedbackKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapmyIndiaFeedbackKit.framework; path = Dependencies/MapmyIndiaFeedbackKit.framework; sourceTree = SOURCE_ROOT; };
+		18994BB723F556D100CB5B65 /* MapmyIndiaAPIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapmyIndiaAPIKit.framework; path = Dependencies/MapmyIndiaAPIKit.framework; sourceTree = SOURCE_ROOT; };
+		18994BB823F556D100CB5B65 /* Polyline.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Polyline.framework; path = Dependencies/Polyline.framework; sourceTree = SOURCE_ROOT; };
+		18994BB923F556D100CB5B65 /* MapboxDirections.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapboxDirections.framework; path = Dependencies/MapboxDirections.framework; sourceTree = SOURCE_ROOT; };
 		189D0B7E230AA3E2005C8390 /* MMILocationPuckView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMILocationPuckView.h; sourceTree = "<group>"; };
 		189D0B7F230AA3E2005C8390 /* MMILocationPuckView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMILocationPuckView.m; sourceTree = "<group>"; };
 		189D0BC3230CFDC5005C8390 /* HighlightPointExample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HighlightPointExample.h; sourceTree = "<group>"; };
@@ -204,7 +204,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		18994BB423F556D100CB5B65 /* Dependencies */ = {
+		009EA37F243B3B0D00EBD9EE /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
 				182AEADC243B36B800EDC300 /* temp.json */,
@@ -344,8 +344,8 @@
 		68A6BF0A2106E03C00547929 = {
 			isa = PBXGroup;
 			children = (
+				009EA37F243B3B0D00EBD9EE /* Dependencies */,
 				18894B8D230438B3005DC142 /* ReverseGPX.gpx */,
-				18994BB423F556D100CB5B65 /* Dependencies */,
 				68A6BF152106E03C00547929 /* MapDemo */,
 				18E87E3421400FAD00F1C866 /* MapmyIndiaFeedbackUIKit */,
 				68A6BF142106E03C00547929 /* Products */,
