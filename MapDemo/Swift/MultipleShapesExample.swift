@@ -6,7 +6,7 @@
 //  Copyright © 2018 MMI. All rights reserved.
 //
 
-import Mapbox
+import MapmyIndiaMaps
 
 @objc(MultipleShapesExample_Swift)
 class MultipleShapesExample_Swift: UIViewController, MGLMapViewDelegate {

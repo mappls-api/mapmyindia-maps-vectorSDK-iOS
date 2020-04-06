@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <Mapbox/Mapbox.h>
+#import <MapmyIndiaMaps/MapmyIndiaMaps.h>
 #import <MapmyIndiaAPIKit/MapmyIndiaAPIKit.h>
 
 @interface mapVCOC : UIViewController <MGLMapViewDelegate, UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource>

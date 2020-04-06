@@ -7,7 +7,7 @@
 //
 
 #import "MultipleShapesExample.h"
-@import Mapbox;
+@import MapmyIndiaMaps;
 
 @interface MultipleShapesExample () <MapmyIndiaMapViewDelegate>
 @property (nonatomic) MapmyIndiaMapView *mapView;

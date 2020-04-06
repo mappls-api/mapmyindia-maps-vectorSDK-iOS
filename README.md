@@ -4,9 +4,9 @@
 
 **This is a sample project created to demonstrate features of different libraries available on iOS plaform. Such as MapmyIndiaMaps, MapmyIndiaAPIKit, MapmyIndiaDirections, MapmyIndiaFeedbackKit.**
 
-**To use sample, download latest frameworks from versions list below and copy them in "Dependencies" folder of sample project.**
-
-<br/>
+**Notes:**
+*From release 1.4.4 Cocoapods will be used, So there will be no need to download frameworks manually. MapmyIndiaFeedbackKit is embedded in project*
+*To use sample below 1.4.4, download latest frameworks from versions list below and copy them in "Dependencies" folder of sample project.*
 
 **Easy To Integrate Maps & Location APIs & SDKs For Web & Mobile Applications**
 
@@ -45,7 +45,28 @@ The allowed SDK hits are described on the [plans](https://www.mapmyindia.com/api
 
 ## [Setup your Project](#Setup-your-Project)
 
-#### Create a new project in Xcode.
+First clone repo by using below git command or any GUI tool.
+
+`git clone git@github.com:MapmyIndia/mapmyindia-maps-vectorSDK-iOS-sample-withREST-beta.git`
+
+#### Cocoapods
+
+After cloning of this repo follow below steps
+
+- `cd mapmyindia-maps-vectorSDK-iOS-sample-withREST-beta`
+- `pod install`
+- `open MapDemo.xcworkspace`
+
+Latest available version of MapmyIndiaAPIKit is 1.3.9, for MapmyIndiaMaps it is 5.7.0 and for MapmyIndiaDirections it is 0.23.8.
+Which care accessible using below pod commands
+
+```Cocoapods
+pod 'MapmyIndiaAPIKit', '~> 1.3.9'
+pod 'MapmyIndiaMaps', '~> 5.7.0'
+pod 'MapmyIndiaDirections', '~> 0.23.8'
+```
+
+#### Manual Procedure.
 
 -   Drag and drop the MapmyIndia Map SDK Framework (Mapbox.framework) to your project. It must be added in embedded binaries.
 -   Drag and drop the `MapmyIndiaAPIKit` Framework to your project. It must be added in embedded binaries. It is a dependent framework.

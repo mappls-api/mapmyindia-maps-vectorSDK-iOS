@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Mapbox
+import MapmyIndiaMaps
 import MapmyIndiaAPIKit
 
 class DefaultIndoorVC: UIViewController {

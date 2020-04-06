@@ -6,7 +6,7 @@
 //  Copyright © 2018 MMI. All rights reserved.
 //
 
-@import Mapbox;
+@import MapmyIndiaMaps;
 
 // MGLAnnotation protocol reimplementation
 @interface CustomAnnotation : NSObject <MGLAnnotation>

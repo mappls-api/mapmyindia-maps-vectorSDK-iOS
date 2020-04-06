@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import MapboxDirections
+import MapmyIndiaDirections
 
 class InstructionTableVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
    

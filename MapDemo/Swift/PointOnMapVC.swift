@@ -8,7 +8,7 @@
 
 import UIKit
 import MapmyIndiaAPIKit
-import Mapbox
+import MapmyIndiaMaps
 
 class PointOnMapVC: UIViewController , MapmyIndiaMapViewDelegate {
     

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-@import Mapbox;
+@import MapmyIndiaMaps;
 
 @interface CustomInfoWindowView : UIView <MGLCalloutView>
 

@@ -6,7 +6,7 @@
 //  Copyright © 2019 MMI. All rights reserved.
 //
 
-import Mapbox
+import MapmyIndiaMaps
 
 @objc(DashedPolylineExample_Swift)
 class DashedPolylineExample_Swift: UIViewController {

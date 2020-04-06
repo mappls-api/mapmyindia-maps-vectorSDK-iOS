@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Mapbox
+import MapmyIndiaMaps
 
 class CustomCalloutViewForPolyline: UIView , MGLCalloutView{
     

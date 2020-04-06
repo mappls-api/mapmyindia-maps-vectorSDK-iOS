@@ -13,7 +13,7 @@
 #import "CustomAnnotationModels.h"
 #import "CustomInfoWindowView.h"
 
-@import MapboxDirections;
+@import MapmyIndiaDirections;
 @import MapmyIndiaFeedbackUIKit;
 
 
@@ -539,11 +539,12 @@ CLLocation *referenceLocation = nil;
                                          [[MBWaypoint alloc] initWithCoordinate:CLLocationCoordinate2DMake(28.551052, 77.268918) coordinateAccuracy:-1 name:@"MapmyIndia"],
                                          [[MBWaypoint alloc] initWithCoordinate:CLLocationCoordinate2DMake(28.630195, 77.218119) coordinateAccuracy:-1 name:@""],
                                          ];
-    MBRouteOptions *options = [[MBRouteOptions alloc] initWithWaypoints:waypoints profileIdentifier: MBDirectionsProfileIdentifierAutomobile];
+        
+    MBRouteOptions *options = [[MBRouteOptions alloc] initWithWaypoints:waypoints resourceIdentifier: NULL profileIdentifier:NULL];
     options.includesSteps = YES;
     
     if (isETA) {
-        options.profileIdentifier = MBDirectionsProfileIdentifierAutomobileWithTraffic;
+        options.resourceIdentifier = MBDirectionsResourceIdentifierRouteETA;
     }
     MBDirections *directionManager = [[MBDirections alloc] initWithRestKey:MapmyIndiaAccountManager.restAPIKey];
     [directionManager calculateDirectionsWithOptions:options completionHandler:^(NSArray<MBWaypoint *> * _Nullable waypoints, NSArray<MBRoute *> * _Nullable routes, NSError * _Nullable error) {

@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import Mapbox
+import MapmyIndiaMaps
 
 class CustomPointAnnotation: NSObject, MGLAnnotation {
     // As a reimplementation of the MGLAnnotation protocol, we have to add mutable coordinate and (sub)title properties ourselves.

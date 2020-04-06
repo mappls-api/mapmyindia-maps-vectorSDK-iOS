@@ -7,7 +7,7 @@
 //
 
 #import "HighlightPointExample.h"
-@import Mapbox;
+@import MapmyIndiaMaps;
 
 @interface HighlightPointExample () <MapmyIndiaMapViewDelegate>
 @property (nonatomic) MapmyIndiaMapView *mapView;

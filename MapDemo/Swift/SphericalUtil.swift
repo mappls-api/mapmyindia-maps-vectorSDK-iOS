@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import Mapbox
+import MapmyIndiaMaps
 
 public class SphericalUtil {
     init() {

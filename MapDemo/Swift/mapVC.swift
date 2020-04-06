@@ -7,9 +7,9 @@
 //
 
 import UIKit
-import Mapbox
+import MapmyIndiaMaps
 import MapmyIndiaAPIKit
-import MapboxDirections
+import MapmyIndiaDirections
 import MapmyIndiaFeedbackUIKit
 
 class mapVC: UIViewController, MapmyIndiaMapViewDelegate,AutoSuggestDelegates {
@@ -674,7 +674,7 @@ class mapVC: UIViewController, MapmyIndiaMapViewDelegate,AutoSuggestDelegates {
         options.includesAlternativeRoutes = true
         
         if isETA {
-            options.profileIdentifier = .automobileWithTraffic
+            options.resourceIdentifier = .routeETA
         }
         
         Directions(restKey: MapmyIndiaAccountManager.restAPIKey()).calculate(options) { (waypoints, routes, error) in

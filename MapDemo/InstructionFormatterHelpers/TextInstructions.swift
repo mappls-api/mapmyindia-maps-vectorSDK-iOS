@@ -1,5 +1,5 @@
 import Foundation
-import MapboxDirections
+import MapmyIndiaDirections
 
 // Will automatically read localized TextInstructions.plist
 let StepTextInstructionsStrings = NSDictionary(contentsOfFile: Bundle(for: TextInstructions.self).path(forResource: "TextInstructions", ofType: "plist")!)!

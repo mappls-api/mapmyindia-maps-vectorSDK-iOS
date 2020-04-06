@@ -6,7 +6,7 @@
 //  Copyright © 2019 MMI. All rights reserved.
 //
 
-import Mapbox
+import MapmyIndiaMaps
 
 
 class CustomPolygon: MGLPolygon {
