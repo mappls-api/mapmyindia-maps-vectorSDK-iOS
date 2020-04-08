@@ -21,6 +21,7 @@ Powered with India's most comprehensive and robust mapping functionalities.
 
 | Version | Last Updated | Author | Download | Compatibility |
 | ---- | ---- | ---- | ---- | ---- |
+| 4.9.0 | 08 April 2020 | MapmyIndia API Team ([RK](https://github.com/spacekingindia)) | [Download](http://downloads.mapmyindia.com/mmishare/HMIFMKMCSWQT/MapmyIndia_Vector_Map_SDKs_v4.9.0_08042020.zip) | XCode 11.2.1+; Directions Module updated
 | 4.9.0 | 03 April 2020 | MapmyIndia API Team ([RK](https://github.com/spacekingindia)) | [Download](http://downloads.mapmyindia.com/mmishare/FHGUJJEK5T3F/MapmyIndia_Vector_Map_SDKs_v4.9.0_03042020.zip) | XCode 11.2.1+; SDK Authorization Improvements
 | 4.9.0 | 24 March 2020 | MapmyIndia API Team ([RK](https://github.com/spacekingindia)) | [Download](http://downloads.mapmyindia.com/mmishare/GWBNBIWL0YBO/MapmyIndia_Vector_Map_SDKs_v4.9.0_20032020.zip) | XCode 11.2.1+;
 | 4.9.0 | 29 January 2020 | MapmyIndia API Team ([RK](https://github.com/spacekingindia)) | [Download](http://downloads.mapmyindia.com/mmishare/GFECUS5KIZTA/MapmyIndia_Vector_Map_SDK_withSample_v4.9.0_29012020.zip) | XCode 11.2.1+;
