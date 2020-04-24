@@ -17,7 +17,39 @@ Powered with India's most comprehensive and robust mapping functionalities.
 
 2. The sample code is provided to help you understand the basic functionality of MapmyIndia maps & REST APIs working on iOS native development platform. 
 
+## [Cocoapods Version History](#Cocoapods-Version-History)
+
+### [MapmyIndiaAPIKit](#MapmyIndiaAPIKit)
+
+[Release Notes]()
+
+| Version | Dated | Description |
+| :---- | :---- | :---- |
+| `1.3.11` | 21 Apr, 2020 | Feedback API wrapper added which can be used using `MapmyIndiaFeedbackAPIManager`. |
+| `1.3.10` | 24 Mar, 2020 | Minor fixes for tile issue (For Map SDK). |
+| `1.3.9` | 24 Mar, 2020 | Promotional API wrapper added (For Map SDK to show Corona Link Button), Geocode API issue fixed for not getting eLco parameter. |
+| `1.3.8` | 11 Dec, 2019 | Configuration settings added to enable disable default Indoor UI. |
+
+### [MapmyIndiaMaps](#MapmyIndiaMaps)
+
+[Release Notes]()
+
+| Version | Dated | Description |
+| :---- | :---- | :---- |
+| `5.7.1` | 23 Apr, 2020 | Fixed an issue where tiles were not reloading again after expiry of map access key. |
+| `5.7.0` | 24 Mar, 2020 | Corona Link Button Added on map view. |
+
+### [MapmyIndiaDirections](#MapmyIndiaDirections)
+
+[Release Notes]()
+
+| Version | Dated | Description |
+| :---- | :---- | :---- |
+| `0.23.8` | 23 Apr, 2020 | Initial release on Pods. |
+
 ## [Version History](#Version-History)
+
+Below is version histroy of frameworks which were distributed through manual procedure.
 
 | Version | Last Updated | Author | Download | Compatibility |
 | ---- | ---- | ---- | ---- | ---- |
@@ -32,7 +64,6 @@ Powered with India's most comprehensive and robust mapping functionalities.
 | 4.9.0 | 20 May 2019 | MapmyIndia API Team ([RK](https://github.com/spacekingindia)) | [Download](http://downloads.mapmyindia.com/mmishare/17DTMF8VC2JV/MapmyIndia_Vector_Map_SDK_withSample_v4.9.0_20052019.zip) | XCode 10.2
 | 4.9.0 | 11 April 2019 | MapmyIndia API Team ([RK](https://github.com/spacekingindia)) | ~~Deleted~~ | XCode 10.2
 | 4.1.1 | 17 December 2018 | MapmyIndia API Team ([RK](https://github.com/spacekingindia)) | [Download](http://downloads.mapmyindia.com/mmishare/404PIHHQM24V/MapmyIndia_Vector_Map_SDK_withSample_v4.1.1_03042019.zip) | XCode 10.1
-
 
 ## [Getting Started](#Getting-Started)
 
@@ -55,17 +86,18 @@ First clone repo by using below git command or any GUI tool.
 After cloning of this repo follow below steps
 
 - `cd mapmyindia-maps-vectorSDK-iOS-sample-withREST-beta`
-- `pod install`
+- `pod install` or `pod update` (to update existing pods)
 - `open MapDemo.xcworkspace`
 
-Latest available version of MapmyIndiaAPIKit is 1.3.9, for MapmyIndiaMaps it is 5.7.0 and for MapmyIndiaDirections it is 0.23.8.
-Which care accessible using below pod commands
+MapmyIndiaAPIKit, MapmyIndiaMaps and MapmyIndiaDirections are available on Cocoapods which care accessible using below pod commands:
 
 ```Cocoapods
-pod 'MapmyIndiaAPIKit', '~> 1.3.9'
-pod 'MapmyIndiaMaps', '~> 5.7.0'
-pod 'MapmyIndiaDirections', '~> 0.23.8'
+pod 'MapmyIndiaAPIKit'
+pod 'MapmyIndiaMaps'
+pod 'MapmyIndiaDirections'
 ```
+
+**Version histroy** on Cocoapods for each can be found above [here](#Cocoapods-Version-History)
 
 #### Manual Procedure.
 
