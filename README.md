@@ -79,13 +79,13 @@ The allowed SDK hits are described on the [plans](https://www.mapmyindia.com/api
 
 First clone repo by using below git command or any GUI tool.
 
-`git clone git@github.com:MapmyIndia/mapmyindia-maps-vectorSDK-iOS-sample-withREST-beta.git`
+`git clone git@github.com:MapmyIndia/mapmyindia-maps-vectorSDK-iOS.git`
 
 #### Cocoapods
 
 After cloning of this repo follow below steps
 
-- `cd mapmyindia-maps-vectorSDK-iOS-sample-withREST-beta`
+- `cd mapmyindia-maps-vectorSDK-iOS`
 - `pod install` or `pod update` (to update existing pods)
 - `open MapDemo.xcworkspace`
 
@@ -151,7 +151,7 @@ MapmyIndiaAccountManager.setAtlasAPIVersion("1.3.11") // Optional; deprecated
 
 ```
 
-For more information click [Wiki](https://github.com/MapmyIndia/mapmyindia-maps-vectorSDK-iOS-sample-withREST-beta/wiki)
+For more information click [Wiki](https://github.com/MapmyIndia/mapmyindia-maps-vectorSDK-iOS/wiki)
 
 OR
 
