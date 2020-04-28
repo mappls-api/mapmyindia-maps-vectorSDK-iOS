@@ -6,8 +6,8 @@ target 'MapDemo' do
   use_frameworks!
 
   # Pods for MapDemo
-  pod 'MapmyIndiaMaps', '~> 5.7.1'
-  pod 'MapmyIndiaDirections', '~> 0.23.8'
+  pod 'MapmyIndiaMaps'
+  pod 'MapmyIndiaDirections'
 
 end
 

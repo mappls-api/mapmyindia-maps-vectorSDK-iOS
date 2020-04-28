@@ -25,6 +25,7 @@ Powered with India's most comprehensive and robust mapping functionalities.
 
 | Version | Dated | Description |
 | :---- | :---- | :---- |
+| `1.3.12` | 28 Apr, 2020 | Fix issue of Map SDK was in Debug mode. |
 | `1.3.11` | 21 Apr, 2020 | Feedback API wrapper added which can be used using `MapmyIndiaFeedbackAPIManager`. |
 | `1.3.10` | 24 Mar, 2020 | Minor fixes for tile issue (For Map SDK). |
 | `1.3.9` | 24 Mar, 2020 | Promotional API wrapper added (For Map SDK to show Corona Link Button), Geocode API issue fixed for not getting eLco parameter. |
@@ -36,6 +37,7 @@ Powered with India's most comprehensive and robust mapping functionalities.
 
 | Version | Dated | Description |
 | :---- | :---- | :---- |
+| `5.7.3` | 28 Apr, 2020 | Fix issue of Map SDK was in Debug mode. |
 | `5.7.1` | 23 Apr, 2020 | Fixed an issue where tiles were not reloading again after expiry of map access key. |
 | `5.7.0` | 24 Mar, 2020 | Corona Link Button Added on map view. |
 
@@ -53,6 +55,7 @@ Below is version histroy of frameworks which were distributed through manual pro
 
 | Version | Last Updated | Author | Download | Compatibility |
 | ---- | ---- | ---- | ---- | ---- |
+| 4.9.0 | 28 April 2020 | MapmyIndia API Team ([RK](https://github.com/spacekingindia)) | [Download](http://downloads.mapmyindia.com/mmishare/RNW7TP5JCJS8/MapmyIndia_Vector_Map_SDKs_v4.9.0_27042020.zip) | Fix issue of Map SDK was in Debug mode.
 | 4.9.0 | 08 April 2020 | MapmyIndia API Team ([RK](https://github.com/spacekingindia)) | [Download](http://downloads.mapmyindia.com/mmishare/HMIFMKMCSWQT/MapmyIndia_Vector_Map_SDKs_v4.9.0_08042020.zip) | XCode 11.2.1+; Directions Module updated
 | 4.9.0 | 03 April 2020 | MapmyIndia API Team ([RK](https://github.com/spacekingindia)) | [Download](http://downloads.mapmyindia.com/mmishare/FHGUJJEK5T3F/MapmyIndia_Vector_Map_SDKs_v4.9.0_03042020.zip) | XCode 11.2.1+; SDK Authorization Improvements
 | 4.9.0 | 24 March 2020 | MapmyIndia API Team ([RK](https://github.com/spacekingindia)) | [Download](http://downloads.mapmyindia.com/mmishare/GWBNBIWL0YBO/MapmyIndia_Vector_Map_SDKs_v4.9.0_20032020.zip) | XCode 11.2.1+;
