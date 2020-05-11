@@ -64,6 +64,9 @@
 		A4DA1E9523DB16BF0010743F /* DirectionIndicationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DA1E9323DB16BE0010743F /* DirectionIndicationView.swift */; };
 		A4DA1E9623DB16BF0010743F /* DirectionIndicationViewStyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DA1E9423DB16BE0010743F /* DirectionIndicationViewStyleKit.swift */; };
 		DBE3881482E687678C3949EE /* Pods_MapmyIndiaFeedbackUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50891AB11B661451F50B582F /* Pods_MapmyIndiaFeedbackUIKit.framework */; };
+		B16E4AD0246967A3004BF783 /* SafetyPluginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16E4ACF246967A3004BF783 /* SafetyPluginVC.swift */; };
+		B16E4AE8246989F5004BF783 /* MapmyIndiaSafetyPlugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B16E4AE6246989EE004BF783 /* MapmyIndiaSafetyPlugin.framework */; };
+		B16E4AE9246989F5004BF783 /* MapmyIndiaSafetyPlugin.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B16E4AE6246989EE004BF783 /* MapmyIndiaSafetyPlugin.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +95,7 @@
 			files = (
 				181F97782429CEA300D996EA /* MapmyIndiaFeedbackKit.framework in Embed Frameworks */,
 				00D33399245308C70038ADAE /* MapmyIndiaFeedbackUIKit.framework in Embed Frameworks */,
+				B16E4AE9246989F5004BF783 /* MapmyIndiaSafetyPlugin.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -180,6 +184,8 @@
 		A4DA1E9423DB16BE0010743F /* DirectionIndicationViewStyleKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionIndicationViewStyleKit.swift; sourceTree = "<group>"; };
 		AA2636A906A2747D423E63DE /* Pods_MapDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MapDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3D15646AEF14EA939A09B1B /* Pods-MapmyIndiaFeedbackUIKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapmyIndiaFeedbackUIKit.release.xcconfig"; path = "Target Support Files/Pods-MapmyIndiaFeedbackUIKit/Pods-MapmyIndiaFeedbackUIKit.release.xcconfig"; sourceTree = "<group>"; };
+		B16E4ACF246967A3004BF783 /* SafetyPluginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafetyPluginVC.swift; sourceTree = "<group>"; };
+		B16E4AE6246989EE004BF783 /* MapmyIndiaSafetyPlugin.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapmyIndiaSafetyPlugin.framework; path = ../../Desktop/MapmyIndiaSafetyPlugin.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +202,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B16E4AE8246989F5004BF783 /* MapmyIndiaSafetyPlugin.framework in Frameworks */,
 				00D33398245308C70038ADAE /* MapmyIndiaFeedbackUIKit.framework in Frameworks */,
 				181F97772429CEA300D996EA /* MapmyIndiaFeedbackKit.framework in Frameworks */,
 				5FA14F79C3ACA6D2E1EB2C91 /* Pods_MapDemo.framework in Frameworks */,
@@ -208,6 +215,7 @@
 		009EA37F243B3B0D00EBD9EE /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
+				B16E4AE6246989EE004BF783 /* MapmyIndiaSafetyPlugin.framework */,
 				182AEADC243B36B800EDC300 /* temp.json */,
 				18994BB623F556D100CB5B65 /* MapmyIndiaFeedbackKit.framework */,
 			);
@@ -305,6 +313,7 @@
 			isa = PBXGroup;
 			children = (
 				68417CC6210B32A700424A00 /* ListVC.swift */,
+				B16E4ACF246967A3004BF783 /* SafetyPluginVC.swift */,
 				68534689210EF14B000ED395 /* mapVC.swift */,
 				185B7FBF214B83C7000785FC /* MultipleShapesExample.swift */,
 				18BDD84D22F4005D00239CDC /* InteriorPolygonExample.swift */,
@@ -619,6 +628,7 @@
 				188AE97821C7D66800D2C866 /* CustomAnnotationModels.swift in Sources */,
 				18BDD84E22F4005D00239CDC /* InteriorPolygonExample.swift in Sources */,
 				18404BD52303C435001D8DC0 /* DashedPolylineExample.swift in Sources */,
+				B16E4AD0246967A3004BF783 /* SafetyPluginVC.swift in Sources */,
 				188AE97D21C7DAF500D2C866 /* CustomInfoWindowView.m in Sources */,
 				189D0BC5230CFDC5005C8390 /* HighlightPointExample.m in Sources */,
 				A45C2997239A157100EC81F6 /* CustomIndoorVC.swift in Sources */,

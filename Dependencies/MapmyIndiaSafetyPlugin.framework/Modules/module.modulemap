@@ -1,0 +1,11 @@
+framework module MapmyIndiaSafetyPlugin {
+  umbrella header "MapmyIndiaSafetyPlugin.h"
+
+  export *
+  module * { export * }
+}
+
+module MapmyIndiaSafetyPlugin.Swift {
+    header "MapmyIndiaSafetyPlugin-Swift.h"
+    requires objc
+}

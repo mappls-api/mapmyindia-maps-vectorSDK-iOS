@@ -25,10 +25,19 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Your location is used to personalize content.</string>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>We need your location information to provide information of nearby known location and create your logs for creating timeline at Web portal.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>We need your location information to provide information of nearby known location and create your logs for creating timeline at Web portal.</string>
+	<key>NSMotionUsageDescription</key>
+	<string>In order to count steps I need an access to your pedometer</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>fetch</string>
+		<string>location</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

@@ -17,7 +17,7 @@ class ListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @objc var placemark: MapmyIndiaPlacemark?
     
-    let listArr:[String]? = ["Zoom Level", "Zoom Level With Animation", "Center With Animation", "Current Location","Tracking Mode", "Add Marker", "Add Multiple Markers With Bounds","Animate Marker","Clustering Markers","Custom Marker","Interactive Markers","Polyline" , "Polygons", "Circles", "Autosuggest", "Geocoding (Forward Geocode)", "Atlas Geocode", "Reverse Geocoding", "Nearby Search", "Place/eLoc Detail", "Driving Distance", "Distance Matrix", "Distance Matrix ETA", "Route", "Route Advance", "Route Advance ETA", "Feedback", "GeoJson Multiple Shapes", "Dashed Polyline", "Geodesic Polyline", "Interior Polygons","Default Indoor","Custom Indoor","Point On Map"]
+    let listArr:[String]? = ["Zoom Level", "Zoom Level With Animation", "Center With Animation", "Current Location","Tracking Mode", "Add Marker", "Add Multiple Markers With Bounds","Animate Marker","Clustering Markers","Custom Marker","Interactive Markers","Polyline" , "Polygons", "Circles", "Autosuggest", "Geocoding (Forward Geocode)", "Atlas Geocode", "Reverse Geocoding", "Nearby Search", "Place/eLoc Detail", "Driving Distance", "Distance Matrix", "Distance Matrix ETA", "Route", "Route Advance", "Route Advance ETA", "Feedback", "GeoJson Multiple Shapes", "Dashed Polyline", "Geodesic Polyline", "Interior Polygons","Default Indoor","Custom Indoor","Point On Map","Safety Plugin"]
     
     var placeDetails = [String]()
     
@@ -123,6 +123,11 @@ class ListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                 self.navigationController?.pushViewController(vctrl!, animated: true)
                 vctrl?.strType = strType
                 break
+                case "Safety Plugin":
+                               let vctrl = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SafetyPluginVC") as? SafetyPluginVC
+                               self.navigationController?.pushViewController(vctrl!, animated: true)
+                               break
+                
             default:
                 let vctrl = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "mapVC") as? mapVC
                 self.navigationController?.pushViewController(vctrl!, animated: true)
