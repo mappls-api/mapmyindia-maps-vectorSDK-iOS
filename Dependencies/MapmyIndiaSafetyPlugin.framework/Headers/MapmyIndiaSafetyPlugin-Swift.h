@@ -209,6 +209,15 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma pop_macro("any")
 #endif
 
+@class NSCoder;
+
+SWIFT_CLASS("_TtC22MapmyIndiaSafetyPlugin8ApiError")
+@interface ApiError : NSError
+/// Not implemented, do not use.
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithDomain:(NSString * _Nonnull)domain code:(NSInteger)code userInfo:(NSDictionary<NSString *, id> * _Nullable)dict SWIFT_UNAVAILABLE;
+@end
+
 
 SWIFT_CLASS("_TtC22MapmyIndiaSafetyPlugin29CollectingFieldsConfiguration")
 @interface CollectingFieldsConfiguration : NSObject
@@ -497,6 +506,15 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma clang attribute push(__attribute__((external_source_symbol(language="Swift", defined_in="MapmyIndiaSafetyPlugin",generated_declaration))), apply_to=any(function,enum,objc_interface,objc_category,objc_protocol))
 # pragma pop_macro("any")
 #endif
+
+@class NSCoder;
+
+SWIFT_CLASS("_TtC22MapmyIndiaSafetyPlugin8ApiError")
+@interface ApiError : NSError
+/// Not implemented, do not use.
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithDomain:(NSString * _Nonnull)domain code:(NSInteger)code userInfo:(NSDictionary<NSString *, id> * _Nullable)dict SWIFT_UNAVAILABLE;
+@end
 
 
 SWIFT_CLASS("_TtC22MapmyIndiaSafetyPlugin29CollectingFieldsConfiguration")
@@ -791,6 +809,15 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma pop_macro("any")
 #endif
 
+@class NSCoder;
+
+SWIFT_CLASS("_TtC22MapmyIndiaSafetyPlugin8ApiError")
+@interface ApiError : NSError
+/// Not implemented, do not use.
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithDomain:(NSString * _Nonnull)domain code:(NSInteger)code userInfo:(NSDictionary<NSString *, id> * _Nullable)dict SWIFT_UNAVAILABLE;
+@end
+
 
 SWIFT_CLASS("_TtC22MapmyIndiaSafetyPlugin29CollectingFieldsConfiguration")
 @interface CollectingFieldsConfiguration : NSObject
@@ -1079,6 +1106,15 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma clang attribute push(__attribute__((external_source_symbol(language="Swift", defined_in="MapmyIndiaSafetyPlugin",generated_declaration))), apply_to=any(function,enum,objc_interface,objc_category,objc_protocol))
 # pragma pop_macro("any")
 #endif
+
+@class NSCoder;
+
+SWIFT_CLASS("_TtC22MapmyIndiaSafetyPlugin8ApiError")
+@interface ApiError : NSError
+/// Not implemented, do not use.
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithDomain:(NSString * _Nonnull)domain code:(NSInteger)code userInfo:(NSDictionary<NSString *, id> * _Nullable)dict SWIFT_UNAVAILABLE;
+@end
 
 
 SWIFT_CLASS("_TtC22MapmyIndiaSafetyPlugin29CollectingFieldsConfiguration")
