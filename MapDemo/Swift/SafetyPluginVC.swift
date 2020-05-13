@@ -68,7 +68,7 @@ class SafetyPluginVC: UIViewController {
               
               btnCheckNow.isEnabled = false
               btnCheckNow.backgroundColor = UIColor.gray
-              MapmyIndiaSafetyPlugin.shared.getContainmentZone()
+              MapmyIndiaSafetyPlugin.shared.getCurrentLocationSafety()
           }
       }
       

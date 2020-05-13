@@ -40,7 +40,6 @@
 		18E87E502140100F00F1C866 /* MapmyIndiaFeedbackUIKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E87E4F2140100F00F1C866 /* MapmyIndiaFeedbackUIKitManager.swift */; };
 		18F576D023FEA83B0009A2D9 /* TextInstructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F576CF23FEA83B0009A2D9 /* TextInstructions.swift */; };
 		18F576D223FEAA880009A2D9 /* TextInstructions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18F576D123FEAA880009A2D9 /* TextInstructions.plist */; };
-		5FA14F79C3ACA6D2E1EB2C91 /* Pods_MapDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA2636A906A2747D423E63DE /* Pods_MapDemo.framework */; };
 		68417CC5210B329100424A00 /* InitialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68417CC4210B329100424A00 /* InitialVC.swift */; };
 		68417CC7210B32A700424A00 /* ListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68417CC6210B32A700424A00 /* ListVC.swift */; };
 		68417CCD210B48FB00424A00 /* MainC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68417CCC210B48FB00424A00 /* MainC.storyboard */; };
@@ -63,10 +62,7 @@
 		A4ACEA4D23D80C6400447644 /* InstructionTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4ACEA4C23D80C6400447644 /* InstructionTableVC.swift */; };
 		A4DA1E9523DB16BF0010743F /* DirectionIndicationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DA1E9323DB16BE0010743F /* DirectionIndicationView.swift */; };
 		A4DA1E9623DB16BF0010743F /* DirectionIndicationViewStyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DA1E9423DB16BE0010743F /* DirectionIndicationViewStyleKit.swift */; };
-		DBE3881482E687678C3949EE /* Pods_MapmyIndiaFeedbackUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50891AB11B661451F50B582F /* Pods_MapmyIndiaFeedbackUIKit.framework */; };
 		B16E4AD0246967A3004BF783 /* SafetyPluginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16E4ACF246967A3004BF783 /* SafetyPluginVC.swift */; };
-		B16E4AE8246989F5004BF783 /* MapmyIndiaSafetyPlugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B16E4AE6246989EE004BF783 /* MapmyIndiaSafetyPlugin.framework */; };
-		B16E4AE9246989F5004BF783 /* MapmyIndiaSafetyPlugin.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B16E4AE6246989EE004BF783 /* MapmyIndiaSafetyPlugin.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,7 +91,6 @@
 			files = (
 				181F97782429CEA300D996EA /* MapmyIndiaFeedbackKit.framework in Embed Frameworks */,
 				00D33399245308C70038ADAE /* MapmyIndiaFeedbackUIKit.framework in Embed Frameworks */,
-				B16E4AE9246989F5004BF783 /* MapmyIndiaSafetyPlugin.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -114,7 +109,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		04F4C6CC8BDAA7CFFFF1F9C7 /* Pods-MapmyIndiaFeedbackUIKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapmyIndiaFeedbackUIKit.debug.xcconfig"; path = "Target Support Files/Pods-MapmyIndiaFeedbackUIKit/Pods-MapmyIndiaFeedbackUIKit.debug.xcconfig"; sourceTree = "<group>"; };
 		182AEADC243B36B800EDC300 /* temp.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = temp.json; path = Dependencies/temp.json; sourceTree = SOURCE_ROOT; };
 		183207B722FAC5A900C738FF /* HighlightPointExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightPointExample.swift; sourceTree = "<group>"; };
 		18404BD42303C435001D8DC0 /* DashedPolylineExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashedPolylineExample.swift; sourceTree = "<group>"; };
@@ -151,9 +145,6 @@
 		18E87E4F2140100F00F1C866 /* MapmyIndiaFeedbackUIKitManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapmyIndiaFeedbackUIKitManager.swift; sourceTree = "<group>"; };
 		18F576CF23FEA83B0009A2D9 /* TextInstructions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInstructions.swift; sourceTree = "<group>"; };
 		18F576D123FEAA880009A2D9 /* TextInstructions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TextInstructions.plist; sourceTree = "<group>"; };
-		213B8BA697589945515269AF /* Pods-MapDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapDemo.release.xcconfig"; path = "Target Support Files/Pods-MapDemo/Pods-MapDemo.release.xcconfig"; sourceTree = "<group>"; };
-		3D3FAD1F4BBD9E0B746C6776 /* Pods-MapDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapDemo.debug.xcconfig"; path = "Target Support Files/Pods-MapDemo/Pods-MapDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		50891AB11B661451F50B582F /* Pods_MapmyIndiaFeedbackUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MapmyIndiaFeedbackUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		68417CC4210B329100424A00 /* InitialVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialVC.swift; sourceTree = "<group>"; };
 		68417CC6210B32A700424A00 /* ListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVC.swift; sourceTree = "<group>"; };
 		68417CC8210B330D00424A00 /* MapDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MapDemo-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -182,10 +173,7 @@
 		A4ACEA4C23D80C6400447644 /* InstructionTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionTableVC.swift; sourceTree = "<group>"; };
 		A4DA1E9323DB16BE0010743F /* DirectionIndicationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionIndicationView.swift; sourceTree = "<group>"; };
 		A4DA1E9423DB16BE0010743F /* DirectionIndicationViewStyleKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionIndicationViewStyleKit.swift; sourceTree = "<group>"; };
-		AA2636A906A2747D423E63DE /* Pods_MapDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MapDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C3D15646AEF14EA939A09B1B /* Pods-MapmyIndiaFeedbackUIKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapmyIndiaFeedbackUIKit.release.xcconfig"; path = "Target Support Files/Pods-MapmyIndiaFeedbackUIKit/Pods-MapmyIndiaFeedbackUIKit.release.xcconfig"; sourceTree = "<group>"; };
 		B16E4ACF246967A3004BF783 /* SafetyPluginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafetyPluginVC.swift; sourceTree = "<group>"; };
-		B16E4AE6246989EE004BF783 /* MapmyIndiaSafetyPlugin.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapmyIndiaSafetyPlugin.framework; path = ../../Desktop/MapmyIndiaSafetyPlugin.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,7 +182,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				182AEADE243B381D00EDC300 /* MapmyIndiaFeedbackKit.framework in Frameworks */,
-				DBE3881482E687678C3949EE /* Pods_MapmyIndiaFeedbackUIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,10 +189,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B16E4AE8246989F5004BF783 /* MapmyIndiaSafetyPlugin.framework in Frameworks */,
 				00D33398245308C70038ADAE /* MapmyIndiaFeedbackUIKit.framework in Frameworks */,
 				181F97772429CEA300D996EA /* MapmyIndiaFeedbackKit.framework in Frameworks */,
-				5FA14F79C3ACA6D2E1EB2C91 /* Pods_MapDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,20 +200,10 @@
 		009EA37F243B3B0D00EBD9EE /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
-				B16E4AE6246989EE004BF783 /* MapmyIndiaSafetyPlugin.framework */,
 				182AEADC243B36B800EDC300 /* temp.json */,
 				18994BB623F556D100CB5B65 /* MapmyIndiaFeedbackKit.framework */,
 			);
 			path = Dependencies;
-			sourceTree = "<group>";
-		};
-		18DE80F02140FEDD004B52FE /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				AA2636A906A2747D423E63DE /* Pods_MapDemo.framework */,
-				50891AB11B661451F50B582F /* Pods_MapmyIndiaFeedbackUIKit.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		18E87E3421400FAD00F1C866 /* MapmyIndiaFeedbackUIKit */ = {
@@ -357,7 +332,6 @@
 				68A6BF152106E03C00547929 /* MapDemo */,
 				18E87E3421400FAD00F1C866 /* MapmyIndiaFeedbackUIKit */,
 				68A6BF142106E03C00547929 /* Products */,
-				18DE80F02140FEDD004B52FE /* Frameworks */,
 				F560EFD69E767ADFE19F5A20 /* Pods */,
 			);
 			sourceTree = "<group>";
@@ -394,10 +368,6 @@
 		F560EFD69E767ADFE19F5A20 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3D3FAD1F4BBD9E0B746C6776 /* Pods-MapDemo.debug.xcconfig */,
-				213B8BA697589945515269AF /* Pods-MapDemo.release.xcconfig */,
-				04F4C6CC8BDAA7CFFFF1F9C7 /* Pods-MapmyIndiaFeedbackUIKit.debug.xcconfig */,
-				C3D15646AEF14EA939A09B1B /* Pods-MapmyIndiaFeedbackUIKit.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -420,7 +390,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18E87E3C21400FAD00F1C866 /* Build configuration list for PBXNativeTarget "MapmyIndiaFeedbackUIKit" */;
 			buildPhases = (
-				10B50B423049C9BF9F8B0C28 /* [CP] Check Pods Manifest.lock */,
 				18E87E2E21400FAD00F1C866 /* Sources */,
 				18E87E2F21400FAD00F1C866 /* Frameworks */,
 				18E87E3021400FAD00F1C866 /* Headers */,
@@ -440,12 +409,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 68A6BF252106E03F00547929 /* Build configuration list for PBXNativeTarget "MapDemo" */;
 			buildPhases = (
-				AA30C2FE26808660B3020F2D /* [CP] Check Pods Manifest.lock */,
 				68A6BF0F2106E03C00547929 /* Sources */,
 				68A6BF102106E03C00547929 /* Frameworks */,
 				68A6BF112106E03C00547929 /* Resources */,
 				181F977F2429CEA300D996EA /* Embed Frameworks */,
-				2F495EE31D7370C42228D3D8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -522,70 +489,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		10B50B423049C9BF9F8B0C28 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MapmyIndiaFeedbackUIKit-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2F495EE31D7370C42228D3D8 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MapDemo/Pods-MapDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MapDemo/Pods-MapDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MapDemo/Pods-MapDemo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		AA30C2FE26808660B3020F2D /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MapDemo-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		18E87E2E21400FAD00F1C866 /* Sources */ = {
@@ -678,7 +581,6 @@
 /* Begin XCBuildConfiguration section */
 		18E87E3D21400FAD00F1C866 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 04F4C6CC8BDAA7CFFFF1F9C7 /* Pods-MapmyIndiaFeedbackUIKit.debug.xcconfig */;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -715,7 +617,6 @@
 		};
 		18E87E3E21400FAD00F1C866 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C3D15646AEF14EA939A09B1B /* Pods-MapmyIndiaFeedbackUIKit.release.xcconfig */;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -867,7 +768,6 @@
 		};
 		68A6BF262106E03F00547929 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3D3FAD1F4BBD9E0B746C6776 /* Pods-MapDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -899,7 +799,6 @@
 		};
 		68A6BF272106E03F00547929 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 213B8BA697589945515269AF /* Pods-MapDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
