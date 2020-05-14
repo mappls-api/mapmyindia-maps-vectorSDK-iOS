@@ -1,5 +1,13 @@
 # Changes to the MapmyIndia's Sample for available iOS SDKs
 
+## 1.4.6 - 13 May, 2020
+
+#### Changed
+
+- Map SDK version 5.7.5 released with dependency of MapmyIndiaSafetyPlugin through Cocoapods.
+- A sample is added to demonstrated features of MapmyIndiaSafetyPlugin with title `safetyPlugin`.
+
+
 ## 1.4.5 - 24 Apr, 2020
 
 #### Fixed
@@ -7,7 +15,7 @@
 - Fixed an issue where app was not able to run on device because MapmyIndiaFeedbackUIKit framework was not added in Linked Libraries of Sample Application.
 
 - Map SDK updated to version 5.7.1
-    - Tile issue fixed where tiles not fetching after expiring of vector key. 
+    - Tile issue fixed where tiles not fetching after expiring of vector key.
 
 ## 1.4.4 - 06 Apr, 2020
 
