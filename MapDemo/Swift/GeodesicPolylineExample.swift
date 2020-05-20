@@ -12,7 +12,7 @@ import MapKit
 @objc(GeodesicPolylineExample_Swift)
 class GeodesicPolylineExample_Swift: UIViewController {
     
-    var mapView: MGLMapView!
+    var mapView: MapmyIndiaMapView!
     
     override func viewDidLoad() {
         super.viewDidLoad()

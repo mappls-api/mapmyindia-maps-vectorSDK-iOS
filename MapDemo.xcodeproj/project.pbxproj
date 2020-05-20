@@ -22,6 +22,9 @@
 		185B7FBE214B8333000785FC /* metro-line.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 185B7FBD214B8333000785FC /* metro-line.geojson */; };
 		185B7FC0214B83C7000785FC /* MultipleShapesExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B7FBF214B83C7000785FC /* MultipleShapesExample.swift */; };
 		185B7FC3214B848F000785FC /* MultipleShapesExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 185B7FC2214B848F000785FC /* MultipleShapesExample.m */; };
+		18778C4D24751F33006DE478 /* DraggableMapMarkerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18778C4C24751F33006DE478 /* DraggableMapMarkerVC.swift */; };
+		18778C582475435C006DE478 /* UpdateCircleExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18778C572475435C006DE478 /* UpdateCircleExample.swift */; };
+		18778C5A24756C47006DE478 /* MultiplePolylinesExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18778C5924756C47006DE478 /* MultiplePolylinesExample.swift */; };
 		18894B8C23043476005DC142 /* LocationPuckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18894B8B23043476005DC142 /* LocationPuckView.swift */; };
 		188AE97821C7D66800D2C866 /* CustomAnnotationModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188AE97721C7D66800D2C866 /* CustomAnnotationModels.swift */; };
 		188AE97A21C7D92C00D2C866 /* CustomCalloutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188AE97921C7D92C00D2C866 /* CustomCalloutView.swift */; };
@@ -119,6 +122,9 @@
 		185B7FBF214B83C7000785FC /* MultipleShapesExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleShapesExample.swift; sourceTree = "<group>"; };
 		185B7FC1214B848F000785FC /* MultipleShapesExample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultipleShapesExample.h; sourceTree = "<group>"; };
 		185B7FC2214B848F000785FC /* MultipleShapesExample.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MultipleShapesExample.m; sourceTree = "<group>"; };
+		18778C4C24751F33006DE478 /* DraggableMapMarkerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraggableMapMarkerVC.swift; sourceTree = "<group>"; };
+		18778C572475435C006DE478 /* UpdateCircleExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateCircleExample.swift; sourceTree = "<group>"; };
+		18778C5924756C47006DE478 /* MultiplePolylinesExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplePolylinesExample.swift; sourceTree = "<group>"; };
 		18894B8B23043476005DC142 /* LocationPuckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPuckView.swift; sourceTree = "<group>"; };
 		18894B8D230438B3005DC142 /* ReverseGPX.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ReverseGPX.gpx; sourceTree = "<group>"; };
 		188AE97721C7D66800D2C866 /* CustomAnnotationModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnnotationModels.swift; sourceTree = "<group>"; };
@@ -288,7 +294,6 @@
 			isa = PBXGroup;
 			children = (
 				68417CC6210B32A700424A00 /* ListVC.swift */,
-				B16E4ACF246967A3004BF783 /* SafetyPluginVC.swift */,
 				68534689210EF14B000ED395 /* mapVC.swift */,
 				185B7FBF214B83C7000785FC /* MultipleShapesExample.swift */,
 				18BDD84D22F4005D00239CDC /* InteriorPolygonExample.swift */,
@@ -311,6 +316,10 @@
 				A49EB60E23DEC56A00A08E42 /* CustomCalloutViewForPolyline.swift */,
 				A49EB61223E004BA00A08E42 /* InteractiveMarkerVC.swift */,
 				A464438F23E2A9D60089E7CE /* PointOnMapVC.swift */,
+				B16E4ACF246967A3004BF783 /* SafetyPluginVC.swift */,
+				18778C4C24751F33006DE478 /* DraggableMapMarkerVC.swift */,
+				18778C572475435C006DE478 /* UpdateCircleExample.swift */,
+				18778C5924756C47006DE478 /* MultiplePolylinesExample.swift */,
 			);
 			path = Swift;
 			sourceTree = "<group>";
@@ -506,9 +515,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18778C5A24756C47006DE478 /* MultiplePolylinesExample.swift in Sources */,
 				188AE97A21C7D92C00D2C866 /* CustomCalloutView.swift in Sources */,
 				189D0B80230AA3E2005C8390 /* MMILocationPuckView.m in Sources */,
 				A41DFAC9239906CE00D39EF9 /* AutoSuggestVC.swift in Sources */,
+				18778C4D24751F33006DE478 /* DraggableMapMarkerVC.swift in Sources */,
 				A45C2998239A157100EC81F6 /* DefaultIndoorVC.swift in Sources */,
 				68417CC7210B32A700424A00 /* ListVC.swift in Sources */,
 				18894B8C23043476005DC142 /* LocationPuckView.swift in Sources */,
@@ -538,6 +549,7 @@
 				68534685210EDF59000ED395 /* ListVCOC.m in Sources */,
 				185B7FC0214B83C7000785FC /* MultipleShapesExample.swift in Sources */,
 				185B7FC3214B848F000785FC /* MultipleShapesExample.m in Sources */,
+				18778C582475435C006DE478 /* UpdateCircleExample.swift in Sources */,
 				6844DDB921116907007FCD61 /* Polyline.swift in Sources */,
 				68A6BF172106E03C00547929 /* AppDelegate.swift in Sources */,
 				6853468A210EF14B000ED395 /* mapVC.swift in Sources */,

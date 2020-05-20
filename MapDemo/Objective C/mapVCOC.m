@@ -687,6 +687,16 @@ CLLocation *referenceLocation = nil;
     return nil;
 }
 
+- (CGFloat)mapView:(MGLMapView *)mapView lineWidthForPolylineAnnotation:(MGLPolyline *)annotation
+{
+    return 10.0;
+}
+
+- (CGFloat)mapView:(MGLMapView *)mapView alphaForShapeAnnotation:(MGLShape *)annotation
+{
+    return 0.5;
+}
+
 //MARK: Gesture Method
 -(void)didTapMap:(UITapGestureRecognizer*)sender {
     CGPoint touchPoint = [sender locationInView:self.mapView];
