@@ -25,6 +25,7 @@ Powered with India's most comprehensive and robust mapping functionalities.
 
 | Version | Dated | Description |
 | :---- | :---- | :---- |
+| `1.4.1` | 03 June, 2020 | Xcode 11.5 compatibility. |
 | `1.4.0` | 07 May, 2020 | In Nearby API's request sortBy, searchBy and filter parameters added and in response pageInfo object is added. For AutoSuggest API caller, a new class `MapmyIndiaPinFilter` created to set its object in filter request parameter. |
 | `1.3.12` | 28 Apr, 2020 | Fix issue of Map SDK was in Debug mode. |
 | `1.3.11` | 21 Apr, 2020 | Feedback API wrapper added which can be used using `MapmyIndiaFeedbackAPIManager`. |
@@ -38,6 +39,7 @@ Powered with India's most comprehensive and robust mapping functionalities.
 
 | Version | Dated | Description |
 | :---- | :---- | :---- |
+| `5.7.6` | 03 June, 2020 | Xcode 11.5 compatibility. |
 | `5.7.5` | 12 May, 2020 | MapmyIndiaSafetyPlugin is added as dependency while installing through Cocoapods. |
 | `5.7.4` | 07 May, 2020 | Issue resolved, on disabling monument layer Dem layer got disabled. |
 | `5.7.3` | 28 Apr, 2020 | Fix issue of Map SDK was in Debug mode. |
@@ -50,6 +52,7 @@ Powered with India's most comprehensive and robust mapping functionalities.
 
 | Version | Dated | Description |
 | :---- | :---- | :---- |
+| `0.23.10` | 03 June, 2020 | Xcode 11.5 compatibility. |
 | `0.23.9` | 13 May, 2020 | While requesting for routes, by default value of routeShapeResolution i.e "overview" (request parameter) will be full. |
 | `0.23.8` | 23 Apr, 2020 | Initial release on Pods. |
 
