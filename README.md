@@ -56,6 +56,16 @@ Powered with India's most comprehensive and robust mapping functionalities.
 | `0.23.9` | 13 May, 2020 | While requesting for routes, by default value of routeShapeResolution i.e "overview" (request parameter) will be full. |
 | `0.23.8` | 23 Apr, 2020 | Initial release on Pods. |
 
+### [MapmyIndiaFeedbackKit](#MapmyIndiaFeedbackKit)
+
+Read [here](https://github.com/MapmyIndia/mapmyindia-maps-vectorSDK-iOS/wiki/MapmyIndia-Feedback-Kit) for more information about this module.
+
+[Release Notes]()
+
+| Version | Dated | Description |
+| :---- | :---- | :---- |
+| `1.0.0` | 05 June, 2020 | Initial release through CocoaPods. |
+
 ## [Version History](#Version-History)
 
 Below is version histroy of frameworks which were distributed through manual procedure.
