@@ -8,7 +8,7 @@ target 'MapDemo' do
   # Pods for MapDemo
   pod 'MapmyIndiaMaps'
   pod 'MapmyIndiaDirections'
-
+  pod 'MapmyIndiaFeedbackKit'
 end
 
 target 'MapmyIndiaFeedbackUIKit' do
@@ -16,5 +16,5 @@ target 'MapmyIndiaFeedbackUIKit' do
   use_frameworks!
 
   # Pods for MapmyIndiaFeedbackUIKit
-
+  pod 'MapmyIndiaFeedbackKit'
 end
