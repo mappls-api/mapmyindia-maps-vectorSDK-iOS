@@ -17,7 +17,7 @@ class ListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @objc var placemark: MapmyIndiaPlacemark?
     
-    let listArr:[String]? = ["Zoom Level", "Zoom Level With Animation", "Center With Animation", "Current Location","Tracking Mode", "Add Marker", "Add Multiple Markers With Bounds", "Custom Marker", "Animate Marker", "Draggable Marker", "Clustering Markers", "Interactive Markers", "Polyline", "Multiple Polylines", "Polygons", "Circles", "Update Circle", "Autosuggest", "Geocoding (Forward Geocode)", "Atlas Geocode", "Reverse Geocoding", "Nearby Search", "Place/eLoc Detail", "Driving Distance", "Distance Matrix", "Distance Matrix ETA", "Route", "Route Advance", "Route Advance ETA", "Feedback", "GeoJson Multiple Shapes", "Dashed Polyline", "Geodesic Polyline", "Interior Polygons", "Default Indoor", "Custom Indoor", "Point On Map", "Safety Plugin"]
+    let listArr:[String]? = ["Zoom Level", "Zoom Level With Animation", "Center With Animation", "Current Location","Tracking Mode", "Add Marker", "Add Multiple Markers With Bounds", "Custom Marker", "Animate Marker", "Draggable Marker", "Clustering Markers", "Interactive Markers", "Polyline", "Multiple Polylines", "Polygons", "Circles", "Update Circle", "Autosuggest", "Geocoding (Forward Geocode)", "Atlas Geocode", "Reverse Geocoding", "Nearby Search", "Place/eLoc Detail", "Driving Distance", "Distance Matrix", "Distance Matrix ETA", "Route", "Route Advance", "Route Advance ETA", "Feedback", "GeoJson Multiple Shapes", "Dashed Polyline", "Geodesic Polyline", "Interior Polygons", "Default Indoor", "Custom Indoor", "Point On Map", "Safety Plugin", "Covid Layers"]
     
     var placeDetails = [String]()
     
@@ -138,6 +138,11 @@ class ListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             case "Multiple Polylines":
                 let vc = MultiplePolylinesExample_Swift(nibName: nil, bundle: nil)
                 self.navigationController?.pushViewController(vc, animated: true)
+                break
+            case "Covid Layers":
+                if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CovidLayersExample") as? CovidLayersExample_Swift {
+                    self.navigationController?.pushViewController(vc, animated: true)
+                }
                 break
             default:
                 let vctrl = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "mapVC") as? mapVC

@@ -25,6 +25,7 @@ Powered with India's most comprehensive and robust mapping functionalities.
 
 | Version | Dated | Description |
 | :---- | :---- | :---- |
+| `1.4.2` | 08 June, 2020 | Interactive layer support for Map SDK. |
 | `1.4.1` | 03 June, 2020 | Xcode 11.5 compatibility. |
 | `1.4.0` | 07 May, 2020 | In Nearby API's request sortBy, searchBy and filter parameters added and in response pageInfo object is added. For AutoSuggest API caller, a new class `MapmyIndiaPinFilter` created to set its object in filter request parameter. |
 | `1.3.12` | 28 Apr, 2020 | Fix issue of Map SDK was in Debug mode. |
@@ -39,6 +40,7 @@ Powered with India's most comprehensive and robust mapping functionalities.
 
 | Version | Dated | Description |
 | :---- | :---- | :---- |
+| `5.7.7` | 08 June, 2020 | Show interactive layers(such as Covid-19) on map. For more details go to page [MapmyIndia Interactive Layers](https://github.com/MapmyIndia/mapmyindia-maps-vectorSDK-iOS/wiki/MapmyIndia-Interactive-Layers). |
 | `5.7.6` | 03 June, 2020 | Xcode 11.5 compatibility. |
 | `5.7.5` | 12 May, 2020 | MapmyIndiaSafetyPlugin is added as dependency while installing through Cocoapods. |
 | `5.7.4` | 07 May, 2020 | Issue resolved, on disabling monument layer Dem layer got disabled. |
@@ -149,26 +151,25 @@ You can also set these required keys programmatically.
 Add the following to your `application:didFinishLaunchingWithOptions`: method, replacing `restAPIKey` and `mapSDKKey` with your own API keys:
 
 #### Objective C
-```objectivec
 
+```objectivec
 [MapmyIndiaAccountManager setMapSDKKey:@"MAP SDK_KEY"];
 [MapmyIndiaAccountManager setRestAPIKey:@"REST API_KEY"];
 [MapmyIndiaAccountManager setAtlasClientId:@"ATLAS CLIENT_ID"];
 [MapmyIndiaAccountManager setAtlasClientSecret:@"ATLAS CLIENT_SECRET"];
 [MapmyIndiaAccountManager setAtlasGrantType:@"GRANT_TYPE"]; //always put client_credentials
 [MapmyIndiaAccountManager setAtlasAPIVersion:@"1.3.11"]; // Optional; deprecated
-
 ```
-#### Swift
-```swift
 
+#### Swift
+
+```swift
 MapmyIndiaAccountManager.setMapSDKKey("MAP SDK_KEY")
 MapmyIndiaAccountManager.setRestAPIKey("REST API_KEY")
 MapmyIndiaAccountManager.setAtlasClientId("ATLAS CLIENT_ID")
 MapmyIndiaAccountManager.setAtlasClientSecret("ATLAS CLIENT_SECRET")
 MapmyIndiaAccountManager.setAtlasGrantType("GRANT_TYPE") //always put client_credentials
 MapmyIndiaAccountManager.setAtlasAPIVersion("1.3.11") // Optional; deprecated
-
 ```
 
 For more information click [Wiki](https://github.com/MapmyIndia/mapmyindia-maps-vectorSDK-iOS/wiki)

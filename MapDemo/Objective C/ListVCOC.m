@@ -10,6 +10,7 @@
 #import "mapVCOC.h"
 #import "MultipleShapesExample.h"
 #import "HighlightPointExample.h"
+#import "CovidLayersExample.h"
 
 #define CASE(str)                       if ([__s__ isEqualToString:(str)])
 #define SWITCH(s)                       for (NSString *__s__ = (s); ; )
@@ -36,7 +37,7 @@
 -(void)setUpGUI {
     self.navigationItem.title = @"Objective C";
     _listArr = @[ @"Zoom Level", @"Zoom Level With Animation", @"Center With Animation", @"Current Location",@"Tracking Mode", @"Add Marker", @"Add Multiple Markers With Bounds", @"Polyline" ,@"Polygons",
-                  @"Autosuggest", @"Geocoding (Forward Geocode)", @"Atlas Geocode", @"Reverse Geocoding", @"Nearby Search", @"Place/eLoc Detail", @"Driving Distance", @"Distance Matrix", @"Distance Matrix ETA", @"Route", @"Route Advance", @"Route Advance ETA", @"Feedback", @"Animate Marker", @"GeoJson Multiple Shapes", @"Custom Marker", @"Interior Polygons"
+                  @"Autosuggest", @"Geocoding (Forward Geocode)", @"Atlas Geocode", @"Reverse Geocoding", @"Nearby Search", @"Place/eLoc Detail", @"Driving Distance", @"Distance Matrix", @"Distance Matrix ETA", @"Route", @"Route Advance", @"Route Advance ETA", @"Feedback", @"Animate Marker", @"GeoJson Multiple Shapes", @"Custom Marker", @"Interior Polygons", @"Covid Layers"
                   ];
 }
 
@@ -82,6 +83,12 @@
         CASE (@"Interior Polygons") {
             HighlightPointExample *vc = [[HighlightPointExample alloc] initWithNibName:nil bundle:nil];
             [self.navigationController pushViewController:vc animated:true];
+            break;
+        }
+        CASE (@"Covid Layers") {
+            UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"MainC" bundle:nil];
+            CovidLayersExample *controller = [storyboard instantiateViewControllerWithIdentifier:@"CovidLayersExample"];
+            [self.navigationController pushViewController:controller animated:YES];
             break;
         }
         DEFAULT {

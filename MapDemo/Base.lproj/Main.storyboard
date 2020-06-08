@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="p43-aa-NlM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="p43-aa-NlM">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -874,6 +874,66 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vDQ-By-lov" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3031" y="407"/>
+        </scene>
+        <!--Covid Layers Example Swift-->
+        <scene sceneID="wV7-1F-sUl">
+            <objects>
+                <viewController storyboardIdentifier="CovidLayersExample" id="PlH-b2-Y3F" customClass="CovidLayersExample_Swift" customModule="MapDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Czg-Y3-f4w">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="awj-OM-Yqu" customClass="MapmyIndiaMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aXa-4p-HYO">
+                                <rect key="frame" x="213" y="60" width="142" height="30"/>
+                                <state key="normal" title="Covid Marker Enable"/>
+                                <connections>
+                                    <action selector="covidMarkerToggleButtonPressed:" destination="PlH-b2-Y3F" eventType="touchUpInside" id="fEF-fv-C1R"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ezq-HD-RNv">
+                                <rect key="frame" x="243" y="120" width="112" height="30"/>
+                                <state key="normal" title="Covid-19 Layers"/>
+                                <connections>
+                                    <action selector="covid19ButtonPressed:" destination="PlH-b2-Y3F" eventType="touchUpInside" id="sUs-Bx-5MM"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ok7-Xg-odD">
+                                <rect key="frame" x="0.0" y="646.5" width="375" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="awj-OM-Yqu" firstAttribute="leading" secondItem="evV-E7-i9K" secondAttribute="leading" id="0Bq-mA-IpF"/>
+                            <constraint firstItem="aXa-4p-HYO" firstAttribute="top" secondItem="evV-E7-i9K" secondAttribute="top" constant="60" id="ANB-8K-8lg"/>
+                            <constraint firstItem="evV-E7-i9K" firstAttribute="bottom" secondItem="awj-OM-Yqu" secondAttribute="bottom" id="KVP-oo-sbV"/>
+                            <constraint firstItem="evV-E7-i9K" firstAttribute="trailing" secondItem="aXa-4p-HYO" secondAttribute="trailing" constant="20" id="TmY-HA-869"/>
+                            <constraint firstItem="evV-E7-i9K" firstAttribute="trailing" secondItem="Ok7-Xg-odD" secondAttribute="trailing" id="XYw-lJ-byA"/>
+                            <constraint firstItem="evV-E7-i9K" firstAttribute="trailing" secondItem="Ezq-HD-RNv" secondAttribute="trailing" constant="20" id="mNq-8R-MMP"/>
+                            <constraint firstItem="Ezq-HD-RNv" firstAttribute="top" secondItem="aXa-4p-HYO" secondAttribute="bottom" constant="30" id="qYd-dp-4hQ"/>
+                            <constraint firstItem="awj-OM-Yqu" firstAttribute="top" secondItem="evV-E7-i9K" secondAttribute="top" id="s5Q-Cp-O53"/>
+                            <constraint firstItem="evV-E7-i9K" firstAttribute="bottom" secondItem="Ok7-Xg-odD" secondAttribute="bottom" id="vQm-gO-Nu9"/>
+                            <constraint firstItem="Ok7-Xg-odD" firstAttribute="leading" secondItem="evV-E7-i9K" secondAttribute="leading" id="xe7-yg-YXb"/>
+                            <constraint firstItem="evV-E7-i9K" firstAttribute="trailing" secondItem="awj-OM-Yqu" secondAttribute="trailing" id="y4M-fe-VyF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="evV-E7-i9K"/>
+                    </view>
+                    <connections>
+                        <outlet property="covid19Button" destination="Ezq-HD-RNv" id="dtZ-y5-B3u"/>
+                        <outlet property="covidInfoLabel" destination="Ok7-Xg-odD" id="Lrs-Hx-LOU"/>
+                        <outlet property="covidMarkerToggleButton" destination="aXa-4p-HYO" id="oRW-rT-Bz5"/>
+                        <outlet property="mapView" destination="awj-OM-Yqu" id="cvb-Ib-wSZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9eo-62-koT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4673" y="-407"/>
         </scene>
     </scenes>
     <resources>
