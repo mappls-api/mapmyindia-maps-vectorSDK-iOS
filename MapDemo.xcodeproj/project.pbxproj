@@ -15,6 +15,8 @@
 		18404BD72303C974001D8DC0 /* GeodesicPolylineExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18404BD62303C974001D8DC0 /* GeodesicPolylineExample.swift */; };
 		18404BD92303D44D001D8DC0 /* ClusterMarkersExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18404BD82303D44D001D8DC0 /* ClusterMarkersExample.swift */; };
 		1859BB872304041F007D70CF /* SphericalUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1859BB862304041F007D70CF /* SphericalUtil.swift */; };
+		185A74EE249B4C5300081DAE /* CovidSafetyStatusExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185A74ED249B4C5300081DAE /* CovidSafetyStatusExample.swift */; };
+		185A74F1249B4C7C00081DAE /* CovidSafetyStatusExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 185A74F0249B4C7C00081DAE /* CovidSafetyStatusExample.m */; };
 		185B7FBE214B8333000785FC /* metro-line.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 185B7FBD214B8333000785FC /* metro-line.geojson */; };
 		185B7FC0214B83C7000785FC /* MultipleShapesExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B7FBF214B83C7000785FC /* MultipleShapesExample.swift */; };
 		185B7FC3214B848F000785FC /* MultipleShapesExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 185B7FC2214B848F000785FC /* MultipleShapesExample.m */; };
@@ -116,6 +118,9 @@
 		18404BD62303C974001D8DC0 /* GeodesicPolylineExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeodesicPolylineExample.swift; sourceTree = "<group>"; };
 		18404BD82303D44D001D8DC0 /* ClusterMarkersExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClusterMarkersExample.swift; sourceTree = "<group>"; };
 		1859BB862304041F007D70CF /* SphericalUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SphericalUtil.swift; sourceTree = "<group>"; };
+		185A74ED249B4C5300081DAE /* CovidSafetyStatusExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidSafetyStatusExample.swift; sourceTree = "<group>"; };
+		185A74EF249B4C7C00081DAE /* CovidSafetyStatusExample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CovidSafetyStatusExample.h; sourceTree = "<group>"; };
+		185A74F0249B4C7C00081DAE /* CovidSafetyStatusExample.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CovidSafetyStatusExample.m; sourceTree = "<group>"; };
 		185B7FBD214B8333000785FC /* metro-line.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "metro-line.geojson"; sourceTree = "<group>"; };
 		185B7FBF214B83C7000785FC /* MultipleShapesExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleShapesExample.swift; sourceTree = "<group>"; };
 		185B7FC1214B848F000785FC /* MultipleShapesExample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultipleShapesExample.h; sourceTree = "<group>"; };
@@ -290,6 +295,8 @@
 				186D0210248E266F006F1C84 /* CovidLayersExample.m */,
 				186D020F248E266F006F1C84 /* MMIInteractiveLayersTableViewController.h */,
 				186D020E248E266F006F1C84 /* MMIInteractiveLayersTableViewController.m */,
+				185A74EF249B4C7C00081DAE /* CovidSafetyStatusExample.h */,
+				185A74F0249B4C7C00081DAE /* CovidSafetyStatusExample.m */,
 			);
 			path = "Objective C";
 			sourceTree = "<group>";
@@ -326,6 +333,7 @@
 				18778C5924756C47006DE478 /* MultiplePolylinesExample.swift */,
 				186D0209248E25F4006F1C84 /* CovidLayersExample.swift */,
 				186D020A248E25F4006F1C84 /* CovidLayersTableVC.swift */,
+				185A74ED249B4C5300081DAE /* CovidSafetyStatusExample.swift */,
 			);
 			path = Swift;
 			sourceTree = "<group>";
@@ -537,6 +545,7 @@
 				1859BB872304041F007D70CF /* SphericalUtil.swift in Sources */,
 				18404BD72303C974001D8DC0 /* GeodesicPolylineExample.swift in Sources */,
 				6853468D210EF161000ED395 /* mapVCOC.m in Sources */,
+				185A74EE249B4C5300081DAE /* CovidSafetyStatusExample.swift in Sources */,
 				183207B822FAC5A900C738FF /* HighlightPointExample.swift in Sources */,
 				A49EB61323E004BA00A08E42 /* InteractiveMarkerVC.swift in Sources */,
 				A464439023E2A9D60089E7CE /* PointOnMapVC.swift in Sources */,
@@ -562,6 +571,7 @@
 				18778C582475435C006DE478 /* UpdateCircleExample.swift in Sources */,
 				6844DDB921116907007FCD61 /* Polyline.swift in Sources */,
 				68A6BF172106E03C00547929 /* AppDelegate.swift in Sources */,
+				185A74F1249B4C7C00081DAE /* CovidSafetyStatusExample.m in Sources */,
 				6853468A210EF14B000ED395 /* mapVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -794,7 +804,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 19;
+				CURRENT_PROJECT_VERSION = 20;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 22L95D5KTZ;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -809,7 +819,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.4.9;
+				MARKETING_VERSION = 1.4.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mmi.MapDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "MapDemo/Objective C/MapDemo-Bridging-Header.h";
@@ -825,7 +835,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 19;
+				CURRENT_PROJECT_VERSION = 20;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 22L95D5KTZ;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -840,7 +850,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.4.9;
+				MARKETING_VERSION = 1.4.10;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mmi.MapDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -208,5 +208,63 @@
             </objects>
             <point key="canvasLocation" x="1919" y="-134"/>
         </scene>
+        <!--Covid Safety Status Example-->
+        <scene sceneID="yuv-eE-h9v">
+            <objects>
+                <viewController storyboardIdentifier="CovidSafetyStatusExample" id="daO-3y-oQ4" customClass="CovidSafetyStatusExample" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xFX-He-PZf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Ym-02-Q2w" customClass="MapmyIndiaMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UrS-wB-1J6">
+                                <rect key="frame" x="239" y="318.5" width="116" height="30"/>
+                                <state key="normal" title="Hide Status Strip"/>
+                                <connections>
+                                    <action selector="hideSafetyStatusButtonPressed:" destination="daO-3y-oQ4" eventType="touchUpInside" id="UY3-xS-aUG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3PY-mD-CmY">
+                                <rect key="frame" x="0.0" y="607" width="375" height="60"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="LOP-Na-oKP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Get Safety Status">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="getCurrentSafetyButtonPressed:" destination="daO-3y-oQ4" eventType="touchUpInside" id="AJv-B6-ZsT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="MhL-Xr-Cau" firstAttribute="bottom" secondItem="3PY-mD-CmY" secondAttribute="bottom" id="7oM-rN-Lvk"/>
+                            <constraint firstItem="MhL-Xr-Cau" firstAttribute="trailing" secondItem="UrS-wB-1J6" secondAttribute="trailing" constant="20" id="Gwb-oK-86a"/>
+                            <constraint firstItem="9Ym-02-Q2w" firstAttribute="top" secondItem="MhL-Xr-Cau" secondAttribute="top" id="H9v-d3-4um"/>
+                            <constraint firstItem="3PY-mD-CmY" firstAttribute="leading" secondItem="MhL-Xr-Cau" secondAttribute="leading" id="KeB-7B-NEj"/>
+                            <constraint firstItem="9Ym-02-Q2w" firstAttribute="leading" secondItem="MhL-Xr-Cau" secondAttribute="leading" id="LGT-dn-EzO"/>
+                            <constraint firstItem="MhL-Xr-Cau" firstAttribute="bottom" secondItem="9Ym-02-Q2w" secondAttribute="bottom" id="U8j-ki-d90"/>
+                            <constraint firstItem="MhL-Xr-Cau" firstAttribute="trailing" secondItem="3PY-mD-CmY" secondAttribute="trailing" id="W2c-40-Qe8"/>
+                            <constraint firstItem="UrS-wB-1J6" firstAttribute="centerY" secondItem="MhL-Xr-Cau" secondAttribute="centerY" id="aZZ-gU-6KX"/>
+                            <constraint firstItem="MhL-Xr-Cau" firstAttribute="trailing" secondItem="9Ym-02-Q2w" secondAttribute="trailing" id="m0v-ek-OM4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MhL-Xr-Cau"/>
+                    </view>
+                    <connections>
+                        <outlet property="getCurrentSafetyButton" destination="3PY-mD-CmY" id="glA-ci-qVI"/>
+                        <outlet property="hideSafetyStatusButton" destination="UrS-wB-1J6" id="Fyt-hI-fpn"/>
+                        <outlet property="mapView" destination="9Ym-02-Q2w" id="S3c-NJ-deR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H5Y-q8-Yf9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2874" y="-134"/>
+        </scene>
     </scenes>
 </document>
