@@ -25,6 +25,7 @@ Powered with India's most comprehensive and robust mapping functionalities.
 
 | Version | Dated | Description |
 | :---- | :---- | :---- |
+| `1.4.4` | 23 June, 2020 | Support for global Map session added. (For Map SDK version - 5.7.9). |
 | `1.4.3` | 18 June, 2020 | Some classes are created which is to be used in Maps SDK (version - 5.7.8). |
 | `1.4.2` | 08 June, 2020 | Interactive layer support for Map SDK. |
 | `1.4.1` | 03 June, 2020 | Xcode 11.5 compatibility. |
@@ -41,6 +42,7 @@ Powered with India's most comprehensive and robust mapping functionalities.
 
 | Version | Dated | Description |
 | :---- | :---- | :---- |
+| `5.7.9` | 23 June, 2020 | Global session managed for map SDK. |
 | `5.7.8` | 18 June, 2020 | Feature of showing COVID-19 safety status on map is added. On basis of this feature user's safety status can be shown on basis of user's current location. For More info goto [Safety Strip](https://github.com/MapmyIndia/mapmyindia-maps-vectorSDK-iOS/wiki/MapmyIndia-Safety-Strip).|
 | `5.7.7` | 08 June, 2020 | Show interactive layers(such as Covid-19) on map. For more details go to page [MapmyIndia Interactive Layers](https://github.com/MapmyIndia/mapmyindia-maps-vectorSDK-iOS/wiki/MapmyIndia-Interactive-Layers). |
 | `5.7.6` | 03 June, 2020 | Xcode 11.5 compatibility. |
