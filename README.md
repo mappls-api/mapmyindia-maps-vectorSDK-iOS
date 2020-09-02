@@ -75,6 +75,12 @@ Read [here](https://github.com/MapmyIndia/mapmyindia-maps-vectorSDK-iOS/wiki/Map
 | :---- | :---- | :---- |
 | `1.0.0` | 05 June, 2020 | Initial release through CocoaPods. |
 
+### [MapmyIndiaUIWidgets](#MapmyIndiaUIWidgets)
+
+Read [here](https://github.com/MapmyIndia/mapmyindia-maps-vectorSDK-iOS/wiki/MapmyIndiaUIWidgets) for more information about this module.
+
+Also version history can be seen by following [Version History](https://github.com/MapmyIndia/mapmyindia-maps-vectorSDK-iOS/wiki/MapmyIndiaUIWidgets#Version-History).
+
 ## [Version History](#Version-History)
 
 Below is version histroy of frameworks which were distributed through manual procedure.
@@ -118,12 +124,14 @@ After cloning of this repo follow below steps
 - `pod install` or `pod update` (to update existing pods)
 - `open MapDemo.xcworkspace`
 
-MapmyIndiaAPIKit, MapmyIndiaMaps and MapmyIndiaDirections are available on Cocoapods which care accessible using below pod commands:
+`MapmyIndiaAPIKit`, `MapmyIndiaMaps`, `MapmyIndiaDirections`, `MapmyIndiaFeedbackKit` and `MapmyIndiaUIWidgets` are available on Cocoapods which care accessible using below pod commands:
 
 ```Cocoapods
 pod 'MapmyIndiaAPIKit'
 pod 'MapmyIndiaMaps'
 pod 'MapmyIndiaDirections'
+pod 'MapmyIndiaFeedbackKit'
+pod 'MapmyIndiaUIWidgets'
 ```
 
 **Version histroy** on Cocoapods for each can be found above [here](#Cocoapods-Version-History)

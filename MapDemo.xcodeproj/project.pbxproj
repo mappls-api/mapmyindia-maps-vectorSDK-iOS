@@ -20,6 +20,10 @@
 		185B7FBE214B8333000785FC /* metro-line.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 185B7FBD214B8333000785FC /* metro-line.geojson */; };
 		185B7FC0214B83C7000785FC /* MultipleShapesExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B7FBF214B83C7000785FC /* MultipleShapesExample.swift */; };
 		185B7FC3214B848F000785FC /* MultipleShapesExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 185B7FC2214B848F000785FC /* MultipleShapesExample.m */; };
+		1861995C24DBE040004D5547 /* PlacePickerViewExampleLauncherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1861995A24DBE03F004D5547 /* PlacePickerViewExampleLauncherVC.swift */; };
+		1861995D24DBE040004D5547 /* PlacePickerViewExampleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1861995B24DBE03F004D5547 /* PlacePickerViewExampleVC.swift */; };
+		1861996624DC305A004D5547 /* MapDemoSettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1861996524DC305A004D5547 /* MapDemoSettingsVC.swift */; };
+		1861996824DC30C5004D5547 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1861996724DC30C5004D5547 /* UserDefaultsManager.swift */; };
 		186D020B248E25F4006F1C84 /* CovidLayersExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186D0209248E25F4006F1C84 /* CovidLayersExample.swift */; };
 		186D020C248E25F4006F1C84 /* CovidLayersTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186D020A248E25F4006F1C84 /* CovidLayersTableVC.swift */; };
 		186D0211248E266F006F1C84 /* MMIInteractiveLayersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186D020E248E266F006F1C84 /* MMIInteractiveLayersTableViewController.m */; };
@@ -125,6 +129,10 @@
 		185B7FBF214B83C7000785FC /* MultipleShapesExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleShapesExample.swift; sourceTree = "<group>"; };
 		185B7FC1214B848F000785FC /* MultipleShapesExample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultipleShapesExample.h; sourceTree = "<group>"; };
 		185B7FC2214B848F000785FC /* MultipleShapesExample.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MultipleShapesExample.m; sourceTree = "<group>"; };
+		1861995A24DBE03F004D5547 /* PlacePickerViewExampleLauncherVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacePickerViewExampleLauncherVC.swift; sourceTree = "<group>"; };
+		1861995B24DBE03F004D5547 /* PlacePickerViewExampleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacePickerViewExampleVC.swift; sourceTree = "<group>"; };
+		1861996524DC305A004D5547 /* MapDemoSettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDemoSettingsVC.swift; sourceTree = "<group>"; };
+		1861996724DC30C5004D5547 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		186D0209248E25F4006F1C84 /* CovidLayersExample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CovidLayersExample.swift; sourceTree = "<group>"; };
 		186D020A248E25F4006F1C84 /* CovidLayersTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CovidLayersTableVC.swift; sourceTree = "<group>"; };
 		186D020D248E266F006F1C84 /* CovidLayersExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CovidLayersExample.h; sourceTree = "<group>"; };
@@ -217,6 +225,24 @@
 			path = Dependencies;
 			sourceTree = "<group>";
 		};
+		1861995924DBE02D004D5547 /* PlacePicker */ = {
+			isa = PBXGroup;
+			children = (
+				1861995A24DBE03F004D5547 /* PlacePickerViewExampleLauncherVC.swift */,
+				1861995B24DBE03F004D5547 /* PlacePickerViewExampleVC.swift */,
+			);
+			path = PlacePicker;
+			sourceTree = "<group>";
+		};
+		1861996424DC302A004D5547 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				1861996524DC305A004D5547 /* MapDemoSettingsVC.swift */,
+				1861996724DC30C5004D5547 /* UserDefaultsManager.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		18E87E3421400FAD00F1C866 /* MapmyIndiaFeedbackUIKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -304,6 +330,8 @@
 		68417CC3210B2DCE00424A00 /* Swift */ = {
 			isa = PBXGroup;
 			children = (
+				1861996424DC302A004D5547 /* Settings */,
+				1861995924DBE02D004D5547 /* PlacePicker */,
 				68417CC6210B32A700424A00 /* ListVC.swift */,
 				68534689210EF14B000ED395 /* mapVC.swift */,
 				185B7FBF214B83C7000785FC /* MultipleShapesExample.swift */,
@@ -540,7 +568,9 @@
 				18894B8C23043476005DC142 /* LocationPuckView.swift in Sources */,
 				A49EB60923DC00EB00A08E42 /* InstructionTableViewCell.swift in Sources */,
 				A4DA1E9623DB16BF0010743F /* DirectionIndicationViewStyleKit.swift in Sources */,
+				1861996624DC305A004D5547 /* MapDemoSettingsVC.swift in Sources */,
 				68417CC5210B329100424A00 /* InitialVC.swift in Sources */,
+				1861995D24DBE040004D5547 /* PlacePickerViewExampleVC.swift in Sources */,
 				A49EB60F23DEC56A00A08E42 /* CustomCalloutViewForPolyline.swift in Sources */,
 				1859BB872304041F007D70CF /* SphericalUtil.swift in Sources */,
 				18404BD72303C974001D8DC0 /* GeodesicPolylineExample.swift in Sources */,
@@ -550,6 +580,7 @@
 				A49EB61323E004BA00A08E42 /* InteractiveMarkerVC.swift in Sources */,
 				A464439023E2A9D60089E7CE /* PointOnMapVC.swift in Sources */,
 				A4ACEA4D23D80C6400447644 /* InstructionTableVC.swift in Sources */,
+				1861995C24DBE040004D5547 /* PlacePickerViewExampleLauncherVC.swift in Sources */,
 				18404BD92303D44D001D8DC0 /* ClusterMarkersExample.swift in Sources */,
 				68A6BF192106E03C00547929 /* ViewController.swift in Sources */,
 				A4DA1E9523DB16BF0010743F /* DirectionIndicationView.swift in Sources */,
@@ -564,6 +595,7 @@
 				188AE97D21C7DAF500D2C866 /* CustomInfoWindowView.m in Sources */,
 				189D0BC5230CFDC5005C8390 /* HighlightPointExample.m in Sources */,
 				A45C2997239A157100EC81F6 /* CustomIndoorVC.swift in Sources */,
+				1861996824DC30C5004D5547 /* UserDefaultsManager.swift in Sources */,
 				68534685210EDF59000ED395 /* ListVCOC.m in Sources */,
 				185B7FC0214B83C7000785FC /* MultipleShapesExample.swift in Sources */,
 				186D0212248E266F006F1C84 /* CovidLayersExample.m in Sources */,
@@ -804,7 +836,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 20;
+				CURRENT_PROJECT_VERSION = 21;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 22L95D5KTZ;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -819,7 +851,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.4.10;
+				MARKETING_VERSION = 1.4.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mmi.MapDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "MapDemo/Objective C/MapDemo-Bridging-Header.h";
@@ -835,7 +867,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 20;
+				CURRENT_PROJECT_VERSION = 21;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 22L95D5KTZ;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -850,7 +882,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.4.10;
+				MARKETING_VERSION = 1.4.11;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mmi.MapDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";

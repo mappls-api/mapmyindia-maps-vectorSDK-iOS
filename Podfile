@@ -9,6 +9,7 @@ target 'MapDemo' do
   pod 'MapmyIndiaMaps'
   pod 'MapmyIndiaDirections'
   pod 'MapmyIndiaFeedbackKit'
+  pod 'MapmyIndiaUIWidgets'
 end
 
 target 'MapmyIndiaFeedbackUIKit' do
