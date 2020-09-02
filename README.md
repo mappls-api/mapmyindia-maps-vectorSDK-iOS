@@ -21,21 +21,9 @@ Powered with India's most comprehensive and robust mapping functionalities.
 
 ### [MapmyIndiaAPIKit](#MapmyIndiaAPIKit)
 
-[Release Notes]()
+Read [here](https://github.com/MapmyIndia/mapmyindia-maps-vectorSDK-iOS/wiki/REST-API-Kit) for more information about this module.
 
-| Version | Dated | Description |
-| :---- | :---- | :---- |
-| `1.4.5` | 29 July, 2020 | Isssue resolved where style parameter was not passed in Covid Information API call. |
-| `1.4.4` | 23 June, 2020 | Support for global Map session added. (For Map SDK version - 5.7.9). |
-| `1.4.3` | 18 June, 2020 | Some classes are created which is to be used in Maps SDK (version - 5.7.8). |
-| `1.4.2` | 08 June, 2020 | Interactive layer support for Map SDK. |
-| `1.4.1` | 03 June, 2020 | Xcode 11.5 compatibility. |
-| `1.4.0` | 07 May, 2020 | In Nearby API's request sortBy, searchBy and filter parameters added and in response pageInfo object is added. For AutoSuggest API caller, a new class `MapmyIndiaPinFilter` created to set its object in filter request parameter. |
-| `1.3.12` | 28 Apr, 2020 | Fix issue of Map SDK was in Debug mode. |
-| `1.3.11` | 21 Apr, 2020 | Feedback API wrapper added which can be used using `MapmyIndiaFeedbackAPIManager`. |
-| `1.3.10` | 24 Mar, 2020 | Minor fixes for tile issue (For Map SDK). |
-| `1.3.9` | 24 Mar, 2020 | Promotional API wrapper added (For Map SDK to show Corona Link Button), Geocode API issue fixed for not getting eLco parameter. |
-| `1.3.8` | 11 Dec, 2019 | Configuration settings added to enable disable default Indoor UI. |
+Also version history can be seen by following [Version History](https://github.com/MapmyIndia/mapmyindia-maps-vectorSDK-iOS/wiki/REST-API-Kit#Version-History).
 
 ### [MapmyIndiaMaps](#MapmyIndiaMaps)
 
@@ -43,6 +31,7 @@ Powered with India's most comprehensive and robust mapping functionalities.
 
 | Version | Dated | Description |
 | :---- | :---- | :---- |
+| `5.7.12` | 12 Aug, 2020 | Code improvement made for map tyles. |
 | `5.7.11` | 29 July, 2020 | A info window like marker will be shown instead of default marker on click on map for covid WMS. |
 | `5.7.10` | 15 July, 2020 | Fixed memory consumption issue. |
 | `5.7.9` | 23 June, 2020 | Global session managed for map SDK. |
