@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Polyline
 import MapmyIndiaMaps
 import MapmyIndiaAPIKit
 import MapmyIndiaDirections

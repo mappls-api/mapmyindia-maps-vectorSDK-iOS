@@ -1,5 +1,52 @@
 # Changes to the MapmyIndia's Sample for available iOS SDKs
 
+## 1.4.12 - 08 June, 2020
+
+### Added
+
+- Sample for "POI Along The Route" API wrapper is added. API wrapper for "POI Along The Route" was released in version number 1.4.8 of `MapmyIndiaAPIKit`.
+
+### Changed
+
+- Polyline file is removed from project to use it directly through `Polyline` library.
+
+## 1.4.11 - 03 Sep, 2020
+
+### Added
+
+- Sample for Place Picker is added with settings page to check configuration of Place Picker at run time.
+
+### Fixed
+
+- Map SDK update for managing Global session.
+- Map SDK update with version 5.7.10 to fix issue of memory consumption. 
+- Option to choose example of "Covid 19 Layers" was not exists in list of samples.
+- README file is updated for version related and other information.
+
+## 1.4.10 - 18 June, 2020
+
+### Added
+
+- A sample is added to demonstrate feature to show safety status on map.
+
+## 1.4.9 - 08 June, 2020
+
+### Added
+
+- A sample is added in demo project to show interactive layers on map based on updated SDKs.
+
+## 1.4.8 - 05 June, 2020
+
+### Updated
+
+- README file updated for updated information.
+
+## 1.4.7 - 03 June, 2020
+
+#### Fixed
+
+- Made SDKs compatible to Xcode 11.5.
+
 ## 1.4.6 - 13 May, 2020
 
 #### Changed
