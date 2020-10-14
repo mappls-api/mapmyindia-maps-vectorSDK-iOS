@@ -3,13 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		00D33398245308C70038ADAE /* MapmyIndiaFeedbackUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E87E3321400FAD00F1C866 /* MapmyIndiaFeedbackUIKit.framework */; };
 		00D33399245308C70038ADAE /* MapmyIndiaFeedbackUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 18E87E3321400FAD00F1C866 /* MapmyIndiaFeedbackUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		182AEADD243B36B800EDC300 /* temp.json in Resources */ = {isa = PBXBuildFile; fileRef = 182AEADC243B36B800EDC300 /* temp.json */; };
+		182D24D3251B46F70098914F /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182D24D2251B46F70098914F /* UIViewController+Extension.swift */; };
 		183207B822FAC5A900C738FF /* HighlightPointExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183207B722FAC5A900C738FF /* HighlightPointExample.swift */; };
 		18404BD52303C435001D8DC0 /* DashedPolylineExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18404BD42303C435001D8DC0 /* DashedPolylineExample.swift */; };
 		18404BD72303C974001D8DC0 /* GeodesicPolylineExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18404BD62303C974001D8DC0 /* GeodesicPolylineExample.swift */; };
@@ -39,6 +40,10 @@
 		189D0BC5230CFDC5005C8390 /* HighlightPointExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 189D0BC4230CFDC5005C8390 /* HighlightPointExample.m */; };
 		18BA17E3229E8FF000B0B135 /* GreatCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BA17E2229E8FF000B0B135 /* GreatCircle.swift */; };
 		18BDD84E22F4005D00239CDC /* InteriorPolygonExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BDD84D22F4005D00239CDC /* InteriorPolygonExample.swift */; };
+		18C9EAFC251B6C2A00F95580 /* AutosuggestWidgetTextFieldSearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C9EAFB251B6C2A00F95580 /* AutosuggestWidgetTextFieldSearchVC.swift */; };
+		18C9EAFE251B7E4600F95580 /* AutosuggestCustomUISearchControllerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C9EAFD251B7E4600F95580 /* AutosuggestCustomUISearchControllerVC.swift */; };
+		18D14C9D251A39B5004A6D32 /* AutosuggestWidgetExamplesLauncherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D14C9C251A39B5004A6D32 /* AutosuggestWidgetExamplesLauncherVC.swift */; };
+		18D14CA3251A5C35004A6D32 /* AutosuggestWidgetSampleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D14CA2251A5C35004A6D32 /* AutosuggestWidgetSampleType.swift */; };
 		18E87E3721400FAD00F1C866 /* MapmyIndiaFeedbackUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 18E87E3521400FAD00F1C866 /* MapmyIndiaFeedbackUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		18E87E4721400FE700F1C866 /* MapmyIndiaReportCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E87E4121400FE700F1C866 /* MapmyIndiaReportCategoryCell.swift */; };
 		18E87E4821400FE700F1C866 /* MapmyIndiaReportCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18E87E4221400FE700F1C866 /* MapmyIndiaReportCategoryCell.xib */; };
@@ -48,6 +53,7 @@
 		18E87E4E2140100300F1C866 /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18E87E4D2140100300F1C866 /* Image.xcassets */; };
 		18E87E502140100F00F1C866 /* MapmyIndiaFeedbackUIKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E87E4F2140100F00F1C866 /* MapmyIndiaFeedbackUIKitManager.swift */; };
 		18EF185E250A03EE0067182A /* POIsAlongTheRouteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EF185D250A03EE0067182A /* POIsAlongTheRouteVC.swift */; };
+		18F45358251A81BB0091A898 /* MapmyIndiaStyledAutocompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F45357251A81BB0091A898 /* MapmyIndiaStyledAutocompleteViewController.swift */; };
 		18F576D023FEA83B0009A2D9 /* TextInstructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F576CF23FEA83B0009A2D9 /* TextInstructions.swift */; };
 		18F576D223FEAA880009A2D9 /* TextInstructions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18F576D123FEAA880009A2D9 /* TextInstructions.plist */; };
 		68417CC5210B329100424A00 /* InitialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68417CC4210B329100424A00 /* InitialVC.swift */; };
@@ -117,6 +123,7 @@
 
 /* Begin PBXFileReference section */
 		182AEADC243B36B800EDC300 /* temp.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = temp.json; path = Dependencies/temp.json; sourceTree = SOURCE_ROOT; };
+		182D24D2251B46F70098914F /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		183207B722FAC5A900C738FF /* HighlightPointExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightPointExample.swift; sourceTree = "<group>"; };
 		18404BD42303C435001D8DC0 /* DashedPolylineExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashedPolylineExample.swift; sourceTree = "<group>"; };
 		18404BD62303C974001D8DC0 /* GeodesicPolylineExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeodesicPolylineExample.swift; sourceTree = "<group>"; };
@@ -155,6 +162,10 @@
 		189D0BC4230CFDC5005C8390 /* HighlightPointExample.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HighlightPointExample.m; sourceTree = "<group>"; };
 		18BA17E2229E8FF000B0B135 /* GreatCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreatCircle.swift; sourceTree = "<group>"; };
 		18BDD84D22F4005D00239CDC /* InteriorPolygonExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteriorPolygonExample.swift; sourceTree = "<group>"; };
+		18C9EAFB251B6C2A00F95580 /* AutosuggestWidgetTextFieldSearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutosuggestWidgetTextFieldSearchVC.swift; sourceTree = "<group>"; };
+		18C9EAFD251B7E4600F95580 /* AutosuggestCustomUISearchControllerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutosuggestCustomUISearchControllerVC.swift; sourceTree = "<group>"; };
+		18D14C9C251A39B5004A6D32 /* AutosuggestWidgetExamplesLauncherVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutosuggestWidgetExamplesLauncherVC.swift; sourceTree = "<group>"; };
+		18D14CA2251A5C35004A6D32 /* AutosuggestWidgetSampleType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutosuggestWidgetSampleType.swift; sourceTree = "<group>"; };
 		18E87E3321400FAD00F1C866 /* MapmyIndiaFeedbackUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MapmyIndiaFeedbackUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		18E87E3521400FAD00F1C866 /* MapmyIndiaFeedbackUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapmyIndiaFeedbackUIKit.h; sourceTree = "<group>"; };
 		18E87E3621400FAD00F1C866 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -166,6 +177,7 @@
 		18E87E4D2140100300F1C866 /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Image.xcassets; sourceTree = "<group>"; };
 		18E87E4F2140100F00F1C866 /* MapmyIndiaFeedbackUIKitManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapmyIndiaFeedbackUIKitManager.swift; sourceTree = "<group>"; };
 		18EF185D250A03EE0067182A /* POIsAlongTheRouteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIsAlongTheRouteVC.swift; sourceTree = "<group>"; };
+		18F45357251A81BB0091A898 /* MapmyIndiaStyledAutocompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapmyIndiaStyledAutocompleteViewController.swift; sourceTree = "<group>"; };
 		18F576CF23FEA83B0009A2D9 /* TextInstructions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInstructions.swift; sourceTree = "<group>"; };
 		18F576D123FEAA880009A2D9 /* TextInstructions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TextInstructions.plist; sourceTree = "<group>"; };
 		68417CC4210B329100424A00 /* InitialVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialVC.swift; sourceTree = "<group>"; };
@@ -240,6 +252,26 @@
 				1861996724DC30C5004D5547 /* UserDefaultsManager.swift */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		18D14C9F251A5815004A6D32 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				18D14CA2251A5C35004A6D32 /* AutosuggestWidgetSampleType.swift */,
+				182D24D2251B46F70098914F /* UIViewController+Extension.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		18D14CA1251A59C3004A6D32 /* AutosuggestWidget */ = {
+			isa = PBXGroup;
+			children = (
+				18D14C9C251A39B5004A6D32 /* AutosuggestWidgetExamplesLauncherVC.swift */,
+				18F45357251A81BB0091A898 /* MapmyIndiaStyledAutocompleteViewController.swift */,
+				18C9EAFB251B6C2A00F95580 /* AutosuggestWidgetTextFieldSearchVC.swift */,
+				18C9EAFD251B7E4600F95580 /* AutosuggestCustomUISearchControllerVC.swift */,
+			);
+			path = AutosuggestWidget;
 			sourceTree = "<group>";
 		};
 		18E87E3421400FAD00F1C866 /* MapmyIndiaFeedbackUIKit */ = {
@@ -329,6 +361,7 @@
 		68417CC3210B2DCE00424A00 /* Swift */ = {
 			isa = PBXGroup;
 			children = (
+				18D14CA1251A59C3004A6D32 /* AutosuggestWidget */,
 				1861996424DC302A004D5547 /* Settings */,
 				1861995924DBE02D004D5547 /* PlacePicker */,
 				68417CC6210B32A700424A00 /* ListVC.swift */,
@@ -390,6 +423,7 @@
 		68A6BF152106E03C00547929 /* MapDemo */ = {
 			isa = PBXGroup;
 			children = (
+				18D14C9F251A5815004A6D32 /* Common */,
 				18F576CE23FEA8100009A2D9 /* InstructionFormatterHelpers */,
 				185B7FBD214B8333000785FC /* metro-line.geojson */,
 				68417CC3210B2DCE00424A00 /* Swift */,
@@ -554,6 +588,8 @@
 				189D0B80230AA3E2005C8390 /* MMILocationPuckView.m in Sources */,
 				A41DFAC9239906CE00D39EF9 /* AutoSuggestVC.swift in Sources */,
 				18778C4D24751F33006DE478 /* DraggableMapMarkerVC.swift in Sources */,
+				18D14CA3251A5C35004A6D32 /* AutosuggestWidgetSampleType.swift in Sources */,
+				18F45358251A81BB0091A898 /* MapmyIndiaStyledAutocompleteViewController.swift in Sources */,
 				A45C2998239A157100EC81F6 /* DefaultIndoorVC.swift in Sources */,
 				68417CC7210B32A700424A00 /* ListVC.swift in Sources */,
 				18894B8C23043476005DC142 /* LocationPuckView.swift in Sources */,
@@ -566,6 +602,8 @@
 				1859BB872304041F007D70CF /* SphericalUtil.swift in Sources */,
 				18404BD72303C974001D8DC0 /* GeodesicPolylineExample.swift in Sources */,
 				6853468D210EF161000ED395 /* mapVCOC.m in Sources */,
+				18C9EAFE251B7E4600F95580 /* AutosuggestCustomUISearchControllerVC.swift in Sources */,
+				18C9EAFC251B6C2A00F95580 /* AutosuggestWidgetTextFieldSearchVC.swift in Sources */,
 				185A74EE249B4C5300081DAE /* CovidSafetyStatusExample.swift in Sources */,
 				183207B822FAC5A900C738FF /* HighlightPointExample.swift in Sources */,
 				A49EB61323E004BA00A08E42 /* InteractiveMarkerVC.swift in Sources */,
@@ -576,6 +614,7 @@
 				68A6BF192106E03C00547929 /* ViewController.swift in Sources */,
 				A4DA1E9523DB16BF0010743F /* DirectionIndicationView.swift in Sources */,
 				18BA17E3229E8FF000B0B135 /* GreatCircle.swift in Sources */,
+				18D14C9D251A39B5004A6D32 /* AutosuggestWidgetExamplesLauncherVC.swift in Sources */,
 				186D0211248E266F006F1C84 /* MMIInteractiveLayersTableViewController.m in Sources */,
 				18F576D023FEA83B0009A2D9 /* TextInstructions.swift in Sources */,
 				188AE97821C7D66800D2C866 /* CustomAnnotationModels.swift in Sources */,
@@ -584,6 +623,7 @@
 				B16E4AD0246967A3004BF783 /* SafetyPluginVC.swift in Sources */,
 				186D020B248E25F4006F1C84 /* CovidLayersExample.swift in Sources */,
 				188AE97D21C7DAF500D2C866 /* CustomInfoWindowView.m in Sources */,
+				182D24D3251B46F70098914F /* UIViewController+Extension.swift in Sources */,
 				189D0BC5230CFDC5005C8390 /* HighlightPointExample.m in Sources */,
 				A45C2997239A157100EC81F6 /* CustomIndoorVC.swift in Sources */,
 				1861996824DC30C5004D5547 /* UserDefaultsManager.swift in Sources */,
@@ -826,7 +866,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 22;
+				CURRENT_PROJECT_VERSION = 23;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 22L95D5KTZ;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -857,7 +897,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 22;
+				CURRENT_PROJECT_VERSION = 23;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 22L95D5KTZ;
 				FRAMEWORK_SEARCH_PATHS = (
