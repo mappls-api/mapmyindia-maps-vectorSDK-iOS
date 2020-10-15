@@ -31,6 +31,7 @@ Also version history can be seen by following [Version History](https://github.c
 
 | Version | Dated | Description |
 | :---- | :---- | :---- |
+| `5.7.13` | 14 Oct, 2020 | Xcode 12 compatibility. |
 | `5.7.12` | 12 Aug, 2020 | Code improvement made for map tyles. |
 | `5.7.11` | 29 July, 2020 | A info window like marker will be shown instead of default marker on click on map for covid WMS. |
 | `5.7.10` | 15 July, 2020 | Fixed memory consumption issue. |
@@ -50,6 +51,7 @@ Also version history can be seen by following [Version History](https://github.c
 
 | Version | Dated | Description |
 | :---- | :---- | :---- |
+| `0.23.11` | 14 Oct, 2020 | Xcode 12 compatibility. |
 | `0.23.10` | 03 June, 2020 | Xcode 11.5 compatibility. |
 | `0.23.9` | 13 May, 2020 | While requesting for routes, by default value of routeShapeResolution i.e "overview" (request parameter) will be full. |
 | `0.23.8` | 23 Apr, 2020 | Initial release on Pods. |
@@ -58,11 +60,7 @@ Also version history can be seen by following [Version History](https://github.c
 
 Read [here](https://github.com/MapmyIndia/mapmyindia-maps-vectorSDK-iOS/wiki/MapmyIndia-Feedback-Kit) for more information about this module.
 
-[Release Notes]()
-
-| Version | Dated | Description |
-| :---- | :---- | :---- |
-| `1.0.0` | 05 June, 2020 | Initial release through CocoaPods. |
+Also version history can be seen by following [Version History](https://github.com/MapmyIndia/mapmyindia-maps-vectorSDK-iOS/wiki/MapmyIndia-Feedback-Kit#Version-History).
 
 ### [MapmyIndiaUIWidgets](#MapmyIndiaUIWidgets)
 
