@@ -31,6 +31,7 @@ Also version history can be seen by following [Version History](https://github.c
 
 | Version | Dated | Description |
 | :---- | :---- | :---- |
+| `5.7.14` | 20 Oct, 2020 | ReactNative related issues are fixed.|
 | `5.7.13` | 14 Oct, 2020 | Xcode 12 compatibility. |
 | `5.7.12` | 12 Aug, 2020 | Code improvement made for map tyles. |
 | `5.7.11` | 29 July, 2020 | A info window like marker will be shown instead of default marker on click on map for covid WMS. |
