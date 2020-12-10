@@ -38,7 +38,7 @@
 -(void)setUpGUI {
     self.navigationItem.title = @"Objective C";
     _listArr = @[ @"Zoom Level", @"Zoom Level With Animation", @"Center With Animation", @"Current Location",@"Tracking Mode", @"Add Marker", @"Add Multiple Markers With Bounds", @"Polyline" ,@"Polygons",
-                  @"Autosuggest", @"Geocoding (Forward Geocode)", @"Atlas Geocode", @"Reverse Geocoding", @"Nearby Search", @"Place/eLoc Detail", @"Driving Distance", @"Distance Matrix", @"Distance Matrix ETA", @"Route", @"Route Advance", @"Route Advance ETA", @"Feedback", @"Animate Marker", @"GeoJson Multiple Shapes", @"Custom Marker", @"Interior Polygons", @"Covid Layers", @"COVID-19 Safety Status"
+                  @"Autosuggest", @"Geocoding (Forward Geocode)", @"Atlas Geocode", @"Reverse Geocoding", @"Nearby Search", @"Place/eLoc Detail Legacy", @"Place Detail", @"Driving Distance", @"Distance Matrix", @"Distance Matrix ETA", @"Route", @"Route Advance", @"Route Advance ETA", @"Feedback", @"Animate Marker", @"GeoJson Multiple Shapes", @"Custom Marker", @"Interior Polygons", @"Covid Layers", @"COVID-19 Safety Status"
                   ];
 }
 

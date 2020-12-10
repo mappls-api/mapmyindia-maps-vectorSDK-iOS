@@ -296,14 +296,14 @@ class mapVC: UIViewController, MapmyIndiaMapViewDelegate,AutoSuggestDelegates {
             mapView.addAnnotation(annotation)
             break
             
-        case "Place/eLoc Detail":
+        case "Place/eLoc Detail Legacy":
             searchBar.isHidden = false
             self.constraintSearchBarHeight.constant = 65
             searchBar.isUserInteractionEnabled = false
             searchBar.text = "mmi000"
             mapView.addSubview(searchBar)
-            let placeDetailManager = MapmyIndiaPlaceDetailManager.shared
-            let placeOptions = MapmyIndiaPlaceDetailGeocodeOptions(placeId:
+            let placeDetailManager = MapmyIndiaPlaceDetailLegacyManager.shared
+            let placeOptions = MapmyIndiaPlaceDetailLegacyOptions(placeId:
                 searchBar.text!, withRegion: .india)
             placeDetailManager.getPlaceDetail(placeOptions) { (placemarks,
                 attribution, error) in
@@ -320,6 +320,37 @@ class mapVC: UIViewController, MapmyIndiaMapViewDelegate,AutoSuggestDelegates {
                     self.mapView.addAnnotation(point)
                     self.mapView.setCenter(CLLocationCoordinate2D(latitude: Double (placemarks[0].latitude ?? "")!, longitude:Double (placemarks[0].longitude ?? "")!), zoomLevel: 11, animated: false)
                     self.placemark = placemarks[0]
+                    self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Detail", style: UIBarButtonItem.Style.plain, target: self, action: #selector(self.showPlaceDetail))
+                } else {
+                    print("No results")
+                }
+            }
+            
+            break
+            
+        case "Place Detail":
+            searchBar.isHidden = false
+            self.constraintSearchBarHeight.constant = 65
+            searchBar.isUserInteractionEnabled = false
+            searchBar.text = "mmi000"
+            mapView.addSubview(searchBar)
+            let placeDetailManager = MapmyIndiaPlaceDetailManager.shared
+            let placeOptions = MapmyIndiaPlaceDetailOptions(eLoc:
+                searchBar.text!, withRegion: .india)
+            placeDetailManager.getResults(placeOptions) { (placeDetail, error) in
+                if let error = error {
+                    NSLog("%@", error)
+                } else if let placeDetail = placeDetail, let placeLatitudeNumber = placeDetail.latitude, let placeLongitudeNumber = placeDetail.longitude, let  placeLatitude = Double(exactly: placeLatitudeNumber), let placeLongitude = Double(exactly: placeLongitudeNumber) {
+                    print("Place Detail Geocode: \(placeLatitude),\(placeLongitude)")
+                    print(placeDetail.address as Any)
+                    
+                    let point = MGLPointAnnotation()
+                    point.coordinate = CLLocationCoordinate2D(latitude: placeLatitude, longitude:
+                        placeLongitude)
+                    point.title = placeDetail.address
+                    self.mapView.addAnnotation(point)
+                    self.mapView.setCenter(CLLocationCoordinate2D(latitude: placeLatitude, longitude:placeLongitude), zoomLevel: 11, animated: false)
+                    
                     self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Detail", style: UIBarButtonItem.Style.plain, target: self, action: #selector(self.showPlaceDetail))
                 } else {
                     print("No results")

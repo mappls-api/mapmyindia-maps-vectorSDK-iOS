@@ -254,16 +254,16 @@ CLLocation *referenceLocation = nil;
                                              }
                                          }];
         }
-        CASE (@"Place/eLoc Detail") {
+        CASE (@"Place/eLoc Detail Legacy") {
             [self.searchBar setHidden:NO];
             self.constraintSearchBarHeight.constant = 56;
             self.searchBar.delegate = self;
             self.searchBar.text = @"mmi000";
             
-            MapmyIndiaPlaceDetailManager * placeDetailManager =
-            [MapmyIndiaPlaceDetailManager sharedManager];
-            MapmyIndiaPlaceDetailGeocodeOptions *placeOptions =
-            [[MapmyIndiaPlaceDetailGeocodeOptions alloc] initWithPlaceId:@"mmi000"
+            MapmyIndiaPlaceDetailLegacyManager * placeDetailManager =
+            [MapmyIndiaPlaceDetailLegacyManager sharedManager];
+            MapmyIndiaPlaceDetailLegacyOptions *placeOptions =
+            [[MapmyIndiaPlaceDetailLegacyOptions alloc] initWithPlaceId:@"mmi000"
                                                               withRegion:MMIRegionTypeIdentifierIndia];
             [placeDetailManager getPlaceDetailWithOptions:placeOptions
                                         completionHandler:^(NSArray<MapmyIndiaGeocodedPlacemark *> * _Nullable
@@ -286,6 +286,40 @@ CLLocation *referenceLocation = nil;
                                                 
                                             }
                                         }];
+        }
+        
+        CASE (@"Place Detail") {
+            [self.searchBar setHidden:NO];
+            self.constraintSearchBarHeight.constant = 56;
+            self.searchBar.delegate = self;
+            self.searchBar.text = @"mmi000";
+            
+            MapmyIndiaPlaceDetailManager * placeDetailManager =
+            [MapmyIndiaPlaceDetailManager sharedManager];
+            MapmyIndiaPlaceDetailOptions *placeOptions =
+            
+            [[MapmyIndiaPlaceDetailOptions alloc] initWithELoc:@"mmi000"
+                                                              withRegion:MMIRegionTypeIdentifierIndia];
+            [placeDetailManager getResultsWithOptions:placeOptions completionHandler:^(MapmyIndiaPlaceDetail * _Nullable placeDetail, NSError * _Nullable error) {
+                if (error) {
+                    NSLog(@"%@", error);
+                } else if (placeDetail) {
+                    NSLog(@"Place Detail Geocode %@%@",
+                          placeDetail.latitude,placeDetail.longitude);
+                    MGLPointAnnotation *point = [[MGLPointAnnotation alloc] init];
+                    point.coordinate = CLLocationCoordinate2DMake( [placeDetail.latitude doubleValue],  [placeDetail.longitude doubleValue]);
+                    point.title =  placeDetail.address;
+                    [self.mapView addAnnotation:point];
+                    [self.mapView setCenterCoordinate:CLLocationCoordinate2DMake([placeDetail.latitude doubleValue], [placeDetail.longitude doubleValue])
+                                            zoomLevel:11
+                                             animated:NO];
+                    
+                    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Detail" style:UIBarButtonItemStylePlain target:self action:@selector(showPlaceDetail)];
+                } else {
+                    
+                }
+            }];
+            
         }
         CASE (@"Driving Distance") {
             MapmyIndiaDrivingDistanceOptions *distanceOptions =

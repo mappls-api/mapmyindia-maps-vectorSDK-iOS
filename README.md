@@ -53,6 +53,7 @@ Also version history can be seen by following [Version History](https://github.c
 
 | Version | Dated | Description |
 | :---- | :---- | :---- |
+| `0.23.12` | 09 Dec, 2020 | Xcode 12.2 compatibility. |
 | `0.23.11` | 14 Oct, 2020 | Xcode 12 compatibility. |
 | `0.23.10` | 03 June, 2020 | Xcode 11.5 compatibility. |
 | `0.23.9` | 13 May, 2020 | While requesting for routes, by default value of routeShapeResolution i.e "overview" (request parameter) will be full. |
