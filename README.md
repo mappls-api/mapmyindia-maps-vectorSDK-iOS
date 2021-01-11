@@ -53,6 +53,7 @@ Also version history can be seen by following [Version History](https://github.c
 
 | Version | Dated | Description |
 | :---- | :---- | :---- |
+| `0.23.13` | 11 Jan, 2021 | In Directions locations can be set either an eLoc or comma seperated coordinate(In format longitude, latitude). |
 | `0.23.12` | 09 Dec, 2020 | Xcode 12.2 compatibility. |
 | `0.23.11` | 14 Oct, 2020 | Xcode 12 compatibility. |
 | `0.23.10` | 03 June, 2020 | Xcode 11.5 compatibility. |
