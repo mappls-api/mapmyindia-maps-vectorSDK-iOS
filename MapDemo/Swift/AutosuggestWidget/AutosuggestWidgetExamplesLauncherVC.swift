@@ -24,6 +24,14 @@ class AutosuggestWidgetExamplesLauncherVC: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         view.addSubview(tableView)
+        let settingsBarButton = UIBarButtonItem(title: "Settings", style: .plain, target: self, action: #selector(settingsButtonTapped))
+        self.navigationItem.rightBarButtonItems = [settingsBarButton]
+    }
+    
+    @objc func settingsButtonTapped(sender: UIBarButtonItem) {
+        let vc =  MapDemoSettingsVC(nibName: nil, bundle: nil)
+        vc.demoSettings = [.autocomplete]
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
@@ -91,7 +99,12 @@ extension AutosuggestWidgetExamplesLauncherVC: UITableViewDataSource, UITableVie
     
     func getAutocompleteViewControllerInstance() -> MapmyIndiaAutocompleteViewController {
         let autocompleteViewController = MapmyIndiaAutocompleteViewController()
+        let attributionSetting = MapmyIndiaAttributionsSettings()
+        attributionSetting.attributionSize = MapmyIndiaContentSize(rawValue: UserDefaultsManager.attributionSize) ?? .medium
+        attributionSetting.attributionHorizontalContentAlignment = MapmyIndiaHorizontalContentAlignment(rawValue: Int(UserDefaultsManager.attributionHorizontalAlignment)) ?? .center
+        attributionSetting.attributionVerticalPlacement = MapmyIndiaVerticalPlacement(rawValue: UserDefaultsManager.attributionVerticalPlacement) ?? .before
         autocompleteViewController.delegate = self
+        autocompleteViewController.attributionSettings = attributionSetting
         autocompleteViewController.autocompleteFilter = getAutocompleteFilter()
         return autocompleteViewController
     }
@@ -222,6 +235,11 @@ extension AutosuggestWidgetExamplesLauncherVC: UITableViewDataSource, UITableVie
         acController.secondaryTextColor = secondaryColor
         acController.tintColor = tintColor
 
+        let attributionSetting = MapmyIndiaAttributionsSettings()
+        attributionSetting.attributionSize = MapmyIndiaContentSize(rawValue: UserDefaultsManager.attributionSize) ?? .medium
+        attributionSetting.attributionHorizontalContentAlignment = MapmyIndiaHorizontalContentAlignment(rawValue: Int(UserDefaultsManager.attributionHorizontalAlignment)) ?? .center
+        attributionSetting.attributionVerticalPlacement = MapmyIndiaVerticalPlacement(rawValue: UserDefaultsManager.attributionVerticalPlacement) ?? .before
+        acController.attributionSettings = attributionSetting
         present(acController, animated: true)
     }
     

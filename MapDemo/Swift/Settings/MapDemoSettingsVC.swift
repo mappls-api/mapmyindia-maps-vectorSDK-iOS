@@ -10,7 +10,12 @@ import UIKit
 
 class MapDemoSettingsVC: UITableViewController {
     
+//    let demoSettings = DemoSettingType.allCases
+    var demoSettings: [DemoSettingType] = []
     let placePickerSettings = PlacePickerSettingType.allCases
+    let autocompleteSetttings = AutocompleteSettingType.allCases
+    var selectedOption = ""
+    var didClicked : Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,6 +60,77 @@ class MapDemoSettingsVC: UITableViewController {
         }
     }
     
+    func presentAlertConrollerForDefaultController(currentType: AutocompleteSettingType, didClicked: Bool) -> Int {
+ 
+        let alertController = UIAlertController(title: "Customize attributes?", message: "Select type of attribute you want in search Widgets ", preferredStyle: .actionSheet)
+        
+        switch currentType {
+        case .horizontalAlignment:
+            let selectedOptions = 1
+            alertController.addAction(UIAlertAction(title: "Left", style: .default, handler: { (alertAction) in
+                UserDefaultsManager.attributionHorizontalAlignment = 0
+                self.tableView.reloadData()
+            }))
+            alertController.addAction(UIAlertAction(title: "Center", style: .default, handler: { (alertAction) in
+                UserDefaultsManager.attributionHorizontalAlignment = 1
+                self.tableView.reloadData()
+            }))
+            alertController.addAction(UIAlertAction(title: "Right", style: .default, handler: { (alertAction) in
+                UserDefaultsManager.attributionHorizontalAlignment = 2
+                self.tableView.reloadData()
+            }))
+            alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (alertAction) in
+            }))
+            if didClicked{
+                present(alertController, animated: false, completion: nil)
+            }
+            
+            return selectedOptions
+            
+        case .attributionSize:
+            let selectedOptions = 2
+            alertController.addAction(UIAlertAction(title: "Small", style: .default, handler: { (alertAction) in
+                UserDefaultsManager.attributionSize = 0
+                self.tableView.reloadData()
+            }))
+            alertController.addAction(UIAlertAction(title: "Medium", style: .default, handler: { (alertAction) in
+                UserDefaultsManager.attributionSize = 1
+                self.tableView.reloadData()
+            }))
+            alertController.addAction(UIAlertAction(title: "Large", style: .default, handler: { (alertAction) in
+                UserDefaultsManager.attributionSize = 2
+                self.tableView.reloadData()
+            }))
+            alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (alertAction) in
+            
+            }))
+            if didClicked{
+                present(alertController, animated: false, completion: nil)
+            }
+            return selectedOptions
+            
+        case .attributionVerticalPlacement:
+            let selectedOptions = 3
+            alertController.addAction(UIAlertAction(title: "Top", style: .default, handler: { (alertAction) in
+                
+                UserDefaultsManager.attributionVerticalPlacement = 0
+                self.tableView.reloadData()
+            }))
+            alertController.addAction(UIAlertAction(title: "Bottom", style: .default, handler: { (alertAction) in
+                
+                UserDefaultsManager.attributionVerticalPlacement = 1
+                self.tableView.reloadData()
+            }))
+            alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (alertAction) in
+            }))
+            
+            if didClicked{
+                present(alertController, animated: false, completion: nil)
+            }
+            return selectedOptions
+        }
+    }
+    
     func getValueForPlacePickerSetting(_ placePickerSetting : PlacePickerSettingType) -> Bool {
         switch placePickerSetting {
         case .isCustomMarkerView:
@@ -91,47 +167,151 @@ class MapDemoSettingsVC: UITableViewController {
             return UserDefaultsManager.isBottomPlaceDetailViewHidden
         }
     }
+    
+    func getValueForAutocompleteLogoOptions(_ autocompleteSetting: AutocompleteSettingType) -> String{
+        
+        let intValue = presentAlertConrollerForDefaultController(currentType: autocompleteSetting, didClicked: false)
+        if intValue == 1 {
+            switch UserDefaultsManager.attributionHorizontalAlignment {
+            case 0:
+                return "Left"
+            case 1:
+                return "Center"
+            case 2:
+                return "Right"
+            default:
+                return ""
+            }
+        } else if intValue == 2 {
+            switch UserDefaultsManager.attributionSize {
+            case 0:
+                return "Small"
+            case 1:
+                return "Medium"
+            case 2:
+                return "Large"
+            default:
+                return ""
+            }
+        } else if intValue == 3 {
+            switch UserDefaultsManager.attributionVerticalPlacement {
+            case 0:
+                return "Top"
+            case 1:
+                return "Bottom"
+            default:
+                return ""
+            }
+        } else {
+            return ""
+        }
+    }
 }
 
 //MARK:- Table View Controller Methods
 extension MapDemoSettingsVC {
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return demoSettings.count
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0 {
+        let currentSection = demoSettings[section]
+        switch currentSection {
+        case .placePicker:
             return placePickerSettings.count
+        case .autocomplete:
+            return autocompleteSetttings.count
         }
-        return 0
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if section == 0 {
+        let currentSection = demoSettings[section]
+        switch currentSection {
+        case .placePicker:
             return "Place Picker"
+        case .autocomplete:
+            return "Autocomplete Logo Settings"
         }
-        return nil
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let currentType = placePickerSettings[indexPath.row]
+        let currentSection = demoSettings[indexPath.section]
         
-        let cellIdentifier = "switchCell"
-        if let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) {
-            if let accessoryView = cell.accessoryView, accessoryView.isKind(of: UISwitch.self) {
-                let switchView = accessoryView as! UISwitch
+        if currentSection == .placePicker {
+            let currentType = placePickerSettings[indexPath.row]
+            let cellIdentifier = "switchCell"
+            if let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) {
+                if let accessoryView = cell.accessoryView, accessoryView.isKind(of: UISwitch.self) {
+                    let switchView = accessoryView as! UISwitch
+                    switchView.isOn = getValueForPlacePickerSetting(currentType)
+                    switchView.tag = indexPath.row
+                }
+                return cell
+            } else {
+                let newCell = UITableViewCell(style: .default, reuseIdentifier: cellIdentifier)
+                newCell.textLabel?.text = currentType.description
+                let switchView = UISwitch(frame: .zero)
                 switchView.isOn = getValueForPlacePickerSetting(currentType)
-                switchView.tag = indexPath.row
+                switchView.tag = indexPath.row // for detect which row switch Changed
+                switchView.addTarget(self, action: #selector(self.switchChanged(_:)), for: .valueChanged)
+                newCell.accessoryView = switchView
+                return newCell
             }
-            return cell
-        } else {
-            let newCell = UITableViewCell(style: .default, reuseIdentifier: cellIdentifier)
-            newCell.textLabel?.text = currentType.description
-            let switchView = UISwitch(frame: .zero)
-            switchView.isOn = getValueForPlacePickerSetting(currentType)
-            switchView.tag = indexPath.row // for detect which row switch Changed
-            switchView.addTarget(self, action: #selector(self.switchChanged(_:)), for: .valueChanged)
-            newCell.accessoryView = switchView
-            return newCell
+        }
+        else if currentSection == .autocomplete{
+            let cellIdentifier = "autocompleteOptions"
+            let currentType = autocompleteSetttings[indexPath.row]
+            if let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier){
+                cell.detailTextLabel?.text = getValueForAutocompleteLogoOptions(currentType)
+                return cell
+            }else{
+                let newCell = UITableViewCell(style: .value1, reuseIdentifier: cellIdentifier)
+                newCell.accessoryType = .disclosureIndicator
+                newCell.textLabel?.text = currentType.description
+                newCell.detailTextLabel?.text = getValueForAutocompleteLogoOptions(currentType)
+                return newCell
+            }  
+        }
+        return UITableViewCell()
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let currentSection = demoSettings[indexPath.section]
+        if currentSection == .autocomplete{
+            let currentType = autocompleteSetttings[indexPath.row]
+            didClicked = true
+            _ = presentAlertConrollerForDefaultController(currentType: currentType, didClicked: didClicked)
+        }
+       
+    }
+}
+public enum DemoSettingType: UInt, CustomStringConvertible, CaseIterable{
+    case placePicker
+    case autocomplete
+    
+    public var description: String{
+        switch self {
+        case .placePicker:
+            return "Place Picker"
+        case .autocomplete:
+            return "Autocomplete"
+        
+        }
+    }
+}
+
+public enum AutocompleteSettingType: UInt, CustomStringConvertible, CaseIterable{
+    
+    case attributionSize
+    case horizontalAlignment
+    case attributionVerticalPlacement
+    public var description: String{
+        switch self {
+        case .horizontalAlignment:
+            return "Attribution Horizontal Alignment"
+        case .attributionSize:
+            return "Attribution Size"
+        case .attributionVerticalPlacement:
+            return "Attribution Vertical Placement"
         }
     }
 }
@@ -191,7 +371,3 @@ public enum PlacePickerSettingType: UInt, CustomStringConvertible, CaseIterable 
         }
     }
 }
-
-//public enum MapDemoSettingType: UInt, CustomStringConvertible, CaseIterable {
-//
-//}

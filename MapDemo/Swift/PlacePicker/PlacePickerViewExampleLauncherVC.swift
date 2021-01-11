@@ -44,6 +44,7 @@ class PlacePickerViewExampleLauncherVC: UIViewController {
     
     @objc func settingsButtonTapped(sender: UIBarButtonItem) {
         let vc =  MapDemoSettingsVC(nibName: nil, bundle: nil)
+        vc.demoSettings = [ .placePicker, .autocomplete]
         navigationController?.pushViewController(vc, animated: true)
     }
     

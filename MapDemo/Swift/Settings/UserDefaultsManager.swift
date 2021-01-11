@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import MapmyIndiaUIWidgets
 
 class UserDefaultsManager {
     static func isKeyPresentInUserDefaults(key: String) -> Bool {
@@ -254,4 +255,59 @@ class UserDefaultsManager {
             UserDefaults.standard.set(newValue, forKey: isBottomPlaceDetailViewHiddenKey)
         }
     }
+    
+    private static let attributionHorizontalAlignmentKey = "attributionHorizontalAlignmentKey"
+    static var attributionHorizontalAlignment: Int {
+        get {
+            if isKeyPresentInUserDefaults(key: attributionHorizontalAlignmentKey) {
+                return UserDefaults.standard.integer(forKey: attributionHorizontalAlignmentKey)
+            }
+            else {
+                return Int(MapmyIndiaHorizontalContentAlignment.center.rawValue)
+            }
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: attributionHorizontalAlignmentKey)
+        }
+    }
+    
+    private static let attributionSizeKey = "attributionSizeKey"
+    static var attributionSize: Int {
+        get {
+            if isKeyPresentInUserDefaults(key: attributionSizeKey) {
+                return UserDefaults.standard.integer(forKey: attributionSizeKey)
+            }
+            else {
+                return Int(MapmyIndiaContentSize.medium.rawValue)
+            }
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: attributionSizeKey)
+        }
+    }
+    
+    private static let attributionVerticalPlacementKey = "attributionVerticalPlacementKey"
+    static var attributionVerticalPlacement: Int {
+        get {
+            if isKeyPresentInUserDefaults(key: attributionVerticalPlacementKey) {
+                return UserDefaults.standard.integer(forKey: attributionVerticalPlacementKey)
+            }
+            else {
+                return Int(MapmyIndiaVerticalPlacement.before.rawValue)
+            }
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: attributionVerticalPlacementKey)
+        }
+    }
+    
+    
+    
+//    static var attributionLength: MapmyIndiaContentLength = .long
+    
+//    static var attributionSize: MapmyIndiaContentSize = .medium
+     
+//    static var attributionVerticalPlacement : MapmyIndiaVerticalPlacement = .before
+    
+   
 }

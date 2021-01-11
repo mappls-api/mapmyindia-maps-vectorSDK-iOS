@@ -31,6 +31,11 @@ class AutosuggestWidgetTextFieldSearchVC: UIViewController {
         
         // Setup the results view controller.
         mapmyIndiaTableDataSource = MapmyIndiaAutocompleteTableDataSource()
+        let attributionSetting = MapmyIndiaAttributionsSettings()
+        attributionSetting.attributionSize = MapmyIndiaContentSize(rawValue: UserDefaultsManager.attributionSize) ?? .medium
+        attributionSetting.attributionHorizontalContentAlignment = MapmyIndiaHorizontalContentAlignment(rawValue: Int(UserDefaultsManager.attributionHorizontalAlignment)) ?? .center
+        attributionSetting.attributionVerticalPlacement = MapmyIndiaVerticalPlacement(rawValue: UserDefaultsManager.attributionVerticalPlacement) ?? .before
+        mapmyIndiaTableDataSource.attributionSettings = attributionSetting
         mapmyIndiaTableDataSource.delegate = self
         mapmyIndiaTableDataSource.autocompleteFilter = getAutocompleteFilter()
         

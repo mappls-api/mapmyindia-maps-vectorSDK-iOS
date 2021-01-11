@@ -12,6 +12,7 @@ import MapmyIndiaMaps
 import MapmyIndiaAPIKit
 import MapmyIndiaDirections
 import MapmyIndiaFeedbackUIKit
+import MapmyIndiaUIWidgets
 
 class mapVC: UIViewController, MapmyIndiaMapViewDelegate,AutoSuggestDelegates {
     func suggestionSelected(suggestion: MapmyIndiaAtlasSuggestion, placeName: String) {
@@ -21,6 +22,7 @@ class mapVC: UIViewController, MapmyIndiaMapViewDelegate,AutoSuggestDelegates {
                    annotation.coordinate = coordinates
                    mapView.addAnnotation(annotation)
                    mapView.centerCoordinate = coordinates
+                   mapView.zoomLevel = 16
                    customSearchLabel.text = placeName
                }
     }
@@ -67,7 +69,7 @@ class mapVC: UIViewController, MapmyIndiaMapViewDelegate,AutoSuggestDelegates {
                         Double (truncating: placemarks[0].longitude!))
                     point.title = placemarks[0].formattedAddress
                     self.mapView.addAnnotation(point)
-                    self.mapView.setCenter(CLLocationCoordinate2D(latitude: Double (truncating: placemarks[0].latitude!), longitude:Double (truncating: placemarks[0].longitude!)), zoomLevel: 11, animated: false)
+                    self.mapView.setCenter(CLLocationCoordinate2D(latitude: Double (truncating: placemarks[0].latitude!), longitude:Double (truncating: placemarks[0].longitude!)), zoomLevel: 17, animated: false)
                 } else {
                     print("No results")
                 }
@@ -94,10 +96,13 @@ class mapVC: UIViewController, MapmyIndiaMapViewDelegate,AutoSuggestDelegates {
     var isForCustomAnnotationView = false
     var isCustomCalloutForPolyline = false
     var strType:String?
+    var place:  MapmyIndiaAtlasSuggestion!
+    var refLocations: String!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = strType
         self.mapView.delegate = self
+        
         self.mapView.minimumZoomLevel = 4
         customSearchUI.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap)))
         if strType != "AutoSuggest"{
@@ -283,17 +288,19 @@ class mapVC: UIViewController, MapmyIndiaMapViewDelegate,AutoSuggestDelegates {
             mapView.addGestureRecognizer(singleTap)
             break
         case "Nearby Search":
-            searchBar.isHidden = false
+            searchBar.isHidden = true
             searchBar.delegate = self
             self.constraintSearchBarHeight.constant = 65
             mapView.addSubview(searchBar)
+            searchBar.translatesAutoresizingMaskIntoConstraints = false
+            searchBar.topAnchor.constraint(equalTo: self.view.safeTopAnchor).isActive = true
+            
+            searchBar.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
+            searchBar.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
+            let settingsBarButton = UIBarButtonItem(title: "Set RefLocation", style: .plain, target: self, action: #selector(settingButtonTap))
+            self.navigationItem.rightBarButtonItems = [settingsBarButton]
             searchBar.isUserInteractionEnabled = true
             searchBar.placeholder = "Type Here eg:- Shoes/Hotels"
-            mapView.setCenter(referenceLocation.coordinate, animated: false)
-            mapView.zoomLevel = 16
-            let annotation = MGLPointAnnotation()
-            annotation.coordinate = referenceLocation.coordinate
-            mapView.addAnnotation(annotation)
             break
             
         case "Place/eLoc Detail Legacy":
@@ -514,6 +521,11 @@ class mapVC: UIViewController, MapmyIndiaMapViewDelegate,AutoSuggestDelegates {
             break
         }
     }
+    @objc func settingButtonTap(){
+        let autocompleteVC = MapmyIndiaAutocompleteViewController()
+        autocompleteVC.delegate = self
+        present(autocompleteVC, animated: false, completion: nil)
+    }
     
     @objc func zoomWithAnimation() {
         let mapCamera = self.mapView.camera
@@ -654,7 +666,7 @@ class mapVC: UIViewController, MapmyIndiaMapViewDelegate,AutoSuggestDelegates {
             [CLLocation(latitude: 28.520638, longitude: 77.201959)])
         
         if isETA {
-            distanceMatrixOptions.withTraffic = true
+            distanceMatrixOptions.resourceIdentifier = .eta
         }
         
         var point = MGLPointAnnotation()
@@ -832,15 +844,28 @@ extension mapVC: UISearchBarDelegate {
         switch strType {
         case "Nearby Search":
             let nearByManager = MapmyIndiaNearByManager.shared
-            let nearByOptions = MapmyIndiaNearbyAtlasOptions(query: searchQuery, location: referenceLocation, withRegion: .india)
-            nearByOptions.bounds = MapmyIndiaRectangularRegion(topLeft: CLLocationCoordinate2D(latitude: 28.563838, longitude: 77.244345), bottomRight: CLLocationCoordinate2D(latitude: 28.541898, longitude: 77.294514))
+            let nearByOptions = MapmyIndiaNearbyAtlasOptions(query:searchQuery , location: self.refLocations)
             nearByManager.getNearBySuggestions(nearByOptions) { (suggestions, error) in
                 DispatchQueue.main.async {
                     if let error = error {
                         NSLog("%@", error)
                     } else if let suggestions = suggestions, !suggestions.isEmpty {
                         self.searchSuggestions.removeAll()
+                        self.tempAnnotations.removeAll()
+                        self.removeAllAnnotation()
                         self.searchSuggestions = suggestions
+                        
+                        
+                        for i in 0..<suggestions.count {
+                            let point = MGLPointAnnotation()
+                            
+                            point.coordinate = CLLocationCoordinate2D(latitude: suggestions[i].latitude as! CLLocationDegrees, longitude: suggestions[i].longitude as! CLLocationDegrees)
+                            point.title = "nearByAnnotations"
+                            self.tempAnnotations.append(point)
+                            
+                            
+                        }
+                        self.mapView.addAnnotations(self.tempAnnotations)
                         print("Near by: \(suggestions[0].latitude ?? 0),\(suggestions[0].longitude ?? 0)")
                         print(suggestions[0].placeAddress as Any)
                         print(suggestions[0].distance as Any)
@@ -849,9 +874,11 @@ extension mapVC: UISearchBarDelegate {
                         self.tableViewAutoSuggest.delegate = self
                         self.tableViewAutoSuggest.dataSource = self
                         self.tableViewAutoSuggest.reloadData()
+                        
                     } else {
                         print( "No results")
                     }
+                    
                 }
             }
             break
@@ -913,7 +940,15 @@ extension mapVC: UISearchBarDelegate {
                 // Create a new annotation image.                
                 return MGLAnnotationImage(image: image, reuseIdentifier: reuseIdentifier)
             }
+            
+            
         }
+        
+        if annotation.title == "place Eloc Location" {
+            return MGLAnnotationImage(image: UIImage(named: "icMarkerFocused") ?? UIImage(), reuseIdentifier: "nearByPlace")
+        }
+        
+        
         // Fallback to the default marker image.
         return nil
     }
@@ -951,7 +986,101 @@ extension mapVC: UISearchBarDelegate {
                }
            }
        }
+    func presentAlertController(){
+        guard let place = self.place else {
+            return
+        }
+        let alterView = UIAlertController(title: "Select eLoc or Coordinate", message: "please select eLoc or coordinate", preferredStyle: .actionSheet)
+        alterView.addAction(UIAlertAction(title: "Coordinate", style: .default, handler: { (handler) in
+            if let longitude = place.longitude , let latitude = place.latitude {
+                self.refLocations =  "\(latitude),\(longitude)"
+                let coordintate = CLLocation(latitude: CLLocationDegrees(truncating: latitude), longitude: CLLocationDegrees(truncating: longitude))
+                self.mapView.setCenter(coordintate.coordinate, animated: false)
+                self.removeAllAnnotations()
+                let points = CustomPointAnnotation(coordinate: coordintate.coordinate, title: "Place Location", subtitle: "")
+                points.image = UIImage(named: "icMarkerFocused")
+                points.reuseIdentifier = "nearByPlace"
+                self.mapView.zoomLevel = 17
+                self.mapView.addAnnotation(points)
+                self.searchBar.isHidden = false
+            }
+        }))
+        alterView.addAction(UIAlertAction(title: "Eloc", style: .default, handler: { (handler) in
+            if let eloc = place.eLoc {
+                self.refLocations = "\(eloc)"
+                self.mapView.setMapCenterAtEloc(self.refLocations, animated: false, completionHandler: nil)
+                self.removeAllAnnotations()
+                let annotation11 = MapmyIndiaPointAnnotation(eloc: self.refLocations)
+                annotation11.title = "place Eloc Location"
+                
+                self.mapView.addMapmyIndiaAnnotation(annotation11, completionHandler: nil)
+                self.mapView.zoomLevel = 17
+                self.searchBar.isHidden = false
+            }
+            else {
+                self.refLocations = "\(place.latitude!),\(place.longitude!)"
+                let coordintate = CLLocation(latitude: CLLocationDegrees(truncating: place.latitude!), longitude: CLLocationDegrees(truncating: place.longitude!))
+                self.mapView.setCenter(coordintate.coordinate, animated: false)
+                self.removeAllAnnotations()
+                let points = CustomPointAnnotation(coordinate: coordintate.coordinate, title: "Place Location", subtitle: "")
+                points.image = UIImage(named: "icMarkerFocused")
+                points.reuseIdentifier = "nearByPlace"
+                self.mapView.zoomLevel = 17
+                
+                self.mapView.addAnnotation(points)
+                self.searchBar.isHidden = false
+            }
+        }))
+        alterView.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (handler) in
+        }))
+        present(alterView, animated: false, completion: nil)
+    }
+    func removeAllAnnotations() {
+       
+       guard let annotations = mapView.annotations else { return print("Annotations Error") }
+       
+       if annotations.count != 0 {
+         for annotation in annotations {
+           mapView.removeAnnotation(annotation)
+         }
+       } else {
+         return
+       }
+     }
+    func removeAllAnnotation() {
+       
+       guard let annotations = mapView.annotations else { return print("Annotations Error") }
+       
+       if annotations.count != 0 {
+        
+         for annotation in annotations {
+            if annotation.title == "nearByAnnotations"{
+                mapView.removeAnnotation(annotation)
+            }
+           
+         }
+       } else {
+         return
+       }
+     }
 
+}
+
+extension mapVC: MapmyIndiaAutocompleteViewControllerDelegate {
+    func didAutocomplete(viewController: MapmyIndiaAutocompleteViewController, withPlace place: MapmyIndiaAtlasSuggestion) {
+        self.dismiss(animated: false) {
+            self.place = place
+            self.presentAlertController()
+        }
+    }
+    
+    func didFailAutocomplete(viewController: MapmyIndiaAutocompleteViewController, withError error: NSError) {
+        
+    }
+    
+    func wasCancelled(viewController: MapmyIndiaAutocompleteViewController) {
+        
+    }
 }
 
 // MARK:- CustomPolyline Class

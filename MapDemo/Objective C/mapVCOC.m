@@ -521,7 +521,7 @@ CLLocation *referenceLocation = nil;
                                                                     withRegion: MMIRegionTypeIdentifierIndia ];
     
     if (isETA) {
-        distanceMatrixOptions.withTraffic = YES;
+        distanceMatrixOptions.resourceIdentifier = MapmyIndiaDistanceMatrixResourceIdentifierDefault;
     }
     
     _tempAnnotations = [[NSMutableArray alloc] init];

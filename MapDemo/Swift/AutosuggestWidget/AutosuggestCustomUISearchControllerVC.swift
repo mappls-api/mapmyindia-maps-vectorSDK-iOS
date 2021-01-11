@@ -15,7 +15,11 @@ class AutosuggestCustomUISearchControllerVC: UIViewController {
         resultsViewController = MapmyIndiaAutocompleteResultsViewController()
         resultsViewController?.autocompleteFilter = getAutocompleteFilter()
         resultsViewController?.delegate = self
-
+        let attributionSetting = MapmyIndiaAttributionsSettings()
+        attributionSetting.attributionSize = MapmyIndiaContentSize(rawValue: UserDefaultsManager.attributionSize) ?? .medium
+        attributionSetting.attributionHorizontalContentAlignment = MapmyIndiaHorizontalContentAlignment(rawValue: Int(UserDefaultsManager.attributionHorizontalAlignment)) ?? .center
+        attributionSetting.attributionVerticalPlacement = MapmyIndiaVerticalPlacement(rawValue: UserDefaultsManager.attributionVerticalPlacement) ?? .before
+        resultsViewController?.attributionSettings = attributionSetting
         searchController = UISearchController(searchResultsController: resultsViewController)
         searchController?.hidesNavigationBarDuringPresentation = false
         searchController?.dimsBackgroundDuringPresentation = true

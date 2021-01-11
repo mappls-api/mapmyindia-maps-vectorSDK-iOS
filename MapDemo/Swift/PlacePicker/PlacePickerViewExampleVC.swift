@@ -30,7 +30,12 @@ class PlacePickerViewExampleVC: UIViewController {
         placePickerView = PlacePickerView(frame: self.view.bounds, parentViewController: self, mapView: mapView)
         placePickerView.delegate = self
         self.view.addSubview(placePickerView)
-        
+        // placeView.autocompleAttributionsSetting
+        let attributionSetting = MapmyIndiaAttributionsSettings()
+        attributionSetting.attributionSize = MapmyIndiaContentSize(rawValue: UserDefaultsManager.attributionSize) ?? .medium
+        attributionSetting.attributionHorizontalContentAlignment = MapmyIndiaHorizontalContentAlignment(rawValue: Int(UserDefaultsManager.attributionHorizontalAlignment)) ?? .center
+        attributionSetting.attributionVerticalPlacement = MapmyIndiaVerticalPlacement(rawValue: UserDefaultsManager.attributionVerticalPlacement) ?? .before
+        placePickerView.autocompleteAttributionSettings = attributionSetting
         if isForCustom {
             let customView = UIView(frame: CGRect(x: 0, y: 0, width: 50, height: 200))
             customView.backgroundColor = .red

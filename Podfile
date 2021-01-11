@@ -6,10 +6,11 @@ target 'MapDemo' do
   use_frameworks!
 
   # Pods for MapDemo
+  pod 'MapmyIndiaAPIKit', '~> 1.4.14'
   pod 'MapmyIndiaMaps'
-  pod 'MapmyIndiaDirections'
+  pod 'MapmyIndiaDirections', '~> 0.23.11'
   pod 'MapmyIndiaFeedbackKit'
-  pod 'MapmyIndiaUIWidgets'
+  pod 'MapmyIndiaUIWidgets', '~> 0.3.6'
 end
 
 target 'MapmyIndiaFeedbackUIKit' do
