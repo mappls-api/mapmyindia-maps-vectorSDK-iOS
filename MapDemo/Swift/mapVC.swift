@@ -98,6 +98,8 @@ class mapVC: UIViewController, MapmyIndiaMapViewDelegate,AutoSuggestDelegates {
     var strType:String?
     var place:  MapmyIndiaAtlasSuggestion!
     var refLocations: String!
+    var infoView: UIView!
+    var infoLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = strType
@@ -288,13 +290,31 @@ class mapVC: UIViewController, MapmyIndiaMapViewDelegate,AutoSuggestDelegates {
             mapView.addGestureRecognizer(singleTap)
             break
         case "Nearby Search":
+            infoView = UIView()
+            self.view.addSubview(infoView)
+            infoView.backgroundColor = .red
+            infoView.alpha = 0.7
+            
+            infoView.translatesAutoresizingMaskIntoConstraints = false
+            infoView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
+            infoView.topAnchor.constraint(equalTo: self.view.safeTopAnchor).isActive = true
+            infoView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
+            infoView.heightAnchor.constraint(equalToConstant: 55).isActive = true
+            
+            infoLabel = UILabel()
+            self.infoView.addSubview(infoLabel)
+            infoLabel.translatesAutoresizingMaskIntoConstraints = false
+            infoLabel.text = "Set RefLocation to Search nearby Places"
+            infoLabel.centerYAnchor.constraint(equalTo: infoView.centerYAnchor).isActive = true
+            infoLabel.centerXAnchor.constraint(equalTo: infoView.centerXAnchor).isActive = true
+            infoLabel.textColor = .white
+            
             searchBar.isHidden = true
             searchBar.delegate = self
             self.constraintSearchBarHeight.constant = 65
             mapView.addSubview(searchBar)
             searchBar.translatesAutoresizingMaskIntoConstraints = false
             searchBar.topAnchor.constraint(equalTo: self.view.safeTopAnchor).isActive = true
-            
             searchBar.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
             searchBar.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
             let settingsBarButton = UIBarButtonItem(title: "Set RefLocation", style: .plain, target: self, action: #selector(settingButtonTap))
@@ -811,7 +831,7 @@ extension mapVC: UISearchBarDelegate {
     //  MARK: -  Search Delegate
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if !searchText.isEmpty && searchText.count > 2 {
-            updateListResults(searchQuery: searchText)
+//            updateListResults(searchQuery: searchText)
         }
     }
     
@@ -866,10 +886,13 @@ extension mapVC: UISearchBarDelegate {
                             
                         }
                         self.mapView.addAnnotations(self.tempAnnotations)
+                        
+                        self.mapView.showAnnotations(self.tempAnnotations, edgePadding: UIEdgeInsets(top: 100, left: 100, bottom: -100, right: 100), animated: false, completionHandler: nil)
+                        
                         print("Near by: \(suggestions[0].latitude ?? 0),\(suggestions[0].longitude ?? 0)")
                         print(suggestions[0].placeAddress as Any)
                         print(suggestions[0].distance as Any)
-                        self.tableViewAutoSuggest.isHidden = false
+//                        self.tableViewAutoSuggest.isHidden = false
                         self.mapView.bringSubviewToFront(self.tableViewAutoSuggest)
                         self.tableViewAutoSuggest.delegate = self
                         self.tableViewAutoSuggest.dataSource = self
@@ -1003,6 +1026,7 @@ extension mapVC: UISearchBarDelegate {
                 self.mapView.zoomLevel = 17
                 self.mapView.addAnnotation(points)
                 self.searchBar.isHidden = false
+                self.infoView.isHidden = true
             }
         }))
         alterView.addAction(UIAlertAction(title: "Eloc", style: .default, handler: { (handler) in
@@ -1016,6 +1040,7 @@ extension mapVC: UISearchBarDelegate {
                 self.mapView.addMapmyIndiaAnnotation(annotation11, completionHandler: nil)
                 self.mapView.zoomLevel = 17
                 self.searchBar.isHidden = false
+                self.infoView.isHidden = true
             }
             else {
                 self.refLocations = "\(place.latitude!),\(place.longitude!)"
@@ -1029,6 +1054,7 @@ extension mapVC: UISearchBarDelegate {
                 
                 self.mapView.addAnnotation(points)
                 self.searchBar.isHidden = false
+                self.infoView.isHidden = true
             }
         }))
         alterView.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (handler) in

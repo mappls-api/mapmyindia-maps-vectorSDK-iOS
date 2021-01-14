@@ -53,11 +53,32 @@ class LocationsChooserTableViewController: UITableViewController {
     
     @objc func doneButtonClicked() {
         if mode == .distance {
-            delegate?.locationsPikcedForDistances(sourceLocations: self.sourceLocations, destinationLocations: self.destinationLocations, resource: selectedResourceDistance, profile: selectedProfileDistance)
+            print(sourceLocations.count)
+            if sourceLocations.count > 0 && destinationLocations.count > 0 {
+                delegate?.locationsPikcedForDistances(sourceLocations: self.sourceLocations, destinationLocations: self.destinationLocations, resource: selectedResourceDistance, profile: selectedProfileDistance)
+                dismiss()
+            } else {
+                emptyFieldError()
+            }
+            
         } else if mode == .direction {
-            delegate?.locationsPikcedForDirections(sourceLocation: self.sourceLocations.first!, destinationLocation: self.destinationLocations.first!, viaLocations: viaLocations, resource: selectedResourceDirection, profile: selectedProfileDirection)
+            if self.sourceLocations.first != "" && self.destinationLocations.first != "" {
+                delegate?.locationsPikcedForDirections(sourceLocation: self.sourceLocations.first!, destinationLocation: self.destinationLocations.first!, viaLocations: viaLocations, resource: selectedResourceDirection, profile: selectedProfileDirection)
+                self.dismiss()
+            } else {
+                emptyFieldError()
+            }
         }
         
+    }
+    
+    func emptyFieldError(){
+        let alert = UIAlertController(title: "Empty Field!", message: "Please fill empty fields first.", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func dismiss(){
         if let navVC = self.navigationController {
             navVC.popViewController(animated: true)
         } else {
@@ -542,6 +563,30 @@ extension LocationsChooserTableViewController {
         }
         return 0
     }
+    
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        if indexPath.section == sectionForSourceLocations && mode == .distance {
+            return true
+        } else if indexPath.section == sectionForDestinationLocations && mode == .distance {
+            return true
+        } else {
+            return false
+        }
+        
+    }
+
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == .delete) {
+            if indexPath.section == sectionForDestinationLocations && mode == .distance && destinationLocations.count > 1 {
+                destinationLocations.remove(at: indexPath.row)
+                tableView.reloadData()
+            } else if indexPath.section == sectionForSourceLocations && mode == .distance && sourceLocations.count > 1 {
+                sourceLocations.remove(at: indexPath.row)
+                tableView.reloadData()
+            }
+        }
+    }
+    
 }
 
 extension LocationsChooserTableViewController: MapmyIndiaAutocompleteViewControllerDelegate {

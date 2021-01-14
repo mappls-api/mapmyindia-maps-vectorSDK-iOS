@@ -19,7 +19,7 @@ class DirectionsViewController: UIViewController {
         super.viewDidLoad()
         
         self.view.backgroundColor = .white
-        self.title = "Distance Matrix"
+        self.title = "Directions"
         
         self.setupViews()
         self.setupConstraints()
@@ -131,9 +131,14 @@ class DirectionsViewController: UIViewController {
             
             if let _ = error {
                 self.footerViewLabel.text = error?.localizedDescription
+                self.footerViewButton.isHidden = true
                 return
             }
-            guard let allRoutes = routes, allRoutes.count > 0 else { return }
+            guard let allRoutes = routes, allRoutes.count > 0 else {
+                self.footerViewLabel.text = "No routes found for this route."
+                return
+                
+            }
             
             self.routes = allRoutes
             self.plotRouteOnMap(routeIndex: 0)
