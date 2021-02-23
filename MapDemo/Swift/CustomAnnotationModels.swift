@@ -10,6 +10,12 @@ import Foundation
 import MapmyIndiaMaps
 
 class CustomPointAnnotation: NSObject, MGLAnnotation {
+    var eLoc: String?
+    
+    func updateEloc(_ atEloc: String, completionHandler completion: ((Bool, String?) -> Void)? = nil) {
+        
+    }
+    
     // As a reimplementation of the MGLAnnotation protocol, we have to add mutable coordinate and (sub)title properties ourselves.
     
     var coordinate: CLLocationCoordinate2D

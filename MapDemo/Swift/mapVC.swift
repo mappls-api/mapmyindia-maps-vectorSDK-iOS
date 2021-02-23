@@ -864,7 +864,18 @@ extension mapVC: UISearchBarDelegate {
         switch strType {
         case "Nearby Search":
             let nearByManager = MapmyIndiaNearByManager.shared
-            let nearByOptions = MapmyIndiaNearbyAtlasOptions(query:searchQuery , location: self.refLocations)
+            let filter = MapmyIndiaNearbyKeyValueFilter(filterKey: "brandId", filterValues: ["B420","B316"])
+//            let sortBy = MapmyIndiaSortBy(sortBy: .distance)
+            
+            let sortBy = MapmyIndiaSortByDistanceWithOrder(orderBy: .ascending)
+            
+            
+            let nearByOptions = MapmyIndiaNearbyAtlasOptions(query: "", location: self.refLocations)
+            nearByOptions.filters = [filter]
+            nearByOptions.sortBy = sortBy
+            nearByOptions.searchBy = .importance
+            nearByOptions.searchBy = .distance
+            
             nearByManager.getNearBySuggestions(nearByOptions) { (suggestions, error) in
                 DispatchQueue.main.async {
                     if let error = error {

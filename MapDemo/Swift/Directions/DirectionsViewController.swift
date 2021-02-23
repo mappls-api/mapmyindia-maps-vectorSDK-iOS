@@ -14,6 +14,7 @@ class DirectionsViewController: UIViewController {
     var routes = [Route]()
     var selectedRoute:Route?
     let point = MGLPointAnnotation()
+    var attributeOptions: AttributeOptions = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -118,6 +119,7 @@ class DirectionsViewController: UIViewController {
         options.routeShapeResolution = .full
         options.includesAlternativeRoutes = true
         
+        options.attributeOptions = attributeOptions
         options.resourceIdentifier = resource
         options.profileIdentifier = profile
         
@@ -136,6 +138,7 @@ class DirectionsViewController: UIViewController {
             }
             guard let allRoutes = routes, allRoutes.count > 0 else {
                 self.footerViewLabel.text = "No routes found for this route."
+                self.footerViewButton.isHidden = true
                 return
                 
             }
@@ -271,7 +274,8 @@ extension DirectionsViewController: MapmyIndiaMapViewDelegate {
 }
 
 extension DirectionsViewController: LocationsChooserTableViewControllerDelegate {
-    func locationsPikcedForDirections(sourceLocation: String, destinationLocation: String, viaLocations: [String], resource: MBDirectionsResourceIdentifier, profile: MBDirectionsProfileIdentifier) {
+    func locationsPikcedForDirections(sourceLocation: String, destinationLocation: String, viaLocations: [String], resource: MBDirectionsResourceIdentifier, profile: MBDirectionsProfileIdentifier, attributions: MBAttributeOptions) {
+        self.attributeOptions = attributions
         self.callDirections(sourceLocation: sourceLocation, destinationLocation: destinationLocation, viaLocations: viaLocations, resource: resource, profile: profile)
     }
     

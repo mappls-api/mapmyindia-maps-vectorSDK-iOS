@@ -128,7 +128,7 @@ extension DistanceMatrixViewController: LocationsChooserTableViewControllerDeleg
         self.callDistanceMatrix(sourceLocations: sourceLocations, destinationLocations: destinationLocations, resource: resource, profile: profile)
     }
     
-    func locationsPikcedForDirections(sourceLocation: String, destinationLocation: String, viaLocations: [String], resource: MBDirectionsResourceIdentifier, profile: MBDirectionsProfileIdentifier) {
+    func locationsPikcedForDirections(sourceLocation: String, destinationLocation: String, viaLocations: [String], resource: MBDirectionsResourceIdentifier, profile: MBDirectionsProfileIdentifier, attributions: MBAttributeOptions) {
         
     }
 }

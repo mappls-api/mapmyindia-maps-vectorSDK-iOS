@@ -1,22 +1,25 @@
+//
+//  LocationChooserTableViewDirectionUIPlugin.swift
+//  MapDemo
+//
+//  Created by CEINFO on 18/01/21.
+//  Copyright © 2021 MMI. All rights reserved.
+//
 import UIKit
 import MapmyIndiaAPIKit
 import MapmyIndiaUIWidgets
 import MapmyIndiaDirections
+import MapmyIndiaDirectionsUI
 
-enum LocationsChooserMode: Int {
-    case distance = 0
-    case direction = 1
-}
 
-protocol LocationsChooserTableViewControllerDelegate {
-    func locationsPikcedForDistances(sourceLocations: [String], destinationLocations: [String], resource: MapmyIndiaDistanceMatrixResourceIdentifier, profile: MapmyIndiaDirectionsProfileIdentifier)
+protocol LocationChooserTableViewDirectionUIPluginDelegate {
+    func locationsPikcedForDistancesUI(sourceLocations: [String], destinationLocations: [String], resource: MapmyIndiaDistanceMatrixResourceIdentifier, profile: MapmyIndiaDirectionsProfileIdentifier)
     
-    func locationsPikcedForDirections(sourceLocation: String, destinationLocation: String, viaLocations: [String], resource: MBDirectionsResourceIdentifier, profile: MBDirectionsProfileIdentifier, attributions: MBAttributeOptions)
+    func locationsPikcedForDirectionsUI(sourceLocation: MapmyIndiaDirectionsLocation, destinationLocation: MapmyIndiaDirectionsLocation, viaLocations: [MapmyIndiaDirectionsLocation], resource: MBDirectionsResourceIdentifier, profile: MBDirectionsProfileIdentifier, attributions: MBAttributeOptions)
 }
 
-class LocationsChooserTableViewController: UITableViewController {
-    public var mode: LocationsChooserMode = .distance
-    var delegate: LocationsChooserTableViewControllerDelegate?
+class LocationChooserTableViewDirectionUIPlugin: UITableViewController {
+    var delegate: LocationChooserTableViewDirectionUIPluginDelegate?
     
     let sectionForAutocompleteSwitch = 0
     let sectionForResourceChooser = 1
@@ -26,11 +29,13 @@ class LocationsChooserTableViewController: UITableViewController {
     let sectionForDestinationLocations = 5
     let sectionForViaLocations = 6
     
-    
+
     var shouldOpenAutocomplete: Bool = true
-    var sourceLocations = [String]()
-    var destinationLocations = [String]()
-    var viaLocations = [String]()
+    var sourceLocations = [MapmyIndiaDirectionsLocation]()
+    var destinationLocations = [MapmyIndiaDirectionsLocation]()
+    var viaLocations = [MapmyIndiaDirectionsLocation]()
+    var attributions = [String]()
+    var dirAttributions : MBAttributeOptions = []
     var indexPathForSourceOrDesitnation: IndexPath?
     
     var selectedResourceDistance: MapmyIndiaDistanceMatrixResourceIdentifier = .default
@@ -38,44 +43,29 @@ class LocationsChooserTableViewController: UITableViewController {
     
     var selectedResourceDirection: MBDirectionsResourceIdentifier = .routeAdv
     var selectedProfileDirection: MBDirectionsProfileIdentifier = .driving
-    var attributions : MBAttributeOptions = []
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.title = "Location Chooser"
+        self.title = "Direction Location Chooser"
         self.tableView.separatorStyle = .none
-        
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(doneButtonClicked))
-        
-        if mode == .direction {
-            sourceLocations = [""]
-            destinationLocations = [""]
-        }
+        sourceLocations = [MapmyIndiaDirectionsLocation(location: "", displayName: "", displayAddress: "", locationType: .none)]
+        destinationLocations = [MapmyIndiaDirectionsLocation(location: "", displayName: "", displayAddress: "", locationType: .none)]
     }
     override func viewWillAppear(_ animated: Bool) {
         tableView.reloadData()
     }
     
     @objc func doneButtonClicked() {
-        if mode == .distance {
-            print(sourceLocations.count)
-            if sourceLocations.count > 0 && destinationLocations.count > 0 {
-                delegate?.locationsPikcedForDistances(sourceLocations: self.sourceLocations, destinationLocations: self.destinationLocations, resource: selectedResourceDistance, profile: selectedProfileDistance)
-                dismiss()
-            } else {
-                emptyFieldError()
-            }
-            
-        } else if mode == .direction {
-            if self.sourceLocations.first != "" && self.destinationLocations.first != "" {
-                delegate?.locationsPikcedForDirections(sourceLocation: self.sourceLocations.first!, destinationLocation: self.destinationLocations.first!, viaLocations: viaLocations, resource: selectedResourceDirection, profile: selectedProfileDirection, attributions: attributions)
-                self.dismiss()
-            } else {
-                emptyFieldError()
-            }
+        print()
+        if viaLocations.last?.location ?? "" == "" && viaLocations.count > 0 {
+            viaLocations.remove(at: viaLocations.count - 1)
         }
-        
+        if self.sourceLocations.first?.location != "" && self.destinationLocations.first?.location != "" {
+            delegate?.locationsPikcedForDirectionsUI(sourceLocation: self.sourceLocations.first!, destinationLocation: self.destinationLocations.first!, viaLocations: viaLocations, resource: selectedResourceDirection, profile: selectedProfileDirection, attributions: dirAttributions)
+        } else {
+            emptyFieldError()
+        }
     }
     
     func emptyFieldError(){
@@ -97,34 +87,12 @@ class LocationsChooserTableViewController: UITableViewController {
         tableView.reloadData()
     }
     
-    @objc func makeAttributionArray() {
-        attributions = []
-        print(UserDefaultsManager.isSpeed)
-        print(UserDefaultsManager.isDistance)
-        print(UserDefaultsManager.isCongestionLevel)
-        print(UserDefaultsManager.isExpectedTravelTime)
-        if UserDefaultsManager.isSpeed {
-            attributions.insert(.speed)
-        }
-        if UserDefaultsManager.isDistance {
-            attributions.insert(.distance)
-        }
-        if UserDefaultsManager.isCongestionLevel {
-            attributions.insert(.congestionLevel)
-        }
-        if UserDefaultsManager.isExpectedTravelTime {
-            attributions.insert(.expectedTravelTime)
-        }
-    }
-    
     @objc func getTitleForDetailTextCell(indexPath: IndexPath) -> String {
         switch indexPath.section {
         case sectionForResourceChooser:
             return "Resource"
         case sectionForProfileChooser:
             return "Profile"
-        case sectionForAttributions:
-            return "Attributions"
         default:
             return ""
         }
@@ -133,102 +101,60 @@ class LocationsChooserTableViewController: UITableViewController {
     @objc func getDetailsForDetailTextCell(indexPath: IndexPath) -> String {
         switch indexPath.section {
         case sectionForResourceChooser:
-            if mode == .distance {
-                switch selectedResourceDistance {
-                case .default:
-                    return "default"
-                case .eta:
-                    return "eta"
-                case .traffic:
-                    return "traffic"
-                default:
-                    return ""
-                }
-            } else if mode == .direction {
-                switch selectedResourceDirection {
-                case .routeAdv:
-                    return "default"
-                case .routeETA:
-                    return "eta"
-                case .routeTraffic:
-                    return "traffic"
-                default:
-                    return ""
-                }
+            switch selectedResourceDirection {
+            case .routeAdv:
+                return "default"
+            case .routeETA:
+                return "eta"
+            case .routeTraffic:
+                return "traffic"
+            default:
+                return ""
             }
+            
         case sectionForProfileChooser:
-            if mode == .distance {
-                switch selectedProfileDistance {
-                case .driving:
-                    return "driving"
-                case .walking:
-                    return "walking"
-                case .biking:
-                    return "biking"
-                case .trucking:
-                    return "trucking"
-                default:
-                    return ""
-                }
-            } else if mode == .direction {
-                switch selectedProfileDirection {
-                case .driving:
-                    return "driving"
-                case .walking:
-                    return "walking"
-                case .biking:
-                    return "biking"
-                case .trucking:
-                    return "trucking"
-                default:
-                    return ""
-                }
+            switch selectedProfileDirection {
+            case .driving:
+                return "driving"
+            case .walking:
+                return "walking"
+            case .biking:
+                return "biking"
+            case .trucking:
+                return "trucking"
+            default:
+                return ""
             }
         default:
             return ""
         }
-        return ""
     }
-    /*
-    @objc func getValueForLocationCell(indexPath: IndexPath) -> String {
-        switch indexPath.section {
-        case 3:
-            let sourceLocation = sourceLocations[indexPath.row]
-            return sourceLocation
-        case 4:
-            let destinationLocation = destinationLocations[indexPath.row]
-            return destinationLocation
-        default:
-            return ""
-        }
-    }
-    */
     
     @objc func getValueForSource(row: Int) -> String {
-        return sourceLocations[row]
+        return sourceLocations[row].displayName ?? "None"
     }
     
     @objc func getValueForDestination(row: Int) -> String {
-        return destinationLocations[row]
+        return destinationLocations[row].displayName ?? ""
     }
     
     @objc func getValueForVia(row: Int) -> String {
-        return viaLocations[row]
+        return viaLocations[row].displayName ?? ""
     }
     
     @objc func sourceValueChanged(_ textField: UITextField) {
-        let row = textField.tag
-        sourceLocations[row] = textField.text ?? ""
+//        let row = textField.tag
+//        sourceLocations[row] = textField.text ?? ""
     }
     
     @objc func destinationValueChanged(_ textField: UITextField) {
-        let row = textField.tag
-        destinationLocations[row] = textField.text ?? ""
+//        let row = textField.tag
+//        destinationLocations[row] = textField.text ?? ""
     }
     
     @objc func viaValueChanged(_ textField: UITextField) {
-        let row = textField.tag
-        viaLocations[row] = textField.text ?? ""
+//        let row = textField.tag
+//        viaLocations[row] = textField.text ?? ""
     }
     
     @objc func sourceLocationButtonPressed(_ button: UIButton) {
@@ -258,15 +184,15 @@ class LocationsChooserTableViewController: UITableViewController {
     @objc func addLocationButtonPressed(_ button: UIButton) {
         let section = button.tag
         let emptySourceFields = sourceLocations.filter { (location) -> Bool in
-            let newLocation = location.trimmingCharacters(in: .whitespacesAndNewlines)
+            let newLocation = location.location!.trimmingCharacters(in: .whitespacesAndNewlines)
             return newLocation.isEmpty
         }
         let emptyDestinationFields = destinationLocations.filter { (location) -> Bool in
-            let newLocation = location.trimmingCharacters(in: .whitespacesAndNewlines)
+            let newLocation = location.location!.trimmingCharacters(in: .whitespacesAndNewlines)
             return newLocation.isEmpty
         }
         let emptyViaFields = viaLocations.filter { (location) -> Bool in
-            let newLocation = location.trimmingCharacters(in: .whitespacesAndNewlines)
+            let newLocation = location.location!.trimmingCharacters(in: .whitespacesAndNewlines)
             return newLocation.isEmpty
         }
         if emptySourceFields.count > 0 || emptyDestinationFields.count > 0
@@ -277,19 +203,19 @@ class LocationsChooserTableViewController: UITableViewController {
         } else {
             switch section {
             case sectionForSourceLocations:
-                if mode == .direction && sourceLocations.count >= 1 {
+                if sourceLocations.count >= 1 {
                     break
                 }
-                sourceLocations.append("")
+                sourceLocations.append(MapmyIndiaDirectionsLocation(location: "", displayName: "", displayAddress: "", locationType: .none))
                 self.tableView.reloadData()
             case sectionForDestinationLocations:
-                if mode == .direction && destinationLocations.count >= 1 {
+                if destinationLocations.count >= 1 {
                     break
                 }
-                destinationLocations.append("")
+                destinationLocations.append(MapmyIndiaDirectionsLocation(location: "", displayName: "", displayAddress: "", locationType: .none))
                 self.tableView.reloadData()
             case sectionForViaLocations:
-                viaLocations.append("")
+                viaLocations.append(MapmyIndiaDirectionsLocation(location: "", displayName: "", displayAddress: "", locationType: .none))
                 self.tableView.reloadData()
             default:
                 break
@@ -315,31 +241,27 @@ class LocationsChooserTableViewController: UITableViewController {
         if let indexPath = indexPathForSourceOrDesitnation {
             if let latitude = selectedPlace.latitude, let longitude = selectedPlace.longitude {
                 if indexPath.section == sectionForSourceLocations {
-                    sourceLocations[indexPath.row] = "\(longitude),\(latitude)"
+                    sourceLocations[indexPath.row] = MapmyIndiaDirectionsLocation(location: "\(longitude),\(latitude)", displayName: selectedPlace.placeName, displayAddress: selectedPlace.placeAddress, locationType: .suggestion)
+//                        "\(longitude),\(latitude)"
                 } else if indexPath.section == sectionForDestinationLocations {
-                    destinationLocations[indexPath.row] = "\(longitude),\(latitude)"
+                    destinationLocations[indexPath.row] = MapmyIndiaDirectionsLocation(location: "\(longitude),\(latitude)", displayName: selectedPlace.placeName, displayAddress: selectedPlace.placeAddress, locationType: .suggestion)
                 } else if indexPath.section == sectionForViaLocations {
-                    viaLocations[indexPath.row] = "\(longitude),\(latitude)"
+                    viaLocations[indexPath.row] = MapmyIndiaDirectionsLocation(location: "\(longitude),\(latitude)", displayName: selectedPlace.placeName, displayAddress: selectedPlace.placeAddress, locationType: .suggestion)
                 }
                 tableView.reloadData()
             }
         }
     }
     
-    @objc func openAttributionSetting(){
-        let attributionVC = AttributionSettingTableViewController()
-        self.navigationController?.pushViewController(attributionVC, animated: false)
-    }
-    
     @objc func setElocValueForSourceOrDestinationLocationField(selectedPlace: MapmyIndiaAtlasSuggestion) {
         if let indexPath = indexPathForSourceOrDesitnation {
             if let eLoc = selectedPlace.eLoc {
                 if indexPath.section == sectionForSourceLocations {
-                    sourceLocations[indexPath.row] = eLoc
+                    sourceLocations[indexPath.row] = MapmyIndiaDirectionsLocation(location: eLoc, displayName: selectedPlace.placeName, displayAddress: selectedPlace.placeAddress, locationType: .suggestion)
                 } else if indexPath.section == sectionForDestinationLocations {
-                    destinationLocations[indexPath.row] = eLoc
+                    destinationLocations[indexPath.row] = MapmyIndiaDirectionsLocation(location: eLoc, displayName: selectedPlace.placeName, displayAddress: selectedPlace.placeAddress, locationType: .suggestion)
                 } else if indexPath.section == sectionForViaLocations {
-                    viaLocations[indexPath.row] = eLoc
+                    viaLocations[indexPath.row] = MapmyIndiaDirectionsLocation(location: eLoc, displayName: selectedPlace.placeName, displayAddress: selectedPlace.placeAddress, locationType: .suggestion)
                 }
                 tableView.reloadData()
             }
@@ -349,27 +271,21 @@ class LocationsChooserTableViewController: UITableViewController {
     @objc func openActionSheetToChooseResource() {
         let alterView = UIAlertController(title: "Select eLoc or Coordinate", message: "Please select eLoc or coordinate.", preferredStyle: .actionSheet)
         alterView.addAction(UIAlertAction(title: "default", style: .default, handler: { [self] (handler) in
-            if mode == .distance {
-                selectedResourceDistance = .default
-            } else if mode == .direction {
+      
                 selectedResourceDirection = .routeAdv
-            }
+            
             tableView.reloadData()
         }))
         alterView.addAction(UIAlertAction(title: "eta", style: .default, handler: { [self] (handler) in
-            if mode == .distance {
-                selectedResourceDistance = .eta
-            } else if mode == .direction {
+     
                 selectedResourceDirection = .routeETA
-            }
+            
             tableView.reloadData()
         }))
         alterView.addAction(UIAlertAction(title: "traffic", style: .default, handler: { [self] (handler) in
-            if mode == .distance {
-                selectedResourceDistance = .traffic
-            } else if mode == .direction {
+
                 selectedResourceDirection = .routeTraffic
-            }
+            
             tableView.reloadData()
         }))
         alterView.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (handler) in
@@ -380,84 +296,91 @@ class LocationsChooserTableViewController: UITableViewController {
     @objc func openActionSheetToChooseProfile() {
         let alterView = UIAlertController(title: "Select eLoc or Coordinate", message: "Please select eLoc or coordinate.", preferredStyle: .actionSheet)
         alterView.addAction(UIAlertAction(title: "driving", style: .default, handler: { [self] (handler) in
-            if mode == .distance {
-                selectedProfileDistance = .driving
-            } else if mode == .direction {
+
                 selectedProfileDirection = .driving
-            }
+            
             tableView.reloadData()
         }))
         alterView.addAction(UIAlertAction(title: "walking", style: .default, handler: { [self] (handler) in
-            if mode == .distance {
-                selectedProfileDistance = .walking
-            } else if mode == .direction {
+  
                 selectedProfileDirection = .walking
-            }
+            
             tableView.reloadData()
         }))
         alterView.addAction(UIAlertAction(title: "biking", style: .default, handler: { [self] (handler) in
-            if mode == .distance {
-                selectedProfileDistance = .biking
-            } else if mode == .direction {
+
                 selectedProfileDirection = .biking
-            }
+            
             tableView.reloadData()
         }))
         alterView.addAction(UIAlertAction(title: "trucking", style: .default, handler: { [self] (handler) in
-            if mode == .distance {
-                selectedProfileDistance = .trucking
-            } else if mode == .direction {
+
                 selectedProfileDirection = .trucking
-            }
+            
             tableView.reloadData()
         }))
         alterView.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (handler) in
         }))
         present(alterView, animated: true, completion: nil)
     }
+    
+    @objc func openAttributionSetting(){
+        let attributionVC = AttributionSettingTableViewController()
+        self.navigationController?.pushViewController(attributionVC, animated: false)
+    }
+    
+    @objc func makeAttributionArray() {
+        dirAttributions = []
+        print(UserDefaultsManager.isSpeed)
+        print(UserDefaultsManager.isDistance)
+        print(UserDefaultsManager.isCongestionLevel)
+        print(UserDefaultsManager.isExpectedTravelTime)
+        if UserDefaultsManager.isSpeed {
+            dirAttributions.insert(.speed)
+        }
+        if UserDefaultsManager.isDistance {
+            dirAttributions.insert(.distance)
+        }
+        if UserDefaultsManager.isCongestionLevel {
+            dirAttributions.insert(.congestionLevel)
+        }
+        if UserDefaultsManager.isExpectedTravelTime {
+            dirAttributions.insert(.expectedTravelTime)
+        }
+    }
 }
 
-extension LocationsChooserTableViewController {
+extension LocationChooserTableViewDirectionUIPlugin {
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
-        if mode == .distance {
-            return 6
-        } else if mode == .direction {
             return 7
-        }
-        return 0
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case sectionForAutocompleteSwitch:
-            return 1
+            return 0
         case sectionForResourceChooser:
             return 1
         case sectionForProfileChooser:
             return 1
-        case sectionForAttributions:
-            if mode == .direction {
-                return 1
-            } else {
-                return 0
-            }
-           
         case sectionForSourceLocations:
             return sourceLocations.count
         case sectionForDestinationLocations:
             return destinationLocations.count
         case sectionForViaLocations:
             return viaLocations.count
+        case sectionForAttributions:
+            return 1
         default:
             return 0
         }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        makeAttributionArray()
         var tableCell: UITableViewCell!
         let section = indexPath.section
+        self.makeAttributionArray()
         switch section {
         case sectionForAutocompleteSwitch:
             let cellIdentifier = "switchCell"
@@ -485,22 +408,6 @@ extension LocationsChooserTableViewController {
             }
             tableCell.textLabel?.text = getTitleForDetailTextCell(indexPath: indexPath)
             tableCell.detailTextLabel?.text = getDetailsForDetailTextCell(indexPath: indexPath)
-        
-        case sectionForAttributions:
-            if mode == .direction {
-                let cellIdentifier = "attributionCell"
-                if let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier){
-                    tableCell = cell
-                }else {
-                    tableCell = UITableViewCell(style: .subtitle, reuseIdentifier: cellIdentifier)
-                    tableCell.accessoryType = .disclosureIndicator
-                }
-                tableCell.textLabel?.text = "Attributions"
-                tableCell.detailTextLabel?.text = "\(attributions)"
-            }else {
-                
-            }
-            
         case sectionForSourceLocations, sectionForDestinationLocations, sectionForViaLocations:
             let cellIdentifier = "locationChooserCell"
             if let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as? LocationChooserTableViewCell {
@@ -538,6 +445,18 @@ extension LocationsChooserTableViewController {
                 locationCell.viaAutocompleteWidgetButton.tag = indexPath.row
                 locationCell.viaAutocompleteWidgetButton.isHidden = (shouldOpenAutocomplete && section == sectionForViaLocations) ? false : true
             }
+            
+        case sectionForAttributions:
+            let cellIdentifier = "attributionCell"
+            if let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier){
+                tableCell = cell
+            }else {
+                tableCell = UITableViewCell(style: .subtitle, reuseIdentifier: cellIdentifier)
+                tableCell.accessoryType = .disclosureIndicator
+            }
+            tableCell.textLabel?.text = "Attributions"
+            tableCell.detailTextLabel?.text = "\(dirAttributions)"
+            
         default:
             tableCell = UITableViewCell()
         }
@@ -568,7 +487,6 @@ extension LocationsChooserTableViewController {
             textLabel.translatesAutoresizingMaskIntoConstraints = false
             textLabel.textColor = .white
             textLabel.font = UIFont.boldSystemFont(ofSize: 20)
-            //text.textAlignment = .right
             if section == sectionForSourceLocations {
                 textLabel.text = "Source Locations"
             } else if section == sectionForDestinationLocations {
@@ -582,18 +500,11 @@ extension LocationsChooserTableViewController {
             addButton.heightAnchor.constraint(equalTo: addButton.widthAnchor).isActive = true
             addButton.trailingAnchor.constraint(equalTo: viewHeader.trailingAnchor, constant: -8).isActive = true
             addButton.centerYAnchor.constraint(equalTo: viewHeader.centerYAnchor, constant: 0).isActive = true
-            //addButton.topAnchor.constraint(equalTo: viewHeader.topAnchor, constant: 10).isActive = true
-            //addButton.bottomAnchor.constraint(equalTo: viewHeader.bottomAnchor, constant: -10).isActive = true
             
             textLabel.leftAnchor.constraint(equalTo: viewHeader.leftAnchor, constant: 8).isActive = true
             textLabel.trailingAnchor.constraint(equalTo: addButton.leadingAnchor, constant: -8).isActive = true
             textLabel.centerYAnchor.constraint(equalTo: viewHeader.centerYAnchor, constant: 0).isActive = true
-            //textLabel.topAnchor.constraint(equalTo: viewHeader.topAnchor, constant: 0).isActive = true
-            //textLabel.bottomAnchor.constraint(equalTo: viewHeader.bottomAnchor, constant: 0).isActive = true
-            
-            
-            if ((section == sectionForSourceLocations || section == sectionForDestinationLocations)
-                    && mode == .direction) {
+            if ((section == sectionForSourceLocations || section == sectionForDestinationLocations)) {
                 addButton.isHidden = true
             }
             
@@ -624,11 +535,9 @@ extension LocationsChooserTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        if indexPath.section == sectionForSourceLocations && mode == .distance {
+        if indexPath.section == sectionForViaLocations{
             return true
-        } else if indexPath.section == sectionForDestinationLocations && mode == .distance {
-            return true
-        } else {
+        }else {
             return false
         }
         
@@ -636,19 +545,14 @@ extension LocationsChooserTableViewController {
 
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if (editingStyle == .delete) {
-            if indexPath.section == sectionForDestinationLocations && mode == .distance && destinationLocations.count > 1 {
-                destinationLocations.remove(at: indexPath.row)
+          if indexPath.section == sectionForViaLocations {
+                viaLocations.remove(at: indexPath.row)
                 tableView.reloadData()
-            } else if indexPath.section == sectionForSourceLocations && mode == .distance && sourceLocations.count > 1 {
-                sourceLocations.remove(at: indexPath.row)
-                tableView.reloadData()
-            }
+          }
         }
     }
-    
 }
-
-extension LocationsChooserTableViewController: MapmyIndiaAutocompleteViewControllerDelegate {
+extension LocationChooserTableViewDirectionUIPlugin: MapmyIndiaAutocompleteViewControllerDelegate {
     func didAutocomplete(viewController: MapmyIndiaAutocompleteViewController, withPlace place: MapmyIndiaAtlasSuggestion) {
         self.dismiss(animated: false) {
             if let _ = place.latitude, let _ = place.longitude {

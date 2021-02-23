@@ -7,13 +7,14 @@
 //
 
 import UIKit
-
+import MapmyIndiaDirections
 class MapDemoSettingsVC: UITableViewController {
     
 //    let demoSettings = DemoSettingType.allCases
     var demoSettings: [DemoSettingType] = []
     let placePickerSettings = PlacePickerSettingType.allCases
     let autocompleteSetttings = AutocompleteSettingType.allCases
+    let identifierSettings = IdentifierSettingType.allCases
     var selectedOption = ""
     var didClicked : Bool = false
     
@@ -131,6 +132,56 @@ class MapDemoSettingsVC: UITableViewController {
         }
     }
     
+    func setIdentifierValue(currentType: IdentifierSettingType, didClicked: Bool) -> String {
+        let alertController = UIAlertController(title: "Customize attributes?", message: "Select type of attribute you want in search Widgets ", preferredStyle: .actionSheet)
+        switch currentType {
+        case .profileIdentifier:
+            alertController.addAction(UIAlertAction(title: "Driving", style: .default, handler: { (alertAction) in
+                UserDefaultsManager.profileIdentifier = MBDirectionsProfileIdentifier.driving.rawValue
+                self.tableView.reloadData()
+            }))
+            alertController.addAction(UIAlertAction(title: "Walking", style: .default, handler: { (alertAction) in
+                UserDefaultsManager.profileIdentifier = MBDirectionsProfileIdentifier.walking.rawValue
+                self.tableView.reloadData()
+            }))
+            alertController.addAction(UIAlertAction(title: "Biking", style: .default, handler: { (alertAction) in
+                UserDefaultsManager.profileIdentifier = MBDirectionsProfileIdentifier.biking.rawValue
+                self.tableView.reloadData()
+            }))
+            alertController.addAction(UIAlertAction(title: "Truking", style: .default, handler: { (alertAction) in
+                UserDefaultsManager.profileIdentifier = MBDirectionsProfileIdentifier.trucking.rawValue
+                self.tableView.reloadData()
+            }))
+            alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (alertAction) in
+            
+            }))
+            if didClicked{
+                present(alertController, animated: false, completion: nil)
+            }
+            return UserDefaultsManager.profileIdentifier
+        case .resourceIdentifier:
+            alertController.addAction(UIAlertAction(title: "Default", style: .default, handler: { (alertAction) in
+                UserDefaultsManager.resourceIdentifier = MBDirectionsResourceIdentifier.routeAdv.rawValue
+                self.tableView.reloadData()
+            }))
+            alertController.addAction(UIAlertAction(title: "Eta", style: .default, handler: { (alertAction) in
+                UserDefaultsManager.resourceIdentifier = MBDirectionsResourceIdentifier.routeETA.rawValue
+                self.tableView.reloadData()
+            }))
+            alertController.addAction(UIAlertAction(title: "Trrafic", style: .default, handler: { (alertAction) in
+                UserDefaultsManager.resourceIdentifier = MBDirectionsResourceIdentifier.routeTraffic.rawValue
+                self.tableView.reloadData()
+            }))
+            alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (alertAction) in
+            
+            }))
+            if didClicked{
+                present(alertController, animated: false, completion: nil)
+            }
+            return UserDefaultsManager.resourceIdentifier
+        }
+    }
+    
     func getValueForPlacePickerSetting(_ placePickerSetting : PlacePickerSettingType) -> Bool {
         switch placePickerSetting {
         case .isCustomMarkerView:
@@ -168,7 +219,7 @@ class MapDemoSettingsVC: UITableViewController {
         }
     }
     
-    func getValueForAutocompleteLogoOptions(_ autocompleteSetting: AutocompleteSettingType) -> String{
+    func getValueForAutocompleteLogoOptions(_ autocompleteSetting: AutocompleteSettingType) -> String {
         
         let intValue = presentAlertConrollerForDefaultController(currentType: autocompleteSetting, didClicked: false)
         if intValue == 1 {
@@ -221,6 +272,8 @@ extension MapDemoSettingsVC {
             return placePickerSettings.count
         case .autocomplete:
             return autocompleteSetttings.count
+        case .Identifier:
+            return identifierSettings.count
         }
     }
     
@@ -231,6 +284,8 @@ extension MapDemoSettingsVC {
             return "Place Picker"
         case .autocomplete:
             return "Autocomplete Logo Settings"
+        case .Identifier:
+            return "Identifier Setting"
         }
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -271,6 +326,20 @@ extension MapDemoSettingsVC {
                 return newCell
             }  
         }
+        else if currentSection == .Identifier {
+            let cellIdentifier = "identifier"
+            let currentType = identifierSettings[indexPath.row]
+            if let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier){
+                cell.detailTextLabel?.text = setIdentifierValue(currentType: currentType, didClicked: false)
+                return cell
+            }else{
+                let newCell = UITableViewCell(style: .value1, reuseIdentifier: cellIdentifier)
+                newCell.accessoryType = .disclosureIndicator
+                newCell.textLabel?.text = currentType.description
+                newCell.detailTextLabel?.text = setIdentifierValue(currentType: currentType, didClicked: false)
+                return newCell
+            }
+        }
         return UITableViewCell()
     }
     
@@ -281,12 +350,17 @@ extension MapDemoSettingsVC {
             didClicked = true
             _ = presentAlertConrollerForDefaultController(currentType: currentType, didClicked: didClicked)
         }
+        else if currentSection == .Identifier {
+            let currentType = identifierSettings[indexPath.row]
+            _ = setIdentifierValue(currentType: currentType, didClicked: true)
+        }
        
     }
 }
-public enum DemoSettingType: UInt, CustomStringConvertible, CaseIterable{
+public enum DemoSettingType: UInt, CustomStringConvertible, CaseIterable {
     case placePicker
     case autocomplete
+    case Identifier
     
     public var description: String{
         switch self {
@@ -294,6 +368,8 @@ public enum DemoSettingType: UInt, CustomStringConvertible, CaseIterable{
             return "Place Picker"
         case .autocomplete:
             return "Autocomplete"
+        case .Identifier:
+            return "Identifier"
         
         }
     }
@@ -312,6 +388,19 @@ public enum AutocompleteSettingType: UInt, CustomStringConvertible, CaseIterable
             return "Attribution Size"
         case .attributionVerticalPlacement:
             return "Attribution Vertical Placement"
+        }
+    }
+}
+
+public enum IdentifierSettingType: UInt, CustomStringConvertible, CaseIterable {
+    case profileIdentifier
+    case resourceIdentifier
+    public var description: String {
+        switch self {
+        case .profileIdentifier:
+            return "Profile Identifier"
+        case .resourceIdentifier:
+            return "Resource Identifier"
         }
     }
 }

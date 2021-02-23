@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -62,6 +62,7 @@
 		68417CC5210B329100424A00 /* InitialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68417CC4210B329100424A00 /* InitialVC.swift */; };
 		68417CC7210B32A700424A00 /* ListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68417CC6210B32A700424A00 /* ListVC.swift */; };
 		68417CCD210B48FB00424A00 /* MainC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68417CCC210B48FB00424A00 /* MainC.storyboard */; };
+		6850349125B6ACB900A347FB /* AttributionSettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6850349025B6ACB900A347FB /* AttributionSettingTableViewController.swift */; };
 		68534685210EDF59000ED395 /* ListVCOC.m in Sources */ = {isa = PBXBuildFile; fileRef = 68534684210EDF59000ED395 /* ListVCOC.m */; };
 		6853468A210EF14B000ED395 /* mapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68534689210EF14B000ED395 /* mapVC.swift */; };
 		6853468D210EF161000ED395 /* mapVCOC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6853468C210EF161000ED395 /* mapVCOC.m */; };
@@ -71,6 +72,8 @@
 		68A6BF1E2106E03F00547929 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68A6BF1D2106E03F00547929 /* Assets.xcassets */; };
 		68A6BF212106E03F00547929 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68A6BF1F2106E03F00547929 /* LaunchScreen.storyboard */; };
 		68B927C825A63587002E6B8A /* DistanceMatrixViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B927C725A63587002E6B8A /* DistanceMatrixViewController.swift */; };
+		68D07A6025B1CBD2005B86CB /* DirectionUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D07A5F25B1CBD1005B86CB /* DirectionUIViewController.swift */; };
+		68D07A9425B555AC005B86CB /* LocationChooserTableViewDirectionUIPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D07A9325B555AC005B86CB /* LocationChooserTableViewDirectionUIPlugin.swift */; };
 		A41DFAC9239906CE00D39EF9 /* AutoSuggestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41DFAC8239906CE00D39EF9 /* AutoSuggestVC.swift */; };
 		A45C2997239A157100EC81F6 /* CustomIndoorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45C2995239A157000EC81F6 /* CustomIndoorVC.swift */; };
 		A45C2998239A157100EC81F6 /* DefaultIndoorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45C2996239A157100EC81F6 /* DefaultIndoorVC.swift */; };
@@ -164,6 +167,7 @@
 		68417CC6210B32A700424A00 /* ListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVC.swift; sourceTree = "<group>"; };
 		68417CC8210B330D00424A00 /* MapDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MapDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		68417CCC210B48FB00424A00 /* MainC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainC.storyboard; sourceTree = "<group>"; };
+		6850349025B6ACB900A347FB /* AttributionSettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributionSettingTableViewController.swift; sourceTree = "<group>"; };
 		68534683210EDF59000ED395 /* ListVCOC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListVCOC.h; sourceTree = "<group>"; };
 		68534684210EDF59000ED395 /* ListVCOC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListVCOC.m; sourceTree = "<group>"; };
 		68534689210EF14B000ED395 /* mapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapVC.swift; sourceTree = "<group>"; };
@@ -177,6 +181,8 @@
 		68A6BF202106E03F00547929 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		68A6BF222106E03F00547929 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		68B927C725A63587002E6B8A /* DistanceMatrixViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistanceMatrixViewController.swift; sourceTree = "<group>"; };
+		68D07A5F25B1CBD1005B86CB /* DirectionUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionUIViewController.swift; sourceTree = "<group>"; };
+		68D07A9325B555AC005B86CB /* LocationChooserTableViewDirectionUIPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationChooserTableViewDirectionUIPlugin.swift; sourceTree = "<group>"; };
 		A41DFAC8239906CE00D39EF9 /* AutoSuggestVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoSuggestVC.swift; sourceTree = "<group>"; };
 		A45C2995239A157000EC81F6 /* CustomIndoorVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomIndoorVC.swift; sourceTree = "<group>"; };
 		A45C2996239A157100EC81F6 /* DefaultIndoorVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultIndoorVC.swift; sourceTree = "<group>"; };
@@ -240,6 +246,8 @@
 			children = (
 				181F70B925A89A5B006024FE /* LocationsChooserTableViewController.swift */,
 				189C4BEF25A9877500B2ADB2 /* LocationChooserTableViewCell.swift */,
+				68D07A9325B555AC005B86CB /* LocationChooserTableViewDirectionUIPlugin.swift */,
+				6850349025B6ACB900A347FB /* AttributionSettingTableViewController.swift */,
 			);
 			path = LocationsChooser;
 			sourceTree = "<group>";
@@ -396,6 +404,7 @@
 				186D020A248E25F4006F1C84 /* CovidLayersTableVC.swift */,
 				185A74ED249B4C5300081DAE /* CovidSafetyStatusExample.swift */,
 				18EF185D250A03EE0067182A /* POIsAlongTheRouteVC.swift */,
+				68D07A5F25B1CBD1005B86CB /* DirectionUIViewController.swift */,
 			);
 			path = Swift;
 			sourceTree = "<group>";
@@ -513,7 +522,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0940;
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 1220;
 				ORGANIZATIONNAME = MMI;
 				TargetAttributes = {
 					18E87E3221400FAD00F1C866 = {
@@ -594,11 +603,13 @@
 				188AE97A21C7D92C00D2C866 /* CustomCalloutView.swift in Sources */,
 				189D0B80230AA3E2005C8390 /* MMILocationPuckView.m in Sources */,
 				A41DFAC9239906CE00D39EF9 /* AutoSuggestVC.swift in Sources */,
+				68D07A9425B555AC005B86CB /* LocationChooserTableViewDirectionUIPlugin.swift in Sources */,
 				18778C4D24751F33006DE478 /* DraggableMapMarkerVC.swift in Sources */,
 				18D14CA3251A5C35004A6D32 /* AutosuggestWidgetSampleType.swift in Sources */,
 				18F45358251A81BB0091A898 /* MapmyIndiaStyledAutocompleteViewController.swift in Sources */,
 				A45C2998239A157100EC81F6 /* DefaultIndoorVC.swift in Sources */,
 				68417CC7210B32A700424A00 /* ListVC.swift in Sources */,
+				6850349125B6ACB900A347FB /* AttributionSettingTableViewController.swift in Sources */,
 				18894B8C23043476005DC142 /* LocationPuckView.swift in Sources */,
 				A49EB60923DC00EB00A08E42 /* InstructionTableViewCell.swift in Sources */,
 				A4DA1E9623DB16BF0010743F /* DirectionIndicationViewStyleKit.swift in Sources */,
@@ -617,6 +628,7 @@
 				A49EB61323E004BA00A08E42 /* InteractiveMarkerVC.swift in Sources */,
 				A464439023E2A9D60089E7CE /* PointOnMapVC.swift in Sources */,
 				A4ACEA4D23D80C6400447644 /* InstructionTableVC.swift in Sources */,
+				68D07A6025B1CBD2005B86CB /* DirectionUIViewController.swift in Sources */,
 				1861995C24DBE040004D5547 /* PlacePickerViewExampleLauncherVC.swift in Sources */,
 				18404BD92303D44D001D8DC0 /* ClusterMarkersExample.swift in Sources */,
 				68A6BF192106E03C00547929 /* ViewController.swift in Sources */,
@@ -863,7 +875,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 25;
+				CURRENT_PROJECT_VERSION = 26;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 22L95D5KTZ;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -878,7 +890,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.4.14;
+				MARKETING_VERSION = 1.4.15;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mmi.MapDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "MapDemo/Objective C/MapDemo-Bridging-Header.h";
@@ -894,7 +906,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 25;
+				CURRENT_PROJECT_VERSION = 26;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 22L95D5KTZ;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -909,7 +921,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.4.14;
+				MARKETING_VERSION = 1.4.15;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mmi.MapDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";

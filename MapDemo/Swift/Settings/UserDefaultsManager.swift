@@ -8,6 +8,7 @@
 
 import Foundation
 import MapmyIndiaUIWidgets
+import MapmyIndiaDirections
 
 class UserDefaultsManager {
     static func isKeyPresentInUserDefaults(key: String) -> Bool {
@@ -301,13 +302,93 @@ class UserDefaultsManager {
         }
     }
     
+    private static let profileIdentifierKey = "profileIdentifierKey"
+    static var profileIdentifier: String {
+        get {
+            if isKeyPresentInUserDefaults(key: profileIdentifierKey) {
+                return UserDefaults.standard.string(forKey: profileIdentifierKey)!
+            }
+            else {
+                return String(MBDirectionsProfileIdentifier.driving.rawValue)
+            }
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: profileIdentifierKey)
+        }
+    }
+
+    private static let resourceIdentifierKey = "resourceIdentifierKey"
+    static var resourceIdentifier: String {
+        get {
+            if isKeyPresentInUserDefaults(key: resourceIdentifierKey) {
+                return UserDefaults.standard.string(forKey: resourceIdentifierKey)!
+            }
+            else {
+                return String(MBDirectionsResourceIdentifier.routeAdv.rawValue)
+            }
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: resourceIdentifierKey)
+        }
+    }
     
+    private static let isDistanceKey = "isDistanceKey"
+    static var isDistance: Bool {
+        get {
+            if isKeyPresentInUserDefaults(key: isDistanceKey) {
+                return UserDefaults.standard.bool(forKey: isDistanceKey)
+            }
+            else {
+                return false
+            }
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: isDistanceKey)
+        }
+    }
     
-//    static var attributionLength: MapmyIndiaContentLength = .long
+    private static let isExpectedTravelTimeKey = "expectedTravelTimeKey"
+    static var isExpectedTravelTime: Bool {
+        get {
+            if isKeyPresentInUserDefaults(key: isExpectedTravelTimeKey) {
+                return UserDefaults.standard.bool(forKey: isExpectedTravelTimeKey)
+            }
+            else {
+                return false
+            }
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: isExpectedTravelTimeKey)
+        }
+    }
     
-//    static var attributionSize: MapmyIndiaContentSize = .medium
-     
-//    static var attributionVerticalPlacement : MapmyIndiaVerticalPlacement = .before
+    private static let isSpeedKey = "isSpeedKey"
+    static var isSpeed: Bool {
+        get {
+            if isKeyPresentInUserDefaults(key: isSpeedKey) {
+                return UserDefaults.standard.bool(forKey: isSpeedKey)
+            }
+            else {
+                return false
+            }
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: isSpeedKey)
+        }
+    }
     
-   
+    private static let isCongestionLevelKey = "isCongestionLevelKey"
+    static var isCongestionLevel: Bool {
+        get {
+            if isKeyPresentInUserDefaults(key: isCongestionLevelKey) {
+                return UserDefaults.standard.bool(forKey: isCongestionLevelKey)
+            }
+            else {
+                return false
+            }
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: isCongestionLevelKey)
+        }
+    }
 }

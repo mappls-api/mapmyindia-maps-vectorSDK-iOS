@@ -17,7 +17,7 @@ class ListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @objc var placemark: MapmyIndiaPlacemark?
     
-    let listArr:[String]? = ["Zoom Level", "Zoom Level With Animation", "Center With Animation", "Current Location","Tracking Mode", "Add Marker", "Add Multiple Markers With Bounds", "Custom Marker", "Animate Marker", "Draggable Marker", "Clustering Markers", "Interactive Markers", "Polyline", "Multiple Polylines", "Polygons", "Circles", "Update Circle", "Autosuggest", "Geocoding (Forward Geocode)", "Atlas Geocode", "Reverse Geocoding", "Nearby Search", "Place/eLoc Detail Legacy", "Place Detail", "Driving Distance", "Distance Matrix", "Distance Matrix ETA", "Distance Matrix Elocs", "Route", "Route Advance", "Route Advance ETA", "Routing/Directions", "Feedback", "GeoJson Multiple Shapes", "Dashed Polyline", "Geodesic Polyline", "Interior Polygons", "Default Indoor", "Custom Indoor", "Point On Map", "Safety Plugin", "Covid Layers", "COVID-19 Safety Status", "Place Picker", "POI along the Route", "Autosuggest Widget"]
+    let listArr:[String]? = ["Zoom Level", "Zoom Level With Animation", "Center With Animation", "Current Location","Tracking Mode", "Add Marker", "Add Multiple Markers With Bounds", "Custom Marker", "Animate Marker", "Draggable Marker", "Clustering Markers", "Interactive Markers", "Polyline", "Multiple Polylines", "Polygons", "Circles", "Update Circle", "Autosuggest", "Geocoding (Forward Geocode)", "Atlas Geocode", "Reverse Geocoding", "Nearby Search", "Place/eLoc Detail Legacy", "Place Detail", "Driving Distance", "Distance Matrix", "Distance Matrix ETA", "Distance Matrix Elocs", "Route", "Route Advance", "Route Advance ETA", "Routing/Directions", "Feedback", "GeoJson Multiple Shapes", "Dashed Polyline", "Geodesic Polyline", "Interior Polygons", "Default Indoor", "Custom Indoor", "Point On Map", "Safety Plugin", "Covid Layers", "COVID-19 Safety Status", "Place Picker", "POI along the Route", "Autosuggest Widget", "DirectionUI Plugin"]
     
     var placeDetails = [String]()
     
@@ -152,13 +152,15 @@ class ListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             case "Place Picker":
                 let vc = PlacePickerViewExampleLauncherVC(nibName: nil, bundle: nil)
                 self.navigationController?.pushViewController(vc, animated: true)
+                break
             break
             case "POI along the Route":
                 let vc = POIsAlongTheRouteVC(nibName: nil, bundle: nil)
                 self.navigationController?.pushViewController(vc, animated: true)
-            case "Autosugges Widget":
+            case "Autosuggest Widget":
                 let vc = AutosuggestWidgetExamplesLauncherVC(nibName: nil, bundle: nil)
                 self.navigationController?.pushViewController(vc, animated: true)
+                break
             case "Distance Matrix Elocs":
                 let vc = DistanceMatrixViewController()
                 self.navigationController?.pushViewController(vc, animated: true)
@@ -166,6 +168,10 @@ class ListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             case "Routing/Directions":
                 let vc = DirectionsViewController()
                 self.navigationController?.pushViewController(vc, animated: true)
+                break
+            case "DirectionUI Plugin":
+                let vC = DirectionUIViewController()
+                self.navigationController?.pushViewController(vC, animated: false)
                 break
             default:
                 let vctrl = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "mapVC") as? mapVC

@@ -40,6 +40,7 @@
 BOOL isForCustomAnnotationView = false;
 
 CLLocation *referenceLocation = nil;
+NSString *refLocation = nil;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -52,6 +53,7 @@ CLLocation *referenceLocation = nil;
     self.mapView.minimumZoomLevel = 4;
     
     referenceLocation = [[CLLocation alloc] initWithLatitude:28.550667 longitude:77.268959];
+    refLocation = @"28.550667, 77.268959";
     
     _routeAdvices = [[NSMutableArray alloc]init];
 }
@@ -235,7 +237,7 @@ CLLocation *referenceLocation = nil;
             
             MapmyIndiaNearByManager * nearByManager = [MapmyIndiaNearByManager
                                                        sharedManager];
-            MapmyIndiaNearbyAtlasOptions *nearByOptions = [[MapmyIndiaNearbyAtlasOptions alloc] initWithQuery:self.searchBar.text location:referenceLocation withRegion:MMIRegionTypeIdentifierIndia];
+            MapmyIndiaNearbyAtlasOptions *nearByOptions = [[MapmyIndiaNearbyAtlasOptions alloc] initWithQuery:self.searchBar.text location:refLocation withRegion:MMIRegionTypeIdentifierIndia];
             nearByOptions.bounds = [[MapmyIndiaRectangularRegion alloc] initWithTopLeft:CLLocationCoordinate2DMake(28.563838, 77.244345) bottomRight:CLLocationCoordinate2DMake(28.541898, 77.294514)];
             [nearByManager getNearBySuggestionsWithOptions:nearByOptions
                                          completionHandler:^(NSArray<MapmyIndiaAtlasSuggestion *> * _Nullable
