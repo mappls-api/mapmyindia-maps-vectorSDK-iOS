@@ -25,7 +25,7 @@ class mapVC: UIViewController, MapmyIndiaMapViewDelegate,AutoSuggestDelegates, C
     }
     
     func didReverseGeocode(placemark: MapmyIndiaGeocodedPlacemark) {
-//        feedbackButton.addTarget(self, action: #selector(feedbackButtonHandler), for: .touchUpInside)
+
     }
     
     func didFailedReverseGeocode(error: NSError?) {
@@ -70,7 +70,6 @@ class mapVC: UIViewController, MapmyIndiaMapViewDelegate,AutoSuggestDelegates, C
     var location = "MMI000"
     
     @IBAction func feedbackButtonPressed(_ sender: UIButton) {
-        feedbackButtonHandler()
     }
     
     @IBOutlet weak var customSearchUI: UIView!
@@ -515,15 +514,10 @@ class mapVC: UIViewController, MapmyIndiaMapViewDelegate,AutoSuggestDelegates, C
             isCustomCalloutForPolyline = true
             break
         case "Feedback":
-            
             mapView = MapmyIndiaMapView()
-            // Do any additional setup after loading the view.
-           var placePickerView = PlacePickerView(frame: self.view.bounds, parentViewController: self, mapView: mapView)
+            let placePickerView = PlacePickerView(frame: self.view.bounds, parentViewController: self, mapView: mapView)
             placePickerView.delegate = self
-            
             self.view.addSubview(placePickerView)
-            
-//            self.customSearchUI.isHidden = false
             locationManager.delegate = self
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
             locationManager.requestWhenInUseAuthorization()
@@ -532,8 +526,6 @@ class mapVC: UIViewController, MapmyIndiaMapViewDelegate,AutoSuggestDelegates, C
             locationManager.distanceFilter = 10
             mapView.showsUserLocation = true
             feedbackButton.isHidden = false
-//            searchBar.isUserInteractionEnabled = true
-            feedbackButton.addTarget(self, action: #selector(feedbackButtonHandler), for: .touchUpInside)
             break
         case "Animate Marker":
             isForCustomAnnotationView = true
@@ -607,11 +599,6 @@ class mapVC: UIViewController, MapmyIndiaMapViewDelegate,AutoSuggestDelegates, C
         self.mapView.fly(to: mapCamera, withDuration: 5.0) {
             
         }
-    }
-    
-    @objc func feedbackButtonHandler() {
-       
-       
     }
     
     @objc func showPlaceDetail() {
@@ -1170,9 +1157,7 @@ extension mapVC: MapmyIndiaAutocompleteViewControllerDelegate {
     func wasCancelled(viewController: MapmyIndiaAutocompleteViewController) {
         
     }
-    
-    
-    
+
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         print("didUpdateLocations \(locations)")
         print(locations.count)
