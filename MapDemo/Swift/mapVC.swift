@@ -14,7 +14,28 @@ import MapmyIndiaDirections
 import MapmyIndiaFeedbackUIKit
 import MapmyIndiaUIWidgets
 
-class mapVC: UIViewController, MapmyIndiaMapViewDelegate,AutoSuggestDelegates {
+class mapVC: UIViewController, MapmyIndiaMapViewDelegate,AutoSuggestDelegates, CLLocationManagerDelegate , PlacePickerViewDelegate {
+    func didPickedLocation(placemark: MapmyIndiaGeocodedPlacemark) {
+        self.refLocations = "MMI000"
+        if let lat = placemark.longitude, let long = placemark.longitude {
+            self.refLocations = "\(lat),\(long)"
+        }
+        let navVC = MapmyIndiaFeedbackUIKitManager.shared.getViewController(location: self.refLocations, speed: self.speed, alt: self.alt, bearing: self.bearing, accuracy: self.accuracy, appVersion: Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String, osVersionoptional: UIDevice.current.systemVersion, deviceName: UIDevice.current.name)
+        self.present(navVC, animated: true, completion: nil)
+    }
+    
+    func didReverseGeocode(placemark: MapmyIndiaGeocodedPlacemark) {
+//        feedbackButton.addTarget(self, action: #selector(feedbackButtonHandler), for: .touchUpInside)
+    }
+    
+    func didFailedReverseGeocode(error: NSError?) {
+        
+    }
+    
+    func didCancelPlacePicker() {
+        
+    }
+    
     func suggestionSelected(suggestion: MapmyIndiaAtlasSuggestion, placeName: String) {
          if let lat = suggestion.latitude, let lng = suggestion.longitude {
                    let coordinates = CLLocationCoordinate2DMake(CLLocationDegrees(truncating: lat),CLLocationDegrees(truncating: lng))
@@ -37,6 +58,16 @@ class mapVC: UIViewController, MapmyIndiaMapViewDelegate,AutoSuggestDelegates {
     @IBOutlet weak var vwFooter: UIView!
     @IBOutlet weak var lblInfo: UILabel!
     @IBOutlet weak var feedbackButton: UIButton!
+    let locationManager = CLLocationManager()
+    var speed : Int = 0
+    var accuracy: Int = 0
+    var bearing: Int = 0
+    var expiry: Int = 0
+    var alt: Int = 0
+    var flag: Int = 0
+    var quality: Int = 0
+    var utc: Double = 0.0
+    var location = "MMI000"
     
     @IBAction func feedbackButtonPressed(_ sender: UIButton) {
         feedbackButtonHandler()
@@ -98,7 +129,7 @@ class mapVC: UIViewController, MapmyIndiaMapViewDelegate,AutoSuggestDelegates {
     var strType:String?
     var place:  MapmyIndiaAtlasSuggestion!
     var refLocations: String!
-    var infoView: UIView!
+    var infoView = UIView()
     var infoLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -290,7 +321,7 @@ class mapVC: UIViewController, MapmyIndiaMapViewDelegate,AutoSuggestDelegates {
             mapView.addGestureRecognizer(singleTap)
             break
         case "Nearby Search":
-            infoView = UIView()
+//            infoView = UIView()
             self.view.addSubview(infoView)
             infoView.backgroundColor = .red
             infoView.alpha = 0.7
@@ -484,9 +515,24 @@ class mapVC: UIViewController, MapmyIndiaMapViewDelegate,AutoSuggestDelegates {
             isCustomCalloutForPolyline = true
             break
         case "Feedback":
-            mapView.setCenter(CLLocationCoordinate2DMake(28.550667, 77.268959), animated: false)
-            mapView.zoomLevel = 15
+            
+            mapView = MapmyIndiaMapView()
+            // Do any additional setup after loading the view.
+           var placePickerView = PlacePickerView(frame: self.view.bounds, parentViewController: self, mapView: mapView)
+            placePickerView.delegate = self
+            
+            self.view.addSubview(placePickerView)
+            
+//            self.customSearchUI.isHidden = false
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.requestWhenInUseAuthorization()
+            locationManager.startUpdatingLocation()
+            locationManager.startMonitoringSignificantLocationChanges()
+            locationManager.distanceFilter = 10
+            mapView.showsUserLocation = true
             feedbackButton.isHidden = false
+//            searchBar.isUserInteractionEnabled = true
             feedbackButton.addTarget(self, action: #selector(feedbackButtonHandler), for: .touchUpInside)
             break
         case "Animate Marker":
@@ -564,8 +610,8 @@ class mapVC: UIViewController, MapmyIndiaMapViewDelegate,AutoSuggestDelegates {
     }
     
     @objc func feedbackButtonHandler() {
-        let navVC = MapmyIndiaFeedbackUIKitManager.shared.getViewController(location: CLLocation(latitude: mapView.centerCoordinate.latitude, longitude: mapView.centerCoordinate.longitude), moduleId: "")
-        self.present(navVC, animated: true, completion: nil)
+       
+       
     }
     
     @objc func showPlaceDetail() {
@@ -1107,6 +1153,12 @@ extension mapVC: MapmyIndiaAutocompleteViewControllerDelegate {
     func didAutocomplete(viewController: MapmyIndiaAutocompleteViewController, withPlace place: MapmyIndiaAtlasSuggestion) {
         self.dismiss(animated: false) {
             self.place = place
+            if let latitude = place.latitude, let longitude = place.longitude {
+                self.location = "\(latitude),\(longitude)"
+            }else {
+                self.location = place.eLoc ?? ""
+            }
+            
             self.presentAlertController()
         }
     }
@@ -1118,6 +1170,30 @@ extension mapVC: MapmyIndiaAutocompleteViewControllerDelegate {
     func wasCancelled(viewController: MapmyIndiaAutocompleteViewController) {
         
     }
+    
+    
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        print("didUpdateLocations \(locations)")
+        print(locations.count)
+        if let speed = locations.first?.speed {
+            self.speed = Int(speed)
+        }
+        if let altitude = locations.first?.altitude {
+            self.alt = Int(altitude)
+        }
+        self.accuracy = Int(locationManager.desiredAccuracy)
+        self.bearing = Int(locationManager.headingFilter)
+        
+        
+    }
+        func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+            if (error as? CLError)?.code == .denied {
+                manager.stopUpdatingLocation()
+                manager.stopMonitoringSignificantLocationChanges()
+            }
+        }
+    
 }
 
 // MARK:- CustomPolyline Class

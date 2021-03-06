@@ -640,8 +640,8 @@ NSString *refLocation = nil;
 
 -(void)feedbackButtonHandler {
     CLLocation *location = [[CLLocation alloc] initWithLatitude:_mapView.centerCoordinate.latitude longitude:_mapView.centerCoordinate.longitude];
-    UINavigationController *navVC = [[MapmyIndiaFeedbackUIKitManager sharedManager] getViewControllerWithLocation:location moduleId:@""];
-    [self presentViewController:navVC animated:YES completion:nil];
+//    UINavigationController *navVC = [[MapmyIndiaFeedbackUIKitManager sharedManager] getViewControllerWithLocation:location moduleId:@""];
+//    [self presentViewController:navVC animated:YES completion:nil];
 }
     
 -(void)showPlaceDetail {

@@ -85,6 +85,8 @@
 		A4DA1E9523DB16BF0010743F /* DirectionIndicationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DA1E9323DB16BE0010743F /* DirectionIndicationView.swift */; };
 		A4DA1E9623DB16BF0010743F /* DirectionIndicationViewStyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DA1E9423DB16BE0010743F /* DirectionIndicationViewStyleKit.swift */; };
 		B16E4AD0246967A3004BF783 /* SafetyPluginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16E4ACF246967A3004BF783 /* SafetyPluginVC.swift */; };
+		CA6FFF34F45A66F136636452 /* Pods_MapmyIndiaFeedbackUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F93FAA5308C3F4704CBDCCD /* Pods_MapmyIndiaFeedbackUIKit.framework */; };
+		E8523D3BD84FBAA65B76D2EC /* Pods_MapDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C67D1CBDDB238ED9EA202209 /* Pods_MapDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -163,6 +165,7 @@
 		18F45357251A81BB0091A898 /* MapmyIndiaStyledAutocompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapmyIndiaStyledAutocompleteViewController.swift; sourceTree = "<group>"; };
 		18F576CF23FEA83B0009A2D9 /* TextInstructions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInstructions.swift; sourceTree = "<group>"; };
 		18F576D123FEAA880009A2D9 /* TextInstructions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TextInstructions.plist; sourceTree = "<group>"; };
+		4F93FAA5308C3F4704CBDCCD /* Pods_MapmyIndiaFeedbackUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MapmyIndiaFeedbackUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		68417CC4210B329100424A00 /* InitialVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialVC.swift; sourceTree = "<group>"; };
 		68417CC6210B32A700424A00 /* ListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVC.swift; sourceTree = "<group>"; };
 		68417CC8210B330D00424A00 /* MapDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MapDemo-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -183,6 +186,10 @@
 		68B927C725A63587002E6B8A /* DistanceMatrixViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistanceMatrixViewController.swift; sourceTree = "<group>"; };
 		68D07A5F25B1CBD1005B86CB /* DirectionUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionUIViewController.swift; sourceTree = "<group>"; };
 		68D07A9325B555AC005B86CB /* LocationChooserTableViewDirectionUIPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationChooserTableViewDirectionUIPlugin.swift; sourceTree = "<group>"; };
+		6EF96B93A26934F1A8E4BCDE /* Pods-MapDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapDemo.debug.xcconfig"; path = "Target Support Files/Pods-MapDemo/Pods-MapDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		7AE87029747EFC65BF66074E /* Pods-MapmyIndiaFeedbackUIKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapmyIndiaFeedbackUIKit.release.xcconfig"; path = "Target Support Files/Pods-MapmyIndiaFeedbackUIKit/Pods-MapmyIndiaFeedbackUIKit.release.xcconfig"; sourceTree = "<group>"; };
+		7F87137C91ACCB4A5D07E6F4 /* Pods-MapmyIndiaFeedbackUIKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapmyIndiaFeedbackUIKit.debug.xcconfig"; path = "Target Support Files/Pods-MapmyIndiaFeedbackUIKit/Pods-MapmyIndiaFeedbackUIKit.debug.xcconfig"; sourceTree = "<group>"; };
+		8FC9BBD5F93D1CB7079BFCD6 /* Pods-MapDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapDemo.release.xcconfig"; path = "Target Support Files/Pods-MapDemo/Pods-MapDemo.release.xcconfig"; sourceTree = "<group>"; };
 		A41DFAC8239906CE00D39EF9 /* AutoSuggestVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoSuggestVC.swift; sourceTree = "<group>"; };
 		A45C2995239A157000EC81F6 /* CustomIndoorVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomIndoorVC.swift; sourceTree = "<group>"; };
 		A45C2996239A157100EC81F6 /* DefaultIndoorVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultIndoorVC.swift; sourceTree = "<group>"; };
@@ -194,6 +201,7 @@
 		A4DA1E9323DB16BE0010743F /* DirectionIndicationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionIndicationView.swift; sourceTree = "<group>"; };
 		A4DA1E9423DB16BE0010743F /* DirectionIndicationViewStyleKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionIndicationViewStyleKit.swift; sourceTree = "<group>"; };
 		B16E4ACF246967A3004BF783 /* SafetyPluginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafetyPluginVC.swift; sourceTree = "<group>"; };
+		C67D1CBDDB238ED9EA202209 /* Pods_MapDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MapDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +209,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA6FFF34F45A66F136636452 /* Pods_MapmyIndiaFeedbackUIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +218,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00D33398245308C70038ADAE /* MapmyIndiaFeedbackUIKit.framework in Frameworks */,
+				E8523D3BD84FBAA65B76D2EC /* Pods_MapDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +428,7 @@
 				18E87E3421400FAD00F1C866 /* MapmyIndiaFeedbackUIKit */,
 				68A6BF142106E03C00547929 /* Products */,
 				F560EFD69E767ADFE19F5A20 /* Pods */,
+				E3DAC2595127003A248A6DC8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -458,9 +469,22 @@
 			path = DistanceMatrix;
 			sourceTree = "<group>";
 		};
+		E3DAC2595127003A248A6DC8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C67D1CBDDB238ED9EA202209 /* Pods_MapDemo.framework */,
+				4F93FAA5308C3F4704CBDCCD /* Pods_MapmyIndiaFeedbackUIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F560EFD69E767ADFE19F5A20 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				6EF96B93A26934F1A8E4BCDE /* Pods-MapDemo.debug.xcconfig */,
+				8FC9BBD5F93D1CB7079BFCD6 /* Pods-MapDemo.release.xcconfig */,
+				7F87137C91ACCB4A5D07E6F4 /* Pods-MapmyIndiaFeedbackUIKit.debug.xcconfig */,
+				7AE87029747EFC65BF66074E /* Pods-MapmyIndiaFeedbackUIKit.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -483,6 +507,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18E87E3C21400FAD00F1C866 /* Build configuration list for PBXNativeTarget "MapmyIndiaFeedbackUIKit" */;
 			buildPhases = (
+				0A363A9FC059305D295930EA /* [CP] Check Pods Manifest.lock */,
 				18E87E2E21400FAD00F1C866 /* Sources */,
 				18E87E2F21400FAD00F1C866 /* Frameworks */,
 				18E87E3021400FAD00F1C866 /* Headers */,
@@ -501,10 +526,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 68A6BF252106E03F00547929 /* Build configuration list for PBXNativeTarget "MapDemo" */;
 			buildPhases = (
+				CFD08D11D963071ADD357BE6 /* [CP] Check Pods Manifest.lock */,
 				68A6BF0F2106E03C00547929 /* Sources */,
 				68A6BF102106E03C00547929 /* Frameworks */,
 				68A6BF112106E03C00547929 /* Resources */,
 				181F977F2429CEA300D996EA /* Embed Frameworks */,
+				E81EE8DE61E6BDA749C23A40 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -579,6 +606,70 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0A363A9FC059305D295930EA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MapmyIndiaFeedbackUIKit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CFD08D11D963071ADD357BE6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MapDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E81EE8DE61E6BDA749C23A40 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MapDemo/Pods-MapDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MapDemo/Pods-MapDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MapDemo/Pods-MapDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		18E87E2E21400FAD00F1C866 /* Sources */ = {
@@ -684,6 +775,7 @@
 /* Begin XCBuildConfiguration section */
 		18E87E3D21400FAD00F1C866 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F87137C91ACCB4A5D07E6F4 /* Pods-MapmyIndiaFeedbackUIKit.debug.xcconfig */;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -720,6 +812,7 @@
 		};
 		18E87E3E21400FAD00F1C866 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7AE87029747EFC65BF66074E /* Pods-MapmyIndiaFeedbackUIKit.release.xcconfig */;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -871,6 +964,7 @@
 		};
 		68A6BF262106E03F00547929 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6EF96B93A26934F1A8E4BCDE /* Pods-MapDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -902,6 +996,7 @@
 		};
 		68A6BF272106E03F00547929 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8FC9BBD5F93D1CB7079BFCD6 /* Pods-MapDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

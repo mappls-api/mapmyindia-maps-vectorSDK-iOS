@@ -56,8 +56,6 @@ class DirectionUIViewController: UIViewController {
         mapView.delegate = self
         mapView.showsUserLocation = true
         view.addSubview(mapView)
-//        self.navigationController?.navigationBar.isHidden = true
-        
         setUpSearchViewLayout()
         searchTextView.isUserInteractionEnabled = true
         let gestureRecoognizor = UITapGestureRecognizer(target: self, action: #selector(onSearchViewTaped))
@@ -520,6 +518,14 @@ extension DirectionUIViewController: LocationChooserTableViewDirectionUIPluginDe
     }
 }
 extension DirectionUIViewController : MapmyIndiaDirectionsViewControllerDelegate {
+    func didRequestForStartNavigation(for routes: [Route], locations: [MapmyIndiaDirectionsLocation], selectedRouteIndex: Int, error: NSError) {
+        
+    }
+    
+    func didRequestForPreviewRoute(for steps: [RouteStep]?) {
+    
+    }
+    
     func didRequestForGoBack(for view: MapmyIndiaDirectionsTopBannerView) {
         self.navigationController?.navigationBar.isHidden = false
     }
