@@ -31,6 +31,7 @@ Also version history can be seen by following [Version History](https://github.c
 
 | Version | Dated | Description |
 | :---- | :---- | :---- |
+| `5.7.17` | 18 Feb, 2021 | Performance optimization. |
 | `5.7.16` | 27 Jan, 2021 | Fixed an issue where on failing of Session initialization due to token expiry, it will refresh token and reinitialize session. |
 | `5.7.15` | 03 Dec, 2020 | Xcode 12.2 compatibility. Functions are added for e-Loc Strategy. See wiki pages. |
 | `5.7.14` | 20 Oct, 2020 | ReactNative related issues are fixed.|
