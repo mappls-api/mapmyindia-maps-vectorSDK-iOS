@@ -31,6 +31,7 @@ Also version history can be seen by following [Version History](https://github.c
 
 | Version | Dated | Description |
 | :---- | :---- | :---- |
+| `5.7.18` | 29 Apr, 2021 | Fixed a crash which was due to key observer. <br> Some UI Optimization has been made where current location view stucks while packaging app using xcode 12. <br> A dependency `MapmyIndiaSafetyPlugin` removed from podspec file.|
 | `5.7.17` | 18 Feb, 2021 | Performance optimization. |
 | `5.7.16` | 27 Jan, 2021 | Fixed an issue where on failing of Session initialization due to token expiry, it will refresh token and reinitialize session. |
 | `5.7.15` | 03 Dec, 2020 | Xcode 12.2 compatibility. Functions are added for e-Loc Strategy. See wiki pages. |
@@ -55,6 +56,8 @@ Also version history can be seen by following [Version History](https://github.c
 
 | Version | Dated | Description |
 | :---- | :---- | :---- |
+| `0.23.15` | 30 May, 2021 | xcode 12.5 compatibility. |
+| `0.23.14` | 24 Feb, 2021 | xcode 12.4 compatibility. |
 | `0.23.13` | 11 Jan, 2021 | In Directions locations can be set either an eLoc or comma seperated coordinate(In format longitude, latitude). |
 | `0.23.12` | 09 Dec, 2020 | Xcode 12.2 compatibility. |
 | `0.23.11` | 14 Oct, 2020 | Xcode 12 compatibility. |
