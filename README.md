@@ -31,6 +31,7 @@ Also version history can be seen by following [Version History](https://github.c
 
 | Version | Dated | Description |
 | :---- | :---- | :---- |
+| `5.7.19` | 21 May, 2021 | Fixed a crash. Integrated a style API which will help in rendering specific style as well as facilitate the switching of style themes. A default style is set for all account users to start with.|
 | `5.7.18` | 29 Apr, 2021 | Fixed a crash which was due to key observer. <br> Some UI Optimization has been made where current location view stucks while packaging app using xcode 12. <br> A dependency `MapmyIndiaSafetyPlugin` removed from podspec file.|
 | `5.7.17` | 18 Feb, 2021 | Performance optimization. |
 | `5.7.16` | 27 Jan, 2021 | Fixed an issue where on failing of Session initialization due to token expiry, it will refresh token and reinitialize session. |
