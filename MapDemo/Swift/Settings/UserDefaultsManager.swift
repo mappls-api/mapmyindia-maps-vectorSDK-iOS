@@ -15,6 +15,22 @@ class UserDefaultsManager {
         return UserDefaults.standard.object(forKey: key) != nil
     }
     
+    
+    // GeofenceUI Costant.
+    private static let polygonFillColorKey = "polygonFillColorKey"
+    private static let polygonStrokeColorKey = "polygonStrokeColorKey"
+    private static let circleFillColorKey = "circleFillColorKey"
+    private static let circleStrokeColorKey = "circleStrokeColorKey"
+    private static let markerFillColorKey = "markerFillColorKey"
+    private static let markerStrokeColorKey = "markerStrokeColorKey"
+    private static let draggingEdgesLineColorKey = "draggingEdgesLineColorKey"
+    private static let polygonDrawingOverlayColorKey = "polygonDrawingOverlayColorKey"
+    private static let geofencePolygonStrokeWidthKey = "geofencePolygonStrokeWidthKey"
+    private static let geofenceCircleStrokeWidthKey = "geofenceCircleStrokeWidthKey"
+    
+    
+    
+    
     private static let isCustomMarkerViewKey = "isCustomMarkerViewKey"
     static var isCustomMarkerView: Bool {
         get {
@@ -391,4 +407,175 @@ class UserDefaultsManager {
             UserDefaults.standard.set(newValue, forKey: isCongestionLevelKey)
         }
     }
+    
+    // Static var for Geofence UI
+    static var polygonFillColor: UIColor {
+        get {
+            let defaultColor = UIColor.blue.withAlphaComponent(0.3)
+            if isKeyPresentInUserDefaults(key: polygonFillColorKey) {
+                return UserDefaults.standard.colorForKey(key: polygonFillColorKey) ?? defaultColor
+            }
+            else {
+                return defaultColor
+            }
+        }
+        set {
+            UserDefaults.standard.setColor(color: newValue, forKey: polygonFillColorKey)
+        }
+    }
+    static var polygonStrokeColor: UIColor {
+        get {
+            let defaultColor = UIColor.green.withAlphaComponent(0.3)
+            if isKeyPresentInUserDefaults(key: polygonStrokeColorKey) {
+                return UserDefaults.standard.colorForKey(key: polygonStrokeColorKey) ?? defaultColor
+            }
+            else {
+                return defaultColor
+            }
+        }
+        set {
+            UserDefaults.standard.setColor(color: newValue, forKey: polygonStrokeColorKey)
+        }
+    }
+    static var circleFillColor: UIColor {
+        get {
+            let defaultColor = UIColor.blue.withAlphaComponent(0.3)
+            if isKeyPresentInUserDefaults(key: circleFillColorKey) {
+                return UserDefaults.standard.colorForKey(key: circleFillColorKey) ?? defaultColor
+            }
+            else {
+                return defaultColor
+            }
+        }
+        set {
+            UserDefaults.standard.setColor(color: newValue, forKey: circleFillColorKey)
+        }
+    }
+    static var circleStrokeColor: UIColor {
+        get {
+            let defaultColor = UIColor.green.withAlphaComponent(0.3)
+            if isKeyPresentInUserDefaults(key: circleStrokeColorKey) {
+                return UserDefaults.standard.colorForKey(key: circleStrokeColorKey) ?? defaultColor
+            }
+            else {
+                return defaultColor
+            }
+        }
+        set {
+            UserDefaults.standard.setColor(color: newValue, forKey: circleStrokeColorKey)
+        }
+    }
+    static var markerFillColor: UIColor {
+        get {
+            let defaultColor = UIColor.red.withAlphaComponent(0.3)
+            if isKeyPresentInUserDefaults(key: markerFillColorKey) {
+                return UserDefaults.standard.colorForKey(key: markerFillColorKey) ?? defaultColor
+            }
+            else {
+                return defaultColor
+            }
+        }
+        set {
+            UserDefaults.standard.setColor(color: newValue, forKey: markerFillColorKey)
+        }
+    }
+    static var markerStrokeColor: UIColor {
+        get {
+            let defaultColor = UIColor.red.withAlphaComponent(0.5)
+            if isKeyPresentInUserDefaults(key: markerStrokeColorKey) {
+                return UserDefaults.standard.colorForKey(key: markerStrokeColorKey) ?? defaultColor
+            }
+            else {
+                return defaultColor
+            }
+        }
+        set {
+            UserDefaults.standard.setColor(color: newValue, forKey: markerStrokeColorKey)
+        }
+    }
+    static var draggingEdgesLineColor: UIColor {
+        get {
+            let defaultColor = UIColor.blue
+            if isKeyPresentInUserDefaults(key: draggingEdgesLineColorKey) {
+                return UserDefaults.standard.colorForKey(key: draggingEdgesLineColorKey) ?? defaultColor
+            }
+            else {
+                return defaultColor
+            }
+        }
+        set {
+            UserDefaults.standard.setColor(color: newValue, forKey: draggingEdgesLineColorKey)
+        }
+    }
+    static var polygonDrawingOverlayColor: UIColor {
+        get {
+            let defaultColor = UIColor.clear
+            if isKeyPresentInUserDefaults(key: polygonDrawingOverlayColorKey) {
+                return UserDefaults.standard.colorForKey(key: polygonDrawingOverlayColorKey) ?? defaultColor
+            }
+            else {
+                return defaultColor
+            }
+        }
+        set {
+            UserDefaults.standard.setColor(color: newValue, forKey: polygonDrawingOverlayColorKey)
+        }
+    }
+    static var geofencePolygonStrokeWidth: Double {
+        get {
+            if isKeyPresentInUserDefaults(key: geofencePolygonStrokeWidthKey) {
+                return UserDefaults.standard.double(forKey: geofencePolygonStrokeWidthKey)
+            }
+            else {
+                return 2
+            }
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: geofencePolygonStrokeWidthKey)
+        }
+    }
+    static var geofenceCircleStrokeWidth: Double {
+        get {
+            if isKeyPresentInUserDefaults(key: geofenceCircleStrokeWidthKey) {
+                return UserDefaults.standard.double(forKey: geofenceCircleStrokeWidthKey)
+            }
+            else {
+                return 2
+            }
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: geofenceCircleStrokeWidthKey)
+        }
+    }
+    
+    
+}
+
+extension UserDefaults {
+  func colorForKey(key: String) -> UIColor? {
+    var colorReturnded: UIColor?
+    if let colorData = data(forKey: key) {
+      do {
+        if let color = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(colorData) as? UIColor {
+          colorReturnded = color
+        }
+      } catch {
+        print("Error UserDefaults")
+      }
+    }
+    return colorReturnded
+  }
+  
+  func setColor(color: UIColor?, forKey key: String) {
+    var colorData: NSData?
+    if let color = color {
+      do {
+        let data = try NSKeyedArchiver.archivedData(withRootObject: color, requiringSecureCoding: false) as NSData?
+        colorData = data
+      } catch {
+        print("Error UserDefaults")
+      }
+    }
+    set(colorData, forKey: key)
+  }
 }

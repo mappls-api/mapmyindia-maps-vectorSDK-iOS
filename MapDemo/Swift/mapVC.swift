@@ -68,8 +68,9 @@ class mapVC: UIViewController, MapmyIndiaMapViewDelegate,AutoSuggestDelegates, C
     var quality: Int = 0
     var utc: Double = 0.0
     var location = "MMI000"
-    
+    var mapTapped = true
     @IBAction func feedbackButtonPressed(_ sender: UIButton) {
+        
     }
     
     @IBOutlet weak var customSearchUI: UIView!
@@ -269,7 +270,7 @@ class mapVC: UIViewController, MapmyIndiaMapViewDelegate,AutoSuggestDelegates, C
             break
         case "Circles":
             let circleCoordinates = InteriorPolygonExample_Swift.polygonCircleForCoordinate(coordinate: CLLocationCoordinate2D(latitude: 28.550834, longitude:
-                77.268918), withMeterRadius: 100)
+                77.268918), withMeterRadius: 1000)
             let polygon = MGLPolygon(coordinates: circleCoordinates, count: UInt(circleCoordinates.count))
             mapView.addAnnotation(polygon)
             let shapeCam = mapView.cameraThatFitsShape(polygon, direction: CLLocationDirection(0), edgePadding: UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20))
@@ -320,7 +321,7 @@ class mapVC: UIViewController, MapmyIndiaMapViewDelegate,AutoSuggestDelegates, C
             mapView.addGestureRecognizer(singleTap)
             break
         case "Nearby Search":
-//            infoView = UIView()
+//            infoView = UIView()	
             self.view.addSubview(infoView)
             infoView.backgroundColor = .red
             infoView.alpha = 0.7
@@ -508,6 +509,7 @@ class mapVC: UIViewController, MapmyIndiaMapViewDelegate,AutoSuggestDelegates, C
         case "Route Advance":
             callRouteUsingDirectionsFramework(isETA: false)
             isCustomCalloutForPolyline = true
+            
             break
         case "Route Advance ETA":
             callRouteUsingDirectionsFramework(isETA: true)
@@ -625,7 +627,6 @@ class mapVC: UIViewController, MapmyIndiaMapViewDelegate,AutoSuggestDelegates, C
     }
     
     func mapView(_ mapView: MGLMapView, annotationCanShowCallout annotation: MGLAnnotation) -> Bool {
-        // Always allow callouts to popup when annotations are tapped.
         return true
     }
     
@@ -634,11 +635,9 @@ class mapVC: UIViewController, MapmyIndiaMapViewDelegate,AutoSuggestDelegates, C
     @objc func didTapMap(tap: UITapGestureRecognizer) {
         
         if tap.state == .ended {
-            //Do Whatever You want on End of Gesture
             let location = tap.location(in: mapView)
             let coordinate = mapView.convert(location,toCoordinateFrom: mapView)
             
-            // Add annotation:
             switch strType {
             case "Reverse Geocoding":
                 let reverseGeocodeManager = MapmyIndiaReverseGeocodeManager.shared
@@ -646,6 +645,9 @@ class mapVC: UIViewController, MapmyIndiaMapViewDelegate,AutoSuggestDelegates, C
                     coordinate, withRegion: .india)
                 reverseGeocodeManager.reverseGeocode(revOptions) { (placemarks,
                     attribution, error) in
+                    if let result = placemarks {
+                        
+                    }
                     if let error = error {
                         NSLog("%@", error)
                     } else if let placemarks = placemarks, !placemarks.isEmpty {
@@ -808,10 +810,18 @@ class mapVC: UIViewController, MapmyIndiaMapViewDelegate,AutoSuggestDelegates, C
                    }
                }
                self.mapView.addAnnotation(polylines[routeIndex])
+            self.mapView.selectAnnotation(polylines[routeIndex], animated: true)
                self.mapView.showAnnotations(polylines, edgePadding: UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20), animated: false)
                self.selectRoute(route: self.routes[0])
+            let tap = UITapGestureRecognizer(target: self, action: #selector(tappedOnMap))
+            self.mapView.addGestureRecognizer(tap)
            }
        }
+    
+    @objc func tappedOnMap(_ gesture: UITapGestureRecognizer){
+        mapTapped = true
+    }
+
     
     
     func selectRoute(route: Route) {
@@ -897,23 +907,18 @@ extension mapVC: UISearchBarDelegate {
         switch strType {
         case "Nearby Search":
             let nearByManager = MapmyIndiaNearByManager.shared
-            let filter = MapmyIndiaNearbyKeyValueFilter(filterKey: "brandId", filterValues: ["B420","B316"])
-//            let sortBy = MapmyIndiaSortBy(sortBy: .distance)
-            
+            let filter = MapmyIndiaNearbyKeyValueFilter(filterKey: "brandId", filterValues: ["String","String"])
             let sortBy = MapmyIndiaSortByDistanceWithOrder(orderBy: .ascending)
-            
-            
-            let nearByOptions = MapmyIndiaNearbyAtlasOptions(query: "", location: self.refLocations)
-            nearByOptions.filters = [filter]
-            nearByOptions.sortBy = sortBy
-            nearByOptions.searchBy = .importance
-            nearByOptions.searchBy = .distance
+            let nearByOptions = MapmyIndiaNearbyAtlasOptions(query: searchQuery, location: self.refLocations)
+//                        nearByOptions.filters = [filter]
+                        nearByOptions.sortBy = sortBy
+                        nearByOptions.searchBy = .distance
             
             nearByManager.getNearBySuggestions(nearByOptions) { (suggestions, error) in
                 DispatchQueue.main.async {
                     if let error = error {
                         NSLog("%@", error)
-                    } else if let suggestions = suggestions, !suggestions.isEmpty {
+                    } else if let suggestions = suggestions?.suggestions, !suggestions.isEmpty {
                         self.searchSuggestions.removeAll()
                         self.tempAnnotations.removeAll()
                         self.removeAllAnnotation()
@@ -926,8 +931,6 @@ extension mapVC: UISearchBarDelegate {
                             point.coordinate = CLLocationCoordinate2D(latitude: suggestions[i].latitude as! CLLocationDegrees, longitude: suggestions[i].longitude as! CLLocationDegrees)
                             point.title = "nearByAnnotations"
                             self.tempAnnotations.append(point)
-                            
-                            
                         }
                         self.mapView.addAnnotations(self.tempAnnotations)
                         
@@ -936,7 +939,6 @@ extension mapVC: UISearchBarDelegate {
                         print("Near by: \(suggestions[0].latitude ?? 0),\(suggestions[0].longitude ?? 0)")
                         print(suggestions[0].placeAddress as Any)
                         print(suggestions[0].distance as Any)
-//                        self.tableViewAutoSuggest.isHidden = false
                         self.mapView.bringSubviewToFront(self.tableViewAutoSuggest)
                         self.tableViewAutoSuggest.delegate = self
                         self.tableViewAutoSuggest.dataSource = self
@@ -971,6 +973,12 @@ extension mapVC: UISearchBarDelegate {
         return UIColor.red
     }
     
+    func mapView(_ mapView: MGLMapView, didDeselect annotationView: MGLAnnotationView) {
+        if mapTapped {
+            mapView.selectAnnotation(mapView.annotations![0], animated: true)
+        }
+    }
+    
     func mapView(_ mapView: MGLMapView, lineWidthForPolylineAnnotation annotation: MGLPolyline) -> CGFloat {
         // Set the line width for polyline annotations
         return 10.0
@@ -983,7 +991,7 @@ extension mapVC: UISearchBarDelegate {
     
     func mapView(_ mapView: MGLMapView, viewFor annotation: MGLAnnotation) -> MGLAnnotationView? {
         if isForCustomAnnotationView {
-            let annotationView = MGLAnnotationView()
+            let annotationView = MapmyIndiaAnnotationView()
             annotationView.bounds = CGRect(x: 0, y: 0, width: 20, height: 20)
             annotationView.backgroundColor = UIColor.blue
             return annotationView

@@ -239,22 +239,23 @@ NSString *refLocation = nil;
                                                        sharedManager];
             MapmyIndiaNearbyAtlasOptions *nearByOptions = [[MapmyIndiaNearbyAtlasOptions alloc] initWithQuery:self.searchBar.text location:refLocation withRegion:MMIRegionTypeIdentifierIndia];
             nearByOptions.bounds = [[MapmyIndiaRectangularRegion alloc] initWithTopLeft:CLLocationCoordinate2DMake(28.563838, 77.244345) bottomRight:CLLocationCoordinate2DMake(28.541898, 77.294514)];
+
             [nearByManager getNearBySuggestionsWithOptions:nearByOptions
-                                         completionHandler:^(NSArray<MapmyIndiaAtlasSuggestion *> * _Nullable
-                                                             suggestions, NSError * _Nullable error) {
-                                             if (error) {
-                                                 NSLog(@"%@", error);
-                                             } else if (suggestions.count > 0) {
-                                                 NSLog(@"Nearby %@%@",
-                                                       suggestions[0].latitude,suggestions[0].longitude);
-                                                 [self.searchSuggestions removeAllObjects];
-                                                 self.searchSuggestions = [NSMutableArray arrayWithArray:suggestions];
-                                                 self.tableViewAutoSuggest.hidden = NO;
-                                                 [self.tableViewAutoSuggest reloadData];
-                                             } else {
-                                                 
-                                             }
-                                         }];
+                                         completionHandler:^(MapmyIndiaNearbyResult * _Nullable
+                                                             result, NSError * _Nullable error) {
+                if (error) {
+                    NSLog(@"%@", error);
+                } else if (result.suggestions.count > 0) {
+                    NSLog(@"Nearby %@%@",
+                          result.suggestions[0].latitude,result.suggestions[0].longitude);
+                    [self.searchSuggestions removeAllObjects];
+                    self.searchSuggestions = [NSMutableArray arrayWithArray:result.suggestions];
+                    self.tableViewAutoSuggest.hidden = NO;
+                    [self.tableViewAutoSuggest reloadData];
+                } else {
+                    
+                }
+            }];
         }
         CASE (@"Place/eLoc Detail Legacy") {
             [self.searchBar setHidden:NO];

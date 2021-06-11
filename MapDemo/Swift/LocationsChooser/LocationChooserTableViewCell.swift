@@ -27,14 +27,19 @@ class LocationChooserTableViewCell: UITableViewCell {
         setupViews()
         setupConstraints()
         
-        sourceLocationTextField.isHidden = true
+//        sourceLocationTextField.isHidden = true
         destinationLocationTextField.isHidden = true
+        viaLocationTextField.isHidden = true
+        sourceAutocompleteWidgetButton.isHidden = true
+        viaAutocompleteWidgetButton.isHidden = true
+        viaLocationTextField.isHidden = true
+        destinationAutocompleteWidgetButton.isHidden = true
     }
     
     func setupViews() {
         sourceLocationTextField = UITextField()
-        sourceLocationTextField.placeholder = "Source (eLoc or cordinate in longitude, latitude)"
-        sourceLocationTextField.isHidden = true
+        sourceLocationTextField.placeholder = ""
+//        sourceLocationTextField.isHidden = true
         sourceLocationTextField.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(sourceLocationTextField)
         

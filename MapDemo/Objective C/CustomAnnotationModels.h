@@ -22,5 +22,11 @@
 
 @end
 @implementation CustomAnnotation
+@synthesize eLoc;
+
+- (void)updateEloc:(nonnull NSString *)atEloc completionHandler:(nullable void (^)(BOOL, NSString * _Nullable))completion {
+    
+}
+
 @end
 
