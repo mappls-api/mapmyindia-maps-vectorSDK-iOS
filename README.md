@@ -33,6 +33,7 @@ Also version history can be seen by following [Version History](https://github.c
 
 | Version | Dated | Description |
 | :---- | :---- | :---- |
+| `5.7.22` | 30 Sep, 2021 | Bug fixes and improvements. |
 | `5.7.21` | 08 Sep, 2021 | Improvements.|
 | `5.7.20` | 23 Aug, 2021 | Fixed a crash and some code improvements.|
 | `5.7.19` | 21 May, 2021 | Fixed a crash. Integrated a style API which will help in rendering specific style as well as facilitate the switching of style themes. A default style is set for all account users to start with.|
