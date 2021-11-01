@@ -19,6 +19,7 @@ Powered with India's most comprehensive and robust mapping functionalities.
 
 | Version | Dated | Description |
 | :---- | :---- | :---- |
+| `1.4.23` | 01 Nov 2021 | `isBridgeEnabled` parameter in Autosuggest. API wrapper of `Traffic Details`. |
 | `1.4.22` | 28 Sep 2021 | Added support for xcode 13|
 | `1.4.21` | 08 Sep 2021 | Improvement and bug fixes.|
 | `1.4.20` | 25 Aug 2021 | Nearby report API wrapper added and AtlasGrantType is optional to set by user|
@@ -114,6 +115,8 @@ Additionally you can also set location and restriction filters in object of `Map
     -   (a) `MapmyIndiaElocFilter`: to filter results on basis of eLoc
     -   (b) `MapmyIndiaBoundsFilter`: to filter results on basis of geo bound.
 6. **hyperLocal**: This parameter lets the search give results that are hyper-localized to the reference location passed in the location parameter. This means that nearby results are given a higher ranking than results far from the reference location. Highly prominent results will still appear in the search results, however they will be lower in the list of results. This parameter will work ONLY in conjunction with the location parameter.
+7.  **isBridgeEnabled:**  To get suggested searches in response. Value must be set `true` of this.
+
 ### Response Parameters
 
 In response of auto suggest search either you will receive an error or an array of `MapmyIndiaAtlasSuggestion`, Where `MapmyIndiaAtlasSuggestion` is derived from `MapmyIndiaSuggestion` class. Yo will find below useful properties in suggestion object :
@@ -157,7 +160,7 @@ In response of auto suggest search either you will receive an error or an array 
   
 
 
-### Code Samples
+### Code Samples[Deprecated]
 
 #### Objective C
 ```objectivec
@@ -218,6 +221,44 @@ withRegion: .india)
 
 
 For more details visit our [online documentation](https://www.mapmyindia.com/api/advanced-maps/ios/vector-map-sdk#Autosuggest).
+
+### Code Samples[New]
+#### Suggested Searches
+
+A new method `getAutoSuggestionResults` is introduced, To get Suggested Searches along with Suggested Location results. Type of response from above function is `MapmyindiaAutoSuggestLocationResults` which is derived from class `MapmyindiaLocationResults`.
+
+Below is sample code to understand this.
+
+```swift
+let autoSuggestManager = MapmyIndiaAutoSuggestManager.shared
+//Or
+let autoSuggestManager = MapmyIndiaAutoSuggestManager(restKey:
+        MapmyIndiaAccountManager.restAPIKey(), clientId:
+        MapmyIndiaAccountManager.atlasClientId(), clientSecret:
+        MapmyIndiaAccountManager.atlasClientSecret(), grantType:
+        MapmyIndiaAccountManager.atlasGrantType())
+
+let autoSuggestOptions = MapmyIndiaAutoSearchAtlasOptions(query: "Coffee",
+                                                                  withRegion: .india)
+autoSuggestOptions.location = CLLocation(latitude: 28.2323234, longitude: 72.3434123)
+autoSuggestOptions.isBridgeEnabled = true
+autoSuggestOptions.zoom = 5
+autoSuggestManager.getAutoSuggestionResults(autoSuggestOptions) { suggestions, error in
+	if let error = error {
+		print(error.localizedDescription)
+	} else if let results = suggestions,
+		let autoSuggestResults = results as? MapmyindiaAutoSuggestLocationResults {
+		if let suggestionResutls = autoSuggestResults.suggestions, suggestionResutls.count > 0 {
+			// You will get suggested locations here.
+		}
+		if let suggestedSearches = autoSuggestResults.suggestedSearches, suggestedSearches.count > 0 {
+			// You will get suggested searches here.
+		}
+	} else {
+		print("No Results")
+	}
+}
+```
 
 
 ## [Reverse Geocoding API](#Reverse-Geocoding-API)
@@ -1450,7 +1491,82 @@ mapmyIndiaNearbyReportManager.getNearbyReportResult(option) { (response, error) 
 	}
 }
 ```
+## [Road Traffic Details API](#Road-Traffic-Details-API)
 
+### [Introduction](#Introduction)
+
+To provide the details of nearest road with reference of a given GPS point.
+
+Class used to get details of nearest road is `MapmyIndiaRoadTrafficDetailsManager`. Create an object of this class using MapmyIndia API Keys or alternatively use shared instance of `MapmyIndiaRoadTrafficDetailsManager` class.
+
+**Note:** To use shared SDK must be initilized by setting MapmyIndia API Acesss Keys using class `MapmyIndiaAccountManager` of framework `MapmyIndiaAPIKit`. For more information please see [here](https://github.com/MapmyIndia/mapmyindia-maps-vectorSDK-iOS/wiki#Setup-your-Project).
+
+### [Request Parameters](Request-Parameters)
+
+[`MapmyIndiaRoadTrafficDetailsOptions`](#MapmyIndiaRoadTrafficDetailsOptions) is request class which will be used to pass all required and optional parameters. So it will be require to create an instance of [`MapmyIndiaRoadTrafficDetailsOptions`](#MapmyIndiaRoadTrafficDetailsOptions) and pass that instance to `getTrafficRoadDetailsResults` function of `MapmyIndiaRoadTrafficDetailsManager`.
+
+#### [MapmyIndiaRoadTrafficDetailsOptions](#MapmyIndiaRoadTrafficDetailsOptions)
+
+- **latitude** (mandatory)
+- **longitude** (mandatory)
+- **radius** (optional) :- Limits the search to given radius in meters
+
+### [Response Parameters]s(#Response-Parameters):
+
+In callback of `getTrafficRoadDetailsResults` function it will either return an error object of type 'NSError' or an object of type `MapmyIndiaRoadTrafficDetailsResponse`. which contains result parameter of type `MapmyIndiaRoadTrafficDetailsResult` which has following response parameter
+
+- **name :** Name of the nearest road from given coordinates (If available); else null it is of type `String`
+- **routeNo :** If available, route number information of road, else null it is of type `String`
+- **oneway :** If traffic flows in digitized direction only then `true`, else `false` it is of type `Bool`
+- **avg_spd :** Calculated average speed of referenced segment it is of type `Int`
+- **spd_lmt :** If available, posted speed limit applicable for 4 wheeler. it is of type `Int`
+- **formOfWay :** Type of road feature like Bridge, Circle, Ramp, Flyover, Subway, Tunnel it is of type `String`
+- **roadClass :** Road category information, possible values are 'District Highway', 'Golden Quadrilateral', 'Major District Road', 'Major Village Road', 'National Highway', 'Other Roads', 'State Highway', 'Urban Arterial Road', 'Urban Collector Road', 'Urban Minor Road', 'Urban Secondary Road' it is of type `String`
+- **multi_cw :** If road segment is part of Multi carriageway Road then `true` else `false` it is of type `Bool`
+- **divider :** If physical divider exist on referenced road then `true`, it is of type `Bool`
+- **numOfLanes :** Number of lane available on that road segment (if available); else null it is of type `String`
+- **shoulder :** If shoulder lane exist then true, else false. Please note that shoulder information is available for selected road segments only it is of type `Bool`
+- **owner :** Possible values NHAI, null. As of now owner information is available for National Highways only it is of type `String`
+- **distance :** Distance in meters from supplied input coordinate. it is of type `Double`
+- **city :** City name with referenced to the segment it is of type `String`
+- **district :** District name with referenced to the segment it is of type `String`
+- **state :** State name with referenced to the segment it is of type `String`
+- **geometry :** Returns the encoded geometry of the road segment it is of type `String`
+- **trafficStatus :** Information about Traffic Flow on nearest segment. Available values are mentioned below:
+   - **Severe :** Stationary traffic on matched segment
+   - **Heavy :** Heavy traffic congestion
+   - **Moderate :** Traffic flow is moderate
+   - **Low :** Traffic is moving smoothly
+   - **Closure :** Matched road segment is closed
+   - **Not Applicable :** No traffic flow information available for matched segment.
+   
+- **trafficType:** numeric codes for trafficStatus; available values are:
+   - **1 :**  closure
+   - **2 :**  severe
+   - **3 :**  heavy
+   - **4 :**  moderate
+   - **5 :**  low
+   - **6 :** Not Applicable
+
+**Swift**
+
+```swift
+let options = MapmyIndiaRoadTrafficDetailsOptions(latitude: 28.987, longitude: 78.323)
+let manager = MapmyIndiaRoadTrafficDetailsManager.shared
+manager.getTrafficRoadDetailsResults(options) { resposnse, error in
+	if let error = error {
+		print("Road traffic error: \(error.localizedDescription)")
+	} else {
+		if let response  = resposnse {
+			let res: MapmyIndiaRoadTrafficDetailsResponse = response
+			if let result : MapmyIndiaRoadTrafficDetailsResult = res.result {
+				print(result.ditance)
+			}
+		}
+	}
+}       
+    
+```
 <br/>
 
 ## Our many happy customers
