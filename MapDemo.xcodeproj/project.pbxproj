@@ -3,15 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00D33398245308C70038ADAE /* MapmyIndiaFeedbackUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E87E3321400FAD00F1C866 /* MapmyIndiaFeedbackUIKit.framework */; };
-		00D33399245308C70038ADAE /* MapmyIndiaFeedbackUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 18E87E3321400FAD00F1C866 /* MapmyIndiaFeedbackUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		035B2209D836065E362AD257 /* Pods_MapmyIndiaFeedbackUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 500B1B52C9707F47D8B9AF63 /* Pods_MapmyIndiaFeedbackUIKit.framework */; };
 		181F70BA25A89A5B006024FE /* LocationsChooserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181F70B925A89A5B006024FE /* LocationsChooserTableViewController.swift */; };
-		182AEADD243B36B800EDC300 /* temp.json in Resources */ = {isa = PBXBuildFile; fileRef = 182AEADC243B36B800EDC300 /* temp.json */; };
 		182D24D3251B46F70098914F /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182D24D2251B46F70098914F /* UIViewController+Extension.swift */; };
 		183207B822FAC5A900C738FF /* HighlightPointExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183207B722FAC5A900C738FF /* HighlightPointExample.swift */; };
 		18404BD52303C435001D8DC0 /* DashedPolylineExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18404BD42303C435001D8DC0 /* DashedPolylineExample.swift */; };
@@ -60,6 +57,22 @@
 		18F45358251A81BB0091A898 /* MapmyIndiaStyledAutocompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F45357251A81BB0091A898 /* MapmyIndiaStyledAutocompleteViewController.swift */; };
 		18F576D023FEA83B0009A2D9 /* TextInstructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F576CF23FEA83B0009A2D9 /* TextInstructions.swift */; };
 		18F576D223FEAA880009A2D9 /* TextInstructions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18F576D123FEAA880009A2D9 /* TextInstructions.plist */; };
+		4701BE2827158D5100BE45F3 /* MapmyIndiaDirections.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4701BE1F27158D4700BE45F3 /* MapmyIndiaDirections.xcframework */; };
+		4701BE2927158D5100BE45F3 /* MapmyIndiaDirections.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4701BE1F27158D4700BE45F3 /* MapmyIndiaDirections.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4701BE2A27158D5300BE45F3 /* MapmyIndiaMaps.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4701BE2027158D4700BE45F3 /* MapmyIndiaMaps.xcframework */; };
+		4701BE2B27158D5300BE45F3 /* MapmyIndiaMaps.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4701BE2027158D4700BE45F3 /* MapmyIndiaMaps.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4701BE2C27158D5500BE45F3 /* Polyline.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4701BE2127158D4700BE45F3 /* Polyline.xcframework */; };
+		4701BE2D27158D5500BE45F3 /* Polyline.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4701BE2127158D4700BE45F3 /* Polyline.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4701BE3027158DAE00BE45F3 /* MapmyIndiaUIWidgets.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4701BE2E27158DA500BE45F3 /* MapmyIndiaUIWidgets.xcframework */; };
+		4701BE3127158DAE00BE45F3 /* MapmyIndiaUIWidgets.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4701BE2E27158DA500BE45F3 /* MapmyIndiaUIWidgets.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4701BE3527158F4E00BE45F3 /* MapmyIndiaDirectionsUI.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4701BE3327158F4300BE45F3 /* MapmyIndiaDirectionsUI.xcframework */; };
+		4701BE3627158F4E00BE45F3 /* MapmyIndiaDirectionsUI.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4701BE3327158F4300BE45F3 /* MapmyIndiaDirectionsUI.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4701BE412715923A00BE45F3 /* MapmyIndiaNearbyUI.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4701BE3F2715923200BE45F3 /* MapmyIndiaNearbyUI.xcframework */; };
+		4701BE422715923A00BE45F3 /* MapmyIndiaNearbyUI.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4701BE3F2715923200BE45F3 /* MapmyIndiaNearbyUI.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4701BE492715936300BE45F3 /* MapmyIndiaGeofenceUI.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4701BE472715935C00BE45F3 /* MapmyIndiaGeofenceUI.xcframework */; };
+		4701BE4A2715936300BE45F3 /* MapmyIndiaGeofenceUI.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4701BE472715935C00BE45F3 /* MapmyIndiaGeofenceUI.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4701BE552715946E00BE45F3 /* MapmyIndiaSafetyPlugin.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4701BE532715946900BE45F3 /* MapmyIndiaSafetyPlugin.xcframework */; };
+		4701BE562715946E00BE45F3 /* MapmyIndiaSafetyPlugin.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4701BE532715946900BE45F3 /* MapmyIndiaSafetyPlugin.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4726F0562647C017007EDB5E /* ColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4726F0522647C017007EDB5E /* ColorPicker.swift */; };
 		4726F0582647C017007EDB5E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4726F0542647C017007EDB5E /* SettingsViewController.swift */; };
 		4726F0592647C017007EDB5E /* ColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4726F0552647C017007EDB5E /* ColorPickerViewController.swift */; };
@@ -72,10 +85,28 @@
 		4726F06C2647C412007EDB5E /* PolygonPointsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4726F0642647C411007EDB5E /* PolygonPointsVC.swift */; };
 		4726F06D2647C412007EDB5E /* DrawCircleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4726F0652647C412007EDB5E /* DrawCircleVC.swift */; };
 		4726F0712648503B007EDB5E /* ShapeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4726F0702648503B007EDB5E /* ShapeCell.xib */; };
+		472912892722783F0089A329 /* RoadTrafficDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472912882722783F0089A329 /* RoadTrafficDetailsViewController.swift */; };
 		476B0D062615D89100FE8EC6 /* NearbyViewControllerLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476B0D052615D89100FE8EC6 /* NearbyViewControllerLauncher.swift */; };
 		476B0D0D2616CF4700FE8EC6 /* NearbyUIFilterConfigurationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476B0D0C2616CF4700FE8EC6 /* NearbyUIFilterConfigurationCell.swift */; };
 		476B0D192618309F00FE8EC6 /* NearbyFilterConfigurationSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476B0D182618309F00FE8EC6 /* NearbyFilterConfigurationSetting.swift */; };
 		476B0D1D2618341E00FE8EC6 /* CustomNearbyUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476B0D1C2618341E00FE8EC6 /* CustomNearbyUIViewController.swift */; };
+		479D3136272174D00076A5AE /* MapmyIndiaFeedbackKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 479D3134272174C00076A5AE /* MapmyIndiaFeedbackKit.xcframework */; };
+		479D3137272174D10076A5AE /* MapmyIndiaFeedbackKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 479D3134272174C00076A5AE /* MapmyIndiaFeedbackKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		479D3138272174D80076A5AE /* MapmyIndiaFeedbackUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E87E3321400FAD00F1C866 /* MapmyIndiaFeedbackUIKit.framework */; };
+		479D3139272174D80076A5AE /* MapmyIndiaFeedbackUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 18E87E3321400FAD00F1C866 /* MapmyIndiaFeedbackUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		47BB1A3A2722CA640050597E /* MapmyIndiaNearbyReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BB1A392722CA640050597E /* MapmyIndiaNearbyReportViewController.swift */; };
+		47C89080272BD0ED00179EA1 /* MapmyIndiaAPIKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47C8907E272BD0E800179EA1 /* MapmyIndiaAPIKit.xcframework */; };
+		47C89081272BD0ED00179EA1 /* MapmyIndiaAPIKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 47C8907E272BD0E800179EA1 /* MapmyIndiaAPIKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		47DF638B2716AB0F0069AAA8 /* GeoanalyticsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DF638A2716AB0F0069AAA8 /* GeoanalyticsTableViewCell.swift */; };
+		47DF638D2716AB250069AAA8 /* MapmyIndiaGeoanalyticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DF638C2716AB250069AAA8 /* MapmyIndiaGeoanalyticsViewController.swift */; };
+		47DF63942716AC870069AAA8 /* MapmyIndiaGeoanalytics.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47DF63922716AC7C0069AAA8 /* MapmyIndiaGeoanalytics.xcframework */; };
+		47DF63952716AC870069AAA8 /* MapmyIndiaGeoanalytics.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 47DF63922716AC7C0069AAA8 /* MapmyIndiaGeoanalytics.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		47DF63982716B1750069AAA8 /* MapmyIndiaMapStyleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DF63972716B1750069AAA8 /* MapmyIndiaMapStyleViewController.swift */; };
+		47DF639A2716B18E0069AAA8 /* MapmyIndiaMapStyleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DF63992716B18E0069AAA8 /* MapmyIndiaMapStyleTableViewCell.swift */; };
+		47DF63A02716B6CF0069AAA8 /* MapmyIndiaDrivingRangePlugin.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47DF639E2716B6BF0069AAA8 /* MapmyIndiaDrivingRangePlugin.xcframework */; };
+		47DF63A12716B6CF0069AAA8 /* MapmyIndiaDrivingRangePlugin.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 47DF639E2716B6BF0069AAA8 /* MapmyIndiaDrivingRangePlugin.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		47DF63A42716B6FF0069AAA8 /* DrivingRangeSampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DF63A32716B6FF0069AAA8 /* DrivingRangeSampleViewController.swift */; };
+		47DF63A62716BC5D0069AAA8 /* DrivingRangeSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DF63A52716BC5D0069AAA8 /* DrivingRangeSettingViewController.swift */; };
 		68417CC5210B329100424A00 /* InitialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68417CC4210B329100424A00 /* InitialVC.swift */; };
 		68417CC7210B32A700424A00 /* ListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68417CC6210B32A700424A00 /* ListVC.swift */; };
 		68417CCD210B48FB00424A00 /* MainC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68417CCC210B48FB00424A00 /* MainC.storyboard */; };
@@ -112,7 +143,19 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				00D33399245308C70038ADAE /* MapmyIndiaFeedbackUIKit.framework in Embed Frameworks */,
+				4701BE2D27158D5500BE45F3 /* Polyline.xcframework in Embed Frameworks */,
+				4701BE2927158D5100BE45F3 /* MapmyIndiaDirections.xcframework in Embed Frameworks */,
+				47C89081272BD0ED00179EA1 /* MapmyIndiaAPIKit.xcframework in Embed Frameworks */,
+				479D3137272174D10076A5AE /* MapmyIndiaFeedbackKit.xcframework in Embed Frameworks */,
+				4701BE3127158DAE00BE45F3 /* MapmyIndiaUIWidgets.xcframework in Embed Frameworks */,
+				47DF63952716AC870069AAA8 /* MapmyIndiaGeoanalytics.xcframework in Embed Frameworks */,
+				4701BE562715946E00BE45F3 /* MapmyIndiaSafetyPlugin.xcframework in Embed Frameworks */,
+				47DF63A12716B6CF0069AAA8 /* MapmyIndiaDrivingRangePlugin.xcframework in Embed Frameworks */,
+				4701BE422715923A00BE45F3 /* MapmyIndiaNearbyUI.xcframework in Embed Frameworks */,
+				4701BE4A2715936300BE45F3 /* MapmyIndiaGeofenceUI.xcframework in Embed Frameworks */,
+				479D3139272174D80076A5AE /* MapmyIndiaFeedbackUIKit.framework in Embed Frameworks */,
+				4701BE2B27158D5300BE45F3 /* MapmyIndiaMaps.xcframework in Embed Frameworks */,
+				4701BE3627158F4E00BE45F3 /* MapmyIndiaDirectionsUI.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -121,7 +164,6 @@
 
 /* Begin PBXFileReference section */
 		181F70B925A89A5B006024FE /* LocationsChooserTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsChooserTableViewController.swift; sourceTree = "<group>"; };
-		182AEADC243B36B800EDC300 /* temp.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = temp.json; path = Dependencies/temp.json; sourceTree = SOURCE_ROOT; };
 		182D24D2251B46F70098914F /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		183207B722FAC5A900C738FF /* HighlightPointExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightPointExample.swift; sourceTree = "<group>"; };
 		18404BD42303C435001D8DC0 /* DashedPolylineExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashedPolylineExample.swift; sourceTree = "<group>"; };
@@ -183,6 +225,14 @@
 		18F576D123FEAA880009A2D9 /* TextInstructions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TextInstructions.plist; sourceTree = "<group>"; };
 		1E7387BBB36B83E40C20718B /* Pods-MapmyIndiaFeedbackUIKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapmyIndiaFeedbackUIKit.release.xcconfig"; path = "Target Support Files/Pods-MapmyIndiaFeedbackUIKit/Pods-MapmyIndiaFeedbackUIKit.release.xcconfig"; sourceTree = "<group>"; };
 		4057E844D55DC755978D6FB1 /* Pods-MapDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapDemo.debug.xcconfig"; path = "Target Support Files/Pods-MapDemo/Pods-MapDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		4701BE1F27158D4700BE45F3 /* MapmyIndiaDirections.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = MapmyIndiaDirections.xcframework; sourceTree = "<group>"; };
+		4701BE2027158D4700BE45F3 /* MapmyIndiaMaps.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = MapmyIndiaMaps.xcframework; sourceTree = "<group>"; };
+		4701BE2127158D4700BE45F3 /* Polyline.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = Polyline.xcframework; sourceTree = "<group>"; };
+		4701BE2E27158DA500BE45F3 /* MapmyIndiaUIWidgets.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = MapmyIndiaUIWidgets.xcframework; sourceTree = "<group>"; };
+		4701BE3327158F4300BE45F3 /* MapmyIndiaDirectionsUI.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = MapmyIndiaDirectionsUI.xcframework; sourceTree = "<group>"; };
+		4701BE3F2715923200BE45F3 /* MapmyIndiaNearbyUI.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = MapmyIndiaNearbyUI.xcframework; sourceTree = "<group>"; };
+		4701BE472715935C00BE45F3 /* MapmyIndiaGeofenceUI.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = MapmyIndiaGeofenceUI.xcframework; sourceTree = "<group>"; };
+		4701BE532715946900BE45F3 /* MapmyIndiaSafetyPlugin.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = MapmyIndiaSafetyPlugin.xcframework; sourceTree = "<group>"; };
 		4726F0522647C017007EDB5E /* ColorPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPicker.swift; sourceTree = "<group>"; };
 		4726F0542647C017007EDB5E /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		4726F0552647C017007EDB5E /* ColorPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPickerViewController.swift; sourceTree = "<group>"; };
@@ -195,11 +245,23 @@
 		4726F0642647C411007EDB5E /* PolygonPointsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PolygonPointsVC.swift; sourceTree = "<group>"; };
 		4726F0652647C412007EDB5E /* DrawCircleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawCircleVC.swift; sourceTree = "<group>"; };
 		4726F0702648503B007EDB5E /* ShapeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShapeCell.xib; sourceTree = "<group>"; };
+		472912882722783F0089A329 /* RoadTrafficDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadTrafficDetailsViewController.swift; sourceTree = "<group>"; };
 		4747D98D262449C000FE47F0 /* HeatMap.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = HeatMap.json; sourceTree = "<group>"; };
 		476B0D052615D89100FE8EC6 /* NearbyViewControllerLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyViewControllerLauncher.swift; sourceTree = "<group>"; };
 		476B0D0C2616CF4700FE8EC6 /* NearbyUIFilterConfigurationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyUIFilterConfigurationCell.swift; sourceTree = "<group>"; };
 		476B0D182618309F00FE8EC6 /* NearbyFilterConfigurationSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearbyFilterConfigurationSetting.swift; sourceTree = "<group>"; };
 		476B0D1C2618341E00FE8EC6 /* CustomNearbyUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNearbyUIViewController.swift; sourceTree = "<group>"; };
+		479D3134272174C00076A5AE /* MapmyIndiaFeedbackKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = MapmyIndiaFeedbackKit.xcframework; sourceTree = "<group>"; };
+		47BB1A392722CA640050597E /* MapmyIndiaNearbyReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapmyIndiaNearbyReportViewController.swift; sourceTree = "<group>"; };
+		47C8907E272BD0E800179EA1 /* MapmyIndiaAPIKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = MapmyIndiaAPIKit.xcframework; sourceTree = "<group>"; };
+		47DF638A2716AB0F0069AAA8 /* GeoanalyticsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoanalyticsTableViewCell.swift; sourceTree = "<group>"; };
+		47DF638C2716AB250069AAA8 /* MapmyIndiaGeoanalyticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapmyIndiaGeoanalyticsViewController.swift; sourceTree = "<group>"; };
+		47DF63922716AC7C0069AAA8 /* MapmyIndiaGeoanalytics.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = MapmyIndiaGeoanalytics.xcframework; sourceTree = "<group>"; };
+		47DF63972716B1750069AAA8 /* MapmyIndiaMapStyleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapmyIndiaMapStyleViewController.swift; sourceTree = "<group>"; };
+		47DF63992716B18E0069AAA8 /* MapmyIndiaMapStyleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapmyIndiaMapStyleTableViewCell.swift; sourceTree = "<group>"; };
+		47DF639E2716B6BF0069AAA8 /* MapmyIndiaDrivingRangePlugin.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = MapmyIndiaDrivingRangePlugin.xcframework; sourceTree = "<group>"; };
+		47DF63A32716B6FF0069AAA8 /* DrivingRangeSampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrivingRangeSampleViewController.swift; sourceTree = "<group>"; };
+		47DF63A52716BC5D0069AAA8 /* DrivingRangeSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrivingRangeSettingViewController.swift; sourceTree = "<group>"; };
 		500B1B52C9707F47D8B9AF63 /* Pods_MapmyIndiaFeedbackUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MapmyIndiaFeedbackUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		68417CC4210B329100424A00 /* InitialVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialVC.swift; sourceTree = "<group>"; };
 		68417CC6210B32A700424A00 /* ListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVC.swift; sourceTree = "<group>"; };
@@ -250,8 +312,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00D33398245308C70038ADAE /* MapmyIndiaFeedbackUIKit.framework in Frameworks */,
+				47DF63A02716B6CF0069AAA8 /* MapmyIndiaDrivingRangePlugin.xcframework in Frameworks */,
+				4701BE552715946E00BE45F3 /* MapmyIndiaSafetyPlugin.xcframework in Frameworks */,
+				4701BE492715936300BE45F3 /* MapmyIndiaGeofenceUI.xcframework in Frameworks */,
+				4701BE2827158D5100BE45F3 /* MapmyIndiaDirections.xcframework in Frameworks */,
+				4701BE3027158DAE00BE45F3 /* MapmyIndiaUIWidgets.xcframework in Frameworks */,
+				479D3138272174D80076A5AE /* MapmyIndiaFeedbackUIKit.framework in Frameworks */,
+				47DF63942716AC870069AAA8 /* MapmyIndiaGeoanalytics.xcframework in Frameworks */,
 				F9DA5F29530AAE8A523D00B7 /* Pods_MapDemo.framework in Frameworks */,
+				4701BE412715923A00BE45F3 /* MapmyIndiaNearbyUI.xcframework in Frameworks */,
+				4701BE3527158F4E00BE45F3 /* MapmyIndiaDirectionsUI.xcframework in Frameworks */,
+				47C89080272BD0ED00179EA1 /* MapmyIndiaAPIKit.xcframework in Frameworks */,
+				479D3136272174D00076A5AE /* MapmyIndiaFeedbackKit.xcframework in Frameworks */,
+				4701BE2A27158D5300BE45F3 /* MapmyIndiaMaps.xcframework in Frameworks */,
+				4701BE2C27158D5500BE45F3 /* Polyline.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,7 +335,18 @@
 		009EA37F243B3B0D00EBD9EE /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
-				182AEADC243B36B800EDC300 /* temp.json */,
+				47DF63922716AC7C0069AAA8 /* MapmyIndiaGeoanalytics.xcframework */,
+				47DF639E2716B6BF0069AAA8 /* MapmyIndiaDrivingRangePlugin.xcframework */,
+				4701BE532715946900BE45F3 /* MapmyIndiaSafetyPlugin.xcframework */,
+				4701BE1F27158D4700BE45F3 /* MapmyIndiaDirections.xcframework */,
+				4701BE3F2715923200BE45F3 /* MapmyIndiaNearbyUI.xcframework */,
+				47C8907E272BD0E800179EA1 /* MapmyIndiaAPIKit.xcframework */,
+				4701BE472715935C00BE45F3 /* MapmyIndiaGeofenceUI.xcframework */,
+				479D3134272174C00076A5AE /* MapmyIndiaFeedbackKit.xcframework */,
+				4701BE2E27158DA500BE45F3 /* MapmyIndiaUIWidgets.xcframework */,
+				4701BE3327158F4300BE45F3 /* MapmyIndiaDirectionsUI.xcframework */,
+				4701BE2027158D4700BE45F3 /* MapmyIndiaMaps.xcframework */,
+				4701BE2127158D4700BE45F3 /* Polyline.xcframework */,
 			);
 			path = Dependencies;
 			sourceTree = "<group>";
@@ -415,6 +500,22 @@
 			path = GeofenceUISetting;
 			sourceTree = "<group>";
 		};
+		47291287272277F00089A329 /* Road traffic details */ = {
+			isa = PBXGroup;
+			children = (
+				472912882722783F0089A329 /* RoadTrafficDetailsViewController.swift */,
+			);
+			path = "Road traffic details";
+			sourceTree = "<group>";
+		};
+		47BB1A382722CA0C0050597E /* Nearby reports */ = {
+			isa = PBXGroup;
+			children = (
+				47BB1A392722CA640050597E /* MapmyIndiaNearbyReportViewController.swift */,
+			);
+			path = "Nearby reports";
+			sourceTree = "<group>";
+		};
 		47D882A5261340DA0000429D /* NearbyUI */ = {
 			isa = PBXGroup;
 			children = (
@@ -424,6 +525,33 @@
 				476B0D1C2618341E00FE8EC6 /* CustomNearbyUIViewController.swift */,
 			);
 			path = NearbyUI;
+			sourceTree = "<group>";
+		};
+		47DF63892716AAE80069AAA8 /* Geoanalytics */ = {
+			isa = PBXGroup;
+			children = (
+				47DF638A2716AB0F0069AAA8 /* GeoanalyticsTableViewCell.swift */,
+				47DF638C2716AB250069AAA8 /* MapmyIndiaGeoanalyticsViewController.swift */,
+			);
+			path = Geoanalytics;
+			sourceTree = "<group>";
+		};
+		47DF63962716B0BA0069AAA8 /* MapmyIndiaStyles */ = {
+			isa = PBXGroup;
+			children = (
+				47DF63992716B18E0069AAA8 /* MapmyIndiaMapStyleTableViewCell.swift */,
+				47DF63972716B1750069AAA8 /* MapmyIndiaMapStyleViewController.swift */,
+			);
+			path = MapmyIndiaStyles;
+			sourceTree = "<group>";
+		};
+		47DF63A22716B6F30069AAA8 /* DrivingRange */ = {
+			isa = PBXGroup;
+			children = (
+				47DF63A32716B6FF0069AAA8 /* DrivingRangeSampleViewController.swift */,
+				47DF63A52716BC5D0069AAA8 /* DrivingRangeSettingViewController.swift */,
+			);
+			path = DrivingRange;
 			sourceTree = "<group>";
 		};
 		68417CC2210B2DB800424A00 /* Objective C */ = {
@@ -456,6 +584,11 @@
 		68417CC3210B2DCE00424A00 /* Swift */ = {
 			isa = PBXGroup;
 			children = (
+				47BB1A382722CA0C0050597E /* Nearby reports */,
+				47291287272277F00089A329 /* Road traffic details */,
+				47DF63A22716B6F30069AAA8 /* DrivingRange */,
+				47DF63962716B0BA0069AAA8 /* MapmyIndiaStyles */,
+				47DF63892716AAE80069AAA8 /* Geoanalytics */,
 				4726F0412647BCF3007EDB5E /* GeofenceUI */,
 				47D882A5261340DA0000429D /* NearbyUI */,
 				18B3DD5525AB87EF00B26BDF /* LocationsChooser */,
@@ -606,7 +739,6 @@
 				68A6BF112106E03C00547929 /* Resources */,
 				181F977F2429CEA300D996EA /* Embed Frameworks */,
 				47AB0D70260B0C890055B864 /* ShellScript */,
-				09F8F7B0AA2E9EB183FB878A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -672,36 +804,17 @@
 			files = (
 				68A6BF212106E03F00547929 /* LaunchScreen.storyboard in Resources */,
 				68A6BF1E2106E03F00547929 /* Assets.xcassets in Resources */,
-				4747D98E262449C000FE47F0 /* HeatMap.json in Resources */,
 				18F576D223FEAA880009A2D9 /* TextInstructions.plist in Resources */,
 				68A6BF1C2106E03C00547929 /* Main.storyboard in Resources */,
 				4726F0712648503B007EDB5E /* ShapeCell.xib in Resources */,
 				185B7FBE214B8333000785FC /* metro-line.geojson in Resources */,
 				68417CCD210B48FB00424A00 /* MainC.storyboard in Resources */,
-				182AEADD243B36B800EDC300 /* temp.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		09F8F7B0AA2E9EB183FB878A /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MapDemo/Pods-MapDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MapDemo/Pods-MapDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MapDemo/Pods-MapDemo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		3A2F94F55061025484262E00 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -794,15 +907,18 @@
 				4726F0592647C017007EDB5E /* ColorPickerViewController.swift in Sources */,
 				18D14CA3251A5C35004A6D32 /* AutosuggestWidgetSampleType.swift in Sources */,
 				18F45358251A81BB0091A898 /* MapmyIndiaStyledAutocompleteViewController.swift in Sources */,
+				47DF63A42716B6FF0069AAA8 /* DrivingRangeSampleViewController.swift in Sources */,
 				A45C2998239A157100EC81F6 /* DefaultIndoorVC.swift in Sources */,
 				4726F06A2647C412007EDB5E /* MapComponantsVC.swift in Sources */,
 				68417CC7210B32A700424A00 /* ListVC.swift in Sources */,
 				6850349125B6ACB900A347FB /* AttributionSettingTableViewController.swift in Sources */,
+				47DF63982716B1750069AAA8 /* MapmyIndiaMapStyleViewController.swift in Sources */,
 				4726F0662647C412007EDB5E /* GeofenceUILunchVC.swift in Sources */,
 				18894B8C23043476005DC142 /* LocationPuckView.swift in Sources */,
 				A49EB60923DC00EB00A08E42 /* InstructionTableViewCell.swift in Sources */,
 				A4DA1E9623DB16BF0010743F /* DirectionIndicationViewStyleKit.swift in Sources */,
 				1861996624DC305A004D5547 /* MapDemoSettingsVC.swift in Sources */,
+				47DF63A62716BC5D0069AAA8 /* DrivingRangeSettingViewController.swift in Sources */,
 				68417CC5210B329100424A00 /* InitialVC.swift in Sources */,
 				1861995D24DBE040004D5547 /* PlacePickerViewExampleVC.swift in Sources */,
 				476B0D062615D89100FE8EC6 /* NearbyViewControllerLauncher.swift in Sources */,
@@ -817,11 +933,13 @@
 				18C9EAFE251B7E4600F95580 /* AutosuggestCustomUISearchControllerVC.swift in Sources */,
 				18C9EAFC251B6C2A00F95580 /* AutosuggestWidgetTextFieldSearchVC.swift in Sources */,
 				476B0D0D2616CF4700FE8EC6 /* NearbyUIFilterConfigurationCell.swift in Sources */,
+				47BB1A3A2722CA640050597E /* MapmyIndiaNearbyReportViewController.swift in Sources */,
 				185A74EE249B4C5300081DAE /* CovidSafetyStatusExample.swift in Sources */,
 				183207B822FAC5A900C738FF /* HighlightPointExample.swift in Sources */,
 				4726F0672647C412007EDB5E /* ShapeCell.swift in Sources */,
 				A49EB61323E004BA00A08E42 /* InteractiveMarkerVC.swift in Sources */,
 				4726F0692647C412007EDB5E /* CustomGeofenceVC.swift in Sources */,
+				47DF638D2716AB250069AAA8 /* MapmyIndiaGeoanalyticsViewController.swift in Sources */,
 				A464439023E2A9D60089E7CE /* PointOnMapVC.swift in Sources */,
 				4726F0562647C017007EDB5E /* ColorPicker.swift in Sources */,
 				A4ACEA4D23D80C6400447644 /* InstructionTableVC.swift in Sources */,
@@ -835,6 +953,7 @@
 				18BA17E3229E8FF000B0B135 /* GreatCircle.swift in Sources */,
 				18D14C9D251A39B5004A6D32 /* AutosuggestWidgetExamplesLauncherVC.swift in Sources */,
 				186D0211248E266F006F1C84 /* MMIInteractiveLayersTableViewController.m in Sources */,
+				47DF639A2716B18E0069AAA8 /* MapmyIndiaMapStyleTableViewCell.swift in Sources */,
 				18F576D023FEA83B0009A2D9 /* TextInstructions.swift in Sources */,
 				188AE97821C7D66800D2C866 /* CustomAnnotationModels.swift in Sources */,
 				18BDD84E22F4005D00239CDC /* InteriorPolygonExample.swift in Sources */,
@@ -845,6 +964,7 @@
 				186D020B248E25F4006F1C84 /* CovidLayersExample.swift in Sources */,
 				188AE97D21C7DAF500D2C866 /* CustomInfoWindowView.m in Sources */,
 				182D24D3251B46F70098914F /* UIViewController+Extension.swift in Sources */,
+				472912892722783F0089A329 /* RoadTrafficDetailsViewController.swift in Sources */,
 				189D0BC5230CFDC5005C8390 /* HighlightPointExample.m in Sources */,
 				4726F0682647C412007EDB5E /* DefaultGeofenceVC.swift in Sources */,
 				A45C2997239A157100EC81F6 /* CustomIndoorVC.swift in Sources */,
@@ -858,6 +978,7 @@
 				68A6BF172106E03C00547929 /* AppDelegate.swift in Sources */,
 				185A74F1249B4C7C00081DAE /* CovidSafetyStatusExample.m in Sources */,
 				6853468A210EF14B000ED395 /* mapVC.swift in Sources */,
+				47DF638B2716AB0F0069AAA8 /* GeoanalyticsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1092,7 +1213,7 @@
 					"$(PROJECT_DIR)/Dependencies",
 				);
 				INFOPLIST_FILE = MapDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1126,7 +1247,7 @@
 					"$(PROJECT_DIR)/Dependencies",
 				);
 				INFOPLIST_FILE = MapDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
