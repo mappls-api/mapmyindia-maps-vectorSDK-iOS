@@ -15,6 +15,7 @@ class MapDemoSettingsVC: UITableViewController {
     let placePickerSettings = PlacePickerSettingType.allCases
     let autocompleteSetttings = AutocompleteSettingType.allCases
     let identifierSettings = IdentifierSettingType.allCases
+    let drivingRangeSettings = DrivingRangeSettingType.allCases
     var selectedOption = ""
     var didClicked : Bool = false
     
@@ -182,6 +183,56 @@ class MapDemoSettingsVC: UITableViewController {
         }
     }
     
+    func setDrivingRangeValue(currentType: DrivingRangeSettingType, didClicked: Bool) -> String {
+        let alertController = UIAlertController(title: "Customize attributes?", message: "Select type of attribute you want in search Widgets ", preferredStyle: .actionSheet)
+        switch currentType {
+        case .location:
+            return UserDefaultsManager.profileIdentifier
+        case .rangeInfo:
+            alertController.addAction(UIAlertAction(title: "Time", style: .default, handler: { (alertAction) in
+                self.showInputTimeTextField(title: "Time", unit: "mins")
+            }))
+            alertController.addAction(UIAlertAction(title: "Distance", style: .default, handler: { (alertAction) in
+                self.showInputTimeTextField(title: "Distance", unit: "mtrs")
+            }))
+            alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (alertAction) in
+            
+            }))
+            if didClicked{
+                present(alertController, animated: false, completion: nil)
+            }
+            return UserDefaultsManager.resourceIdentifier
+            
+        case .showLocations:
+            return UserDefaultsManager.resourceIdentifier
+        case .speedInfo:
+            return UserDefaultsManager.resourceIdentifier
+        }
+    }
+    
+    
+    func showInputTimeTextField(title: String, unit: String) {
+        let alert = UIAlertController(title: title, message: "Please input \(title) in \(unit)", preferredStyle: .alert)
+        
+        alert.addTextField { (textField : UITextField!) -> Void in
+            textField.placeholder = "Enter time"
+            textField.keyboardType = .numberPad
+        }
+        
+        let action = UIAlertAction(title: "Done", style: .default) { (alertAction) in
+            let textField = alert.textFields![0] as UITextField
+            if (textField.text ?? "").isEmpty {
+                
+            } else {
+                
+            }
+        }
+        
+        alert.addAction(action)
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     func getValueForPlacePickerSetting(_ placePickerSetting : PlacePickerSettingType) -> Bool {
         switch placePickerSetting {
         case .isCustomMarkerView:
@@ -274,6 +325,8 @@ extension MapDemoSettingsVC {
             return autocompleteSetttings.count
         case .Identifier:
             return identifierSettings.count
+        case .DrivingRange:
+            return drivingRangeSettings.count
         }
     }
     
@@ -286,6 +339,8 @@ extension MapDemoSettingsVC {
             return "Autocomplete Logo Settings"
         case .Identifier:
             return "Identifier Setting"
+        case .DrivingRange:
+            return "Driving Range Setting"
         }
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -312,7 +367,7 @@ extension MapDemoSettingsVC {
                 return newCell
             }
         }
-        else if currentSection == .autocomplete{
+        else if currentSection == .autocomplete {
             let cellIdentifier = "autocompleteOptions"
             let currentType = autocompleteSetttings[indexPath.row]
             if let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier){
@@ -339,6 +394,19 @@ extension MapDemoSettingsVC {
                 newCell.detailTextLabel?.text = setIdentifierValue(currentType: currentType, didClicked: false)
                 return newCell
             }
+        } else if currentSection == .DrivingRange {
+            let cellIdentifier = "drivingRange"
+            let currentType = drivingRangeSettings[indexPath.row]
+            if let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier){
+                cell.detailTextLabel?.text = setDrivingRangeValue(currentType: currentType, didClicked: false)
+                return cell
+            }else{
+                let newCell = UITableViewCell(style: .value1, reuseIdentifier: cellIdentifier)
+                newCell.accessoryType = .disclosureIndicator
+                newCell.textLabel?.text = currentType.description
+                newCell.detailTextLabel?.text = setDrivingRangeValue(currentType: currentType, didClicked: false)
+                return newCell
+            }
         }
         return UITableViewCell()
     }
@@ -353,6 +421,9 @@ extension MapDemoSettingsVC {
         else if currentSection == .Identifier {
             let currentType = identifierSettings[indexPath.row]
             _ = setIdentifierValue(currentType: currentType, didClicked: true)
+        } else if currentSection == .DrivingRange {
+            let currentType = drivingRangeSettings[indexPath.row]
+            _ = setDrivingRangeValue(currentType: currentType, didClicked: true)
         }
        
     }
@@ -361,6 +432,7 @@ public enum DemoSettingType: UInt, CustomStringConvertible, CaseIterable {
     case placePicker
     case autocomplete
     case Identifier
+    case DrivingRange
     
     public var description: String{
         switch self {
@@ -370,6 +442,8 @@ public enum DemoSettingType: UInt, CustomStringConvertible, CaseIterable {
             return "Autocomplete"
         case .Identifier:
             return "Identifier"
+        case .DrivingRange:
+            return "DrivingRange"
         
         }
     }
@@ -401,6 +475,26 @@ public enum IdentifierSettingType: UInt, CustomStringConvertible, CaseIterable {
             return "Profile Identifier"
         case .resourceIdentifier:
             return "Resource Identifier"
+        }
+    }
+}
+
+public enum DrivingRangeSettingType: UInt, CustomStringConvertible, CaseIterable {
+    case rangeInfo
+    case speedInfo
+    case location
+    case showLocations
+    public var description: String {
+        switch self {
+        case .rangeInfo:
+            return "Range Info"
+        case .speedInfo:
+            return "Speed Info"
+        case .location:
+            return "Location"
+        case .showLocations:
+            return "Show Locations"
+            
         }
     }
 }

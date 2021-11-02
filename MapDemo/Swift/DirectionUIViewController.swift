@@ -518,12 +518,12 @@ extension DirectionUIViewController: LocationChooserTableViewDirectionUIPluginDe
     }
 }
 extension DirectionUIViewController : MapmyIndiaDirectionsViewControllerDelegate {
-    func didRequestForStartNavigation(for routes: [Route], locations: [MapmyIndiaDirectionsLocation], selectedRouteIndex: Int, error: NSError) {
+    func didRequestForPreviewRoute(for routes: [Route], locations: [MapmyIndiaDirectionsLocation]) {
         
     }
     
-    func didRequestForPreviewRoute(for steps: [RouteStep]?) {
-    
+    func didRequestForStartNavigation(for routes: [Route], locations: [MapmyIndiaDirectionsLocation], selectedRouteIndex: Int, error: NSError) {
+        
     }
     
     func didRequestForGoBack(for view: MapmyIndiaDirectionsTopBannerView) {

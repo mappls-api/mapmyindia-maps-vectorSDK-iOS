@@ -17,7 +17,7 @@ class ListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @objc var placemark: MapmyIndiaPlacemark?
     
-    let listArr:[String]? = ["Geofence UI", "Zoom Level", "Zoom Level With Animation", "Center With Animation", "Current Location","Tracking Mode", "Add Marker", "Add Multiple Markers With Bounds", "Custom Marker", "Animate Marker", "Draggable Marker", "Clustering Markers", "Interactive Markers", "Polyline", "Multiple Polylines", "Polygons", "Circles", "Update Circle", "Autosuggest", "Geocoding (Forward Geocode)", "Atlas Geocode", "Reverse Geocoding", "Nearby Search", "Place/eLoc Detail Legacy", "Place Detail", "Driving Distance", "Distance Matrix", "Distance Matrix ETA", "Distance Matrix Elocs", "Route", "Route Advance", "Route Advance ETA", "Routing/Directions", "Feedback", "GeoJson Multiple Shapes", "Dashed Polyline", "Geodesic Polyline", "Interior Polygons", "Default Indoor", "Custom Indoor", "Point On Map", "Safety Plugin", "Covid Layers", "COVID-19 Safety Status", "Place Picker", "POI along the Route", "Autosuggest Widget", "DirectionUI Plugin","Nearby UI"]
+    let listArr:[String]? = ["Road Traffic Details","Geofence UI", "Geoanalytics", "MapStyle", "DrivingRange", "Nearby Report", "Zoom Level", "Zoom Level With Animation", "Center With Animation", "Current Location","Tracking Mode", "Add Marker", "Add Multiple Markers With Bounds", "Custom Marker", "Animate Marker", "Draggable Marker", "Clustering Markers", "Interactive Markers", "Polyline", "Multiple Polylines", "Polygons", "Circles", "Update Circle", "Autosuggest", "Geocoding (Forward Geocode)", "Atlas Geocode", "Reverse Geocoding", "Nearby Search", "Place/eLoc Detail Legacy", "Place Detail", "Driving Distance", "Distance Matrix", "Distance Matrix ETA", "Distance Matrix Elocs", "Route", "Route Advance", "Route Advance ETA", "Routing/Directions", "Feedback", "GeoJson Multiple Shapes", "Dashed Polyline", "Geodesic Polyline", "Interior Polygons", "Default Indoor", "Custom Indoor", "Point On Map", "Safety Plugin", "Covid Layers", "COVID-19 Safety Status", "Place Picker", "POI along the Route", "Autosuggest Widget", "DirectionUI Plugin","Nearby UI"]
     
     var placeDetails = [String]()
     
@@ -180,6 +180,26 @@ class ListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                 let geofenceUILVC = GeofenceUILunchVC()
                 self.navigationController?.pushViewController(geofenceUILVC, animated: false)
                 
+            case "Geoanalytics":
+                let geoanalytics = MapmyIndiaGeoanalyticsViewController()
+                geoanalytics.title = "Geoanalytics"
+                self.navigationController?.pushViewController(geoanalytics, animated: false)
+            case "MapStyle":
+                let mapStyleVC = MapmyIndiaMapStyleViewController()
+                mapStyleVC.title = "Map style"
+                self.navigationController?.pushViewController(mapStyleVC, animated: false)
+            case "DrivingRange":
+                let drivingRangeVC = DrivingRangeSampleViewController()
+                drivingRangeVC.title = "Driving Range"
+                self.navigationController?.pushViewController(drivingRangeVC, animated: false)
+            case "Road Traffic Details":
+                let roadTrafficDetails = RoadTrafficDetailsViewController()
+                roadTrafficDetails.title = "Road Traffic Details"
+                self.navigationController?.pushViewController(roadTrafficDetails, animated: false)
+            case "Nearby Report":
+                let nearbyReport = MapmyIndiaNearbyReportViewController()
+                nearbyReport.title = "Nearby Report"
+                self.navigationController?.pushViewController(nearbyReport, animated: false)
             default:
                 let vctrl = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "mapVC") as? mapVC
                 self.navigationController?.pushViewController(vctrl!, animated: true)
