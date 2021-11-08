@@ -1511,7 +1511,7 @@ Class used to get details of nearest road is `MapmyIndiaRoadTrafficDetailsManage
 - **longitude** (mandatory)
 - **radius** (optional) :- Limits the search to given radius in meters
 
-### [Response Parameters]s(#Response-Parameters):
+### [Response Parameters](#Response-Parameters):
 
 In callback of `getTrafficRoadDetailsResults` function it will either return an error object of type 'NSError' or an object of type `MapmyIndiaRoadTrafficDetailsResponse`. which contains result parameter of type `MapmyIndiaRoadTrafficDetailsResult` which has following response parameter
 
