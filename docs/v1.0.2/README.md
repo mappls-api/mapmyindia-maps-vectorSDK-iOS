@@ -116,7 +116,7 @@ Powered with India's most comprehensive and robust mapping functionalities.
 	- [Launching with default configuration](./MapmyIndiaNearbyUI.md#Launching-with-default-configuration)
 	- [MapmyIndiaNearbyCategoriesViewControllerDelegate](./MapmyIndiaNearbyUI.md#MapmyIndiaNearbyCategoriesViewControllerDelegate)
 
-- [MapmyIndiaAnnotationExtension](docs/v1.0.1/AnnotationExtension.md)
+- [MapmyIndiaAnnotationExtension](./AnnotationExtension.md)
 
 - [MapmyIndia GeofenceUI Plugin](./MapmyIndiaGeofenceUI-Plugin.md)
 
