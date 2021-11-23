@@ -69,7 +69,6 @@ Powered with India's most comprehensive and robust mapping functionalities.
 	* [Distance Matrix API - Legacy](./REST-API-Kit.md#Driving-Distance-Matrix-API---Legacy)
 	* [POI Along The Route](./REST-API-Kit.md#POI-Along-The-Route-API)
 	* [Nearby Reports API](./REST-API-Kit.md#Nearby-Reports-API)
-	* [Road Traffic Details API](./REST-API-Kit.md#Road-Traffic-Details-API)
 
 - [MapmyIndiaDirections](./MapmyIndiaDirections.md#MapmyIndiaDirections)
 
