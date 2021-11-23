@@ -18,7 +18,7 @@ Powered with India's most comprehensive and robust mapping functionalities.
 | Version | Supported SDK Version |
 | ---- | ---- | 
 | [v1.0.1](./README.md) |  - Map SDK v5.7.22 <br/> - MapmyIndiaAPIKit v1.4.22 <br/>- MapmyIndiaDirections v0.23.17 <br/> - MapmyIndiaUIWidget v0.3.8 <br/> - MapmyIndiaGeofenceUI v0.9.8 <br/> - MapmyIndiaDirectionUI v0.0.5 <br/> - MapmyIndiaNearbyUI v0.1.4 <br/> - MapmyIndiaFeedbackKit v1.0.5 <br/> MapmyIndiaSafetyPlugin v1.0.6 <br/> - MapmyIndiaAnnotationExtension v0.0.4 |
-| [v1.0.0](../v1.0.0/README.md) | - Map SDK v5.7.21 <br/> - MapmyIndiaAPIKit v1.4.21 <br/>- MapmyIndiaDirections v0.23.16 <br/> - MapmyIndiaGeoanalytics v0.1.0 <br/> - MapmyIndiaUIWidget v0.3.7 <br/> - MapmyIndiaGeofenceUI v0.9.7 <br/> - MapmyIndiaDirectionUI v0.0.4 <br/> - MapmyIndiaNearbyUI v0.1.3 <br/> - MapmyIndiaFeedbackKit v1.0.4 <br/> MapmyIndiaSafetyPlugin v1.0.5|
+| [v1.0.0](../v1.0.0/README.md) | - Map SDK v5.7.21 <br/> - MapmyIndiaAPIKit v1.4.21 <br/>- MapmyIndiaDirections v0.23.16 <br/> - MapmyIndiaGeoanalytics v0.1.0 <br/> - MapmyIndiaUIWidget v0.3.7 <br/> - MapmyIndiaGeofenceUI v0.9.7 <br/> - MapmyIndiaDirectionUI v0.0.4 <br/> - MapmyIndiaNearbyUI v0.1.3 <br/> - MapmyIndiaFeedbackKit v1.0.4 <br/> - MapmyIndiaSafetyPlugin v1.0.5|
 
 ## [Version History](#Version-History)
 
@@ -116,7 +116,7 @@ For more details of previous versions , [click here](./VersionHistory.md#MapmyIn
 	- [Launching with default configuration](./MapmyIndiaNearbyUI.md#Launching-with-default-configuration)
 	- [MapmyIndiaNearbyCategoriesViewControllerDelegate](./MapmyIndiaNearbyUI.md#MapmyIndiaNearbyCategoriesViewControllerDelegate)
 
-- [MapmyIndiaAnnotationExtension](docs/v1.0.1/AnnotationExtension.md)
+- [MapmyIndiaAnnotationExtension](./AnnotationExtension.md)
 
 - [MapmyIndia GeofenceUI Plugin](./MapmyIndiaGeofenceUI-Plugin.md)
 
