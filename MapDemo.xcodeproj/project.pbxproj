@@ -246,6 +246,86 @@
 		4726F0652647C412007EDB5E /* DrawCircleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawCircleVC.swift; sourceTree = "<group>"; };
 		4726F0702648503B007EDB5E /* ShapeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShapeCell.xib; sourceTree = "<group>"; };
 		472912882722783F0089A329 /* RoadTrafficDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadTrafficDetailsViewController.swift; sourceTree = "<group>"; };
+		472EB15E2779AB6A003BB42A /* MapmyIndia-Interactive-Layers.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "MapmyIndia-Interactive-Layers.md"; sourceTree = "<group>"; };
+		472EB15F2779AB6A003BB42A /* Set-Regions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Set-Regions.md"; sourceTree = "<group>"; };
+		472EB1602779AB6A003BB42A /* MapmyIndiaDirectionsUIWidget.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = MapmyIndiaDirectionsUIWidget.md; sourceTree = "<group>"; };
+		472EB1612779AB6A003BB42A /* MapmyIndiaNearbyUI.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = MapmyIndiaNearbyUI.md; sourceTree = "<group>"; };
+		472EB1622779AB6A003BB42A /* REST-API-Kit.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "REST-API-Kit.md"; sourceTree = "<group>"; };
+		472EB1632779AB6A003BB42A /* Troubleshooting.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Troubleshooting.md; sourceTree = "<group>"; };
+		472EB1642779AB6A003BB42A /* MapmyIndiaMaps-E-Location-Strategy.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "MapmyIndiaMaps-E-Location-Strategy.md"; sourceTree = "<group>"; };
+		472EB1652779AB6A003BB42A /* MapmyIndia-Safety-Strip.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "MapmyIndia-Safety-Strip.md"; sourceTree = "<group>"; };
+		472EB1662779AB6A003BB42A /* Home.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Home.md; sourceTree = "<group>"; };
+		472EB1672779AB6A003BB42A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		472EB1682779AB6A003BB42A /* AnnotationExtension.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = AnnotationExtension.md; sourceTree = "<group>"; };
+		472EB1692779AB6A003BB42A /* VersionHistory.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = VersionHistory.md; sourceTree = "<group>"; };
+		472EB16A2779AB6A003BB42A /* MapmyIndia-Feedback-Kit.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "MapmyIndia-Feedback-Kit.md"; sourceTree = "<group>"; };
+		472EB16B2779AB6A003BB42A /* Set-MapmyIndia-Style.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Set-MapmyIndia-Style.md"; sourceTree = "<group>"; };
+		472EB16C2779AB6A003BB42A /* MapmyIndiaUIWidgets.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = MapmyIndiaUIWidgets.md; sourceTree = "<group>"; };
+		472EB16D2779AB6A003BB42A /* MapmyIndiaGeofenceUI-Plugin.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "MapmyIndiaGeofenceUI-Plugin.md"; sourceTree = "<group>"; };
+		472EB16E2779AB6A003BB42A /* MapmyIndia-Safety-Plugin.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "MapmyIndia-Safety-Plugin.md"; sourceTree = "<group>"; };
+		472EB16F2779AB6A003BB42A /* MapmyIndiaNearbyUIDetails.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = MapmyIndiaNearbyUIDetails.md; sourceTree = "<group>"; };
+		472EB1702779AB6A003BB42A /* MapmyIndiaGeoanalytics.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = MapmyIndiaGeoanalytics.md; sourceTree = "<group>"; };
+		472EB1712779AB6A003BB42A /* MapmyIndiaDirections.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = MapmyIndiaDirections.md; sourceTree = "<group>"; };
+		472EB1732779AB6A003BB42A /* MapmyIndia-Interactive-Layers.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "MapmyIndia-Interactive-Layers.md"; sourceTree = "<group>"; };
+		472EB1742779AB6A003BB42A /* Set-Regions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Set-Regions.md"; sourceTree = "<group>"; };
+		472EB1752779AB6A003BB42A /* MapmyIndiaDirectionsUIWidget.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = MapmyIndiaDirectionsUIWidget.md; sourceTree = "<group>"; };
+		472EB1762779AB6A003BB42A /* MapmyIndiaNearbyUI.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = MapmyIndiaNearbyUI.md; sourceTree = "<group>"; };
+		472EB1772779AB6A003BB42A /* REST-API-Kit.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "REST-API-Kit.md"; sourceTree = "<group>"; };
+		472EB1782779AB6A003BB42A /* Troubleshooting.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Troubleshooting.md; sourceTree = "<group>"; };
+		472EB1792779AB6A003BB42A /* MapmyIndiaMaps-E-Location-Strategy.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "MapmyIndiaMaps-E-Location-Strategy.md"; sourceTree = "<group>"; };
+		472EB17A2779AB6A003BB42A /* MapmyIndia-Safety-Strip.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "MapmyIndia-Safety-Strip.md"; sourceTree = "<group>"; };
+		472EB17B2779AB6A003BB42A /* Home.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Home.md; sourceTree = "<group>"; };
+		472EB17C2779AB6A003BB42A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		472EB17D2779AB6A003BB42A /* VersionHistory.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = VersionHistory.md; sourceTree = "<group>"; };
+		472EB17E2779AB6A003BB42A /* MapmyIndia-Feedback-Kit.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "MapmyIndia-Feedback-Kit.md"; sourceTree = "<group>"; };
+		472EB17F2779AB6A003BB42A /* _Sidebar.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = _Sidebar.md; sourceTree = "<group>"; };
+		472EB1802779AB6A003BB42A /* Set-MapmyIndia-Style.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Set-MapmyIndia-Style.md"; sourceTree = "<group>"; };
+		472EB1812779AB6A003BB42A /* MapmyIndiaUIWidgets.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = MapmyIndiaUIWidgets.md; sourceTree = "<group>"; };
+		472EB1822779AB6A003BB42A /* MapmyIndiaGeofenceUI-Plugin.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "MapmyIndiaGeofenceUI-Plugin.md"; sourceTree = "<group>"; };
+		472EB1832779AB6A003BB42A /* MapmyIndia-Safety-Plugin.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "MapmyIndia-Safety-Plugin.md"; sourceTree = "<group>"; };
+		472EB1842779AB6A003BB42A /* MapmyIndiaNearbyUIDetails.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = MapmyIndiaNearbyUIDetails.md; sourceTree = "<group>"; };
+		472EB1852779AB6A003BB42A /* MapmyIndiaGeoanalytics.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = MapmyIndiaGeoanalytics.md; sourceTree = "<group>"; };
+		472EB1862779AB6A003BB42A /* MapmyIndiaDirections.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = MapmyIndiaDirections.md; sourceTree = "<group>"; };
+		472EB1882779AB6A003BB42A /* MapmyIndia-Interactive-Layers.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "MapmyIndia-Interactive-Layers.md"; sourceTree = "<group>"; };
+		472EB1892779AB6A003BB42A /* Set-Regions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Set-Regions.md"; sourceTree = "<group>"; };
+		472EB18A2779AB6A003BB42A /* MapmyIndiaDirectionsUIWidget.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = MapmyIndiaDirectionsUIWidget.md; sourceTree = "<group>"; };
+		472EB18B2779AB6A003BB42A /* MapmyIndiaNearbyUI.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = MapmyIndiaNearbyUI.md; sourceTree = "<group>"; };
+		472EB18C2779AB6A003BB42A /* REST-API-Kit.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "REST-API-Kit.md"; sourceTree = "<group>"; };
+		472EB18D2779AB6A003BB42A /* Troubleshooting.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Troubleshooting.md; sourceTree = "<group>"; };
+		472EB18E2779AB6A003BB42A /* MapmyIndiaMaps-E-Location-Strategy.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "MapmyIndiaMaps-E-Location-Strategy.md"; sourceTree = "<group>"; };
+		472EB18F2779AB6A003BB42A /* MapmyIndia-Safety-Strip.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "MapmyIndia-Safety-Strip.md"; sourceTree = "<group>"; };
+		472EB1902779AB6A003BB42A /* Home.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Home.md; sourceTree = "<group>"; };
+		472EB1912779AB6A003BB42A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		472EB1922779AB6A003BB42A /* AnnotationExtension.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = AnnotationExtension.md; sourceTree = "<group>"; };
+		472EB1932779AB6A003BB42A /* VersionHistory.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = VersionHistory.md; sourceTree = "<group>"; };
+		472EB1942779AB6A003BB42A /* MapmyIndia-Feedback-Kit.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "MapmyIndia-Feedback-Kit.md"; sourceTree = "<group>"; };
+		472EB1952779AB6A003BB42A /* Set-MapmyIndia-Style.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Set-MapmyIndia-Style.md"; sourceTree = "<group>"; };
+		472EB1962779AB6A003BB42A /* MapmyIndiaUIWidgets.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = MapmyIndiaUIWidgets.md; sourceTree = "<group>"; };
+		472EB1972779AB6A003BB42A /* MapmyIndiaGeofenceUI-Plugin.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "MapmyIndiaGeofenceUI-Plugin.md"; sourceTree = "<group>"; };
+		472EB1982779AB6A003BB42A /* MapmyIndia-Safety-Plugin.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "MapmyIndia-Safety-Plugin.md"; sourceTree = "<group>"; };
+		472EB1992779AB6A003BB42A /* MapmyIndiaNearbyUIDetails.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = MapmyIndiaNearbyUIDetails.md; sourceTree = "<group>"; };
+		472EB19A2779AB6A003BB42A /* MapmyIndiaGeoanalytics.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = MapmyIndiaGeoanalytics.md; sourceTree = "<group>"; };
+		472EB19B2779AB6A003BB42A /* MapmyIndiaDirections.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = MapmyIndiaDirections.md; sourceTree = "<group>"; };
+		472EB19D2779AB6A003BB42A /* MapmyIndia-Interactive-Layers.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "MapmyIndia-Interactive-Layers.md"; sourceTree = "<group>"; };
+		472EB19E2779AB6A003BB42A /* Set-Regions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Set-Regions.md"; sourceTree = "<group>"; };
+		472EB19F2779AB6A003BB42A /* MapmyIndiaDirectionsUIWidget.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = MapmyIndiaDirectionsUIWidget.md; sourceTree = "<group>"; };
+		472EB1A02779AB6A003BB42A /* MapmyIndiaNearbyUI.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = MapmyIndiaNearbyUI.md; sourceTree = "<group>"; };
+		472EB1A12779AB6A003BB42A /* REST-API-Kit.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "REST-API-Kit.md"; sourceTree = "<group>"; };
+		472EB1A22779AB6A003BB42A /* Troubleshooting.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Troubleshooting.md; sourceTree = "<group>"; };
+		472EB1A32779AB6A003BB42A /* MapmyIndiaMaps-E-Location-Strategy.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "MapmyIndiaMaps-E-Location-Strategy.md"; sourceTree = "<group>"; };
+		472EB1A42779AB6A003BB42A /* MapmyIndia-Safety-Strip.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "MapmyIndia-Safety-Strip.md"; sourceTree = "<group>"; };
+		472EB1A52779AB6A003BB42A /* Home.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Home.md; sourceTree = "<group>"; };
+		472EB1A62779AB6A003BB42A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		472EB1A72779AB6A003BB42A /* AnnotationExtension.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = AnnotationExtension.md; sourceTree = "<group>"; };
+		472EB1A82779AB6A003BB42A /* VersionHistory.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = VersionHistory.md; sourceTree = "<group>"; };
+		472EB1A92779AB6A003BB42A /* MapmyIndia-Feedback-Kit.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "MapmyIndia-Feedback-Kit.md"; sourceTree = "<group>"; };
+		472EB1AA2779AB6A003BB42A /* Set-MapmyIndia-Style.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Set-MapmyIndia-Style.md"; sourceTree = "<group>"; };
+		472EB1AB2779AB6A003BB42A /* MapmyIndiaUIWidgets.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = MapmyIndiaUIWidgets.md; sourceTree = "<group>"; };
+		472EB1AC2779AB6A003BB42A /* MapmyIndiaGeofenceUI-Plugin.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "MapmyIndiaGeofenceUI-Plugin.md"; sourceTree = "<group>"; };
+		472EB1AD2779AB6A003BB42A /* MapmyIndia-Safety-Plugin.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "MapmyIndia-Safety-Plugin.md"; sourceTree = "<group>"; };
+		472EB1AE2779AB6A003BB42A /* MapmyIndiaNearbyUIDetails.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = MapmyIndiaNearbyUIDetails.md; sourceTree = "<group>"; };
+		472EB1AF2779AB6A003BB42A /* MapmyIndiaGeoanalytics.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = MapmyIndiaGeoanalytics.md; sourceTree = "<group>"; };
+		472EB1B02779AB6A003BB42A /* MapmyIndiaDirections.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = MapmyIndiaDirections.md; sourceTree = "<group>"; };
 		4747D98D262449C000FE47F0 /* HeatMap.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = HeatMap.json; sourceTree = "<group>"; };
 		476B0D052615D89100FE8EC6 /* NearbyViewControllerLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyViewControllerLauncher.swift; sourceTree = "<group>"; };
 		476B0D0C2616CF4700FE8EC6 /* NearbyUIFilterConfigurationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyUIFilterConfigurationCell.swift; sourceTree = "<group>"; };
@@ -508,6 +588,125 @@
 			path = "Road traffic details";
 			sourceTree = "<group>";
 		};
+		472EB15C2779AB6A003BB42A /* docs */ = {
+			isa = PBXGroup;
+			children = (
+				472EB15D2779AB6A003BB42A /* v1.0.1 */,
+				472EB1722779AB6A003BB42A /* v1.0.0 */,
+				472EB1872779AB6A003BB42A /* v1.0.2 */,
+				472EB19C2779AB6A003BB42A /* v1.0.3 */,
+			);
+			path = docs;
+			sourceTree = "<group>";
+		};
+		472EB15D2779AB6A003BB42A /* v1.0.1 */ = {
+			isa = PBXGroup;
+			children = (
+				472EB15E2779AB6A003BB42A /* MapmyIndia-Interactive-Layers.md */,
+				472EB15F2779AB6A003BB42A /* Set-Regions.md */,
+				472EB1602779AB6A003BB42A /* MapmyIndiaDirectionsUIWidget.md */,
+				472EB1612779AB6A003BB42A /* MapmyIndiaNearbyUI.md */,
+				472EB1622779AB6A003BB42A /* REST-API-Kit.md */,
+				472EB1632779AB6A003BB42A /* Troubleshooting.md */,
+				472EB1642779AB6A003BB42A /* MapmyIndiaMaps-E-Location-Strategy.md */,
+				472EB1652779AB6A003BB42A /* MapmyIndia-Safety-Strip.md */,
+				472EB1662779AB6A003BB42A /* Home.md */,
+				472EB1672779AB6A003BB42A /* README.md */,
+				472EB1682779AB6A003BB42A /* AnnotationExtension.md */,
+				472EB1692779AB6A003BB42A /* VersionHistory.md */,
+				472EB16A2779AB6A003BB42A /* MapmyIndia-Feedback-Kit.md */,
+				472EB16B2779AB6A003BB42A /* Set-MapmyIndia-Style.md */,
+				472EB16C2779AB6A003BB42A /* MapmyIndiaUIWidgets.md */,
+				472EB16D2779AB6A003BB42A /* MapmyIndiaGeofenceUI-Plugin.md */,
+				472EB16E2779AB6A003BB42A /* MapmyIndia-Safety-Plugin.md */,
+				472EB16F2779AB6A003BB42A /* MapmyIndiaNearbyUIDetails.md */,
+				472EB1702779AB6A003BB42A /* MapmyIndiaGeoanalytics.md */,
+				472EB1712779AB6A003BB42A /* MapmyIndiaDirections.md */,
+			);
+			path = v1.0.1;
+			sourceTree = "<group>";
+		};
+		472EB1722779AB6A003BB42A /* v1.0.0 */ = {
+			isa = PBXGroup;
+			children = (
+				472EB1732779AB6A003BB42A /* MapmyIndia-Interactive-Layers.md */,
+				472EB1742779AB6A003BB42A /* Set-Regions.md */,
+				472EB1752779AB6A003BB42A /* MapmyIndiaDirectionsUIWidget.md */,
+				472EB1762779AB6A003BB42A /* MapmyIndiaNearbyUI.md */,
+				472EB1772779AB6A003BB42A /* REST-API-Kit.md */,
+				472EB1782779AB6A003BB42A /* Troubleshooting.md */,
+				472EB1792779AB6A003BB42A /* MapmyIndiaMaps-E-Location-Strategy.md */,
+				472EB17A2779AB6A003BB42A /* MapmyIndia-Safety-Strip.md */,
+				472EB17B2779AB6A003BB42A /* Home.md */,
+				472EB17C2779AB6A003BB42A /* README.md */,
+				472EB17D2779AB6A003BB42A /* VersionHistory.md */,
+				472EB17E2779AB6A003BB42A /* MapmyIndia-Feedback-Kit.md */,
+				472EB17F2779AB6A003BB42A /* _Sidebar.md */,
+				472EB1802779AB6A003BB42A /* Set-MapmyIndia-Style.md */,
+				472EB1812779AB6A003BB42A /* MapmyIndiaUIWidgets.md */,
+				472EB1822779AB6A003BB42A /* MapmyIndiaGeofenceUI-Plugin.md */,
+				472EB1832779AB6A003BB42A /* MapmyIndia-Safety-Plugin.md */,
+				472EB1842779AB6A003BB42A /* MapmyIndiaNearbyUIDetails.md */,
+				472EB1852779AB6A003BB42A /* MapmyIndiaGeoanalytics.md */,
+				472EB1862779AB6A003BB42A /* MapmyIndiaDirections.md */,
+			);
+			path = v1.0.0;
+			sourceTree = "<group>";
+		};
+		472EB1872779AB6A003BB42A /* v1.0.2 */ = {
+			isa = PBXGroup;
+			children = (
+				472EB1882779AB6A003BB42A /* MapmyIndia-Interactive-Layers.md */,
+				472EB1892779AB6A003BB42A /* Set-Regions.md */,
+				472EB18A2779AB6A003BB42A /* MapmyIndiaDirectionsUIWidget.md */,
+				472EB18B2779AB6A003BB42A /* MapmyIndiaNearbyUI.md */,
+				472EB18C2779AB6A003BB42A /* REST-API-Kit.md */,
+				472EB18D2779AB6A003BB42A /* Troubleshooting.md */,
+				472EB18E2779AB6A003BB42A /* MapmyIndiaMaps-E-Location-Strategy.md */,
+				472EB18F2779AB6A003BB42A /* MapmyIndia-Safety-Strip.md */,
+				472EB1902779AB6A003BB42A /* Home.md */,
+				472EB1912779AB6A003BB42A /* README.md */,
+				472EB1922779AB6A003BB42A /* AnnotationExtension.md */,
+				472EB1932779AB6A003BB42A /* VersionHistory.md */,
+				472EB1942779AB6A003BB42A /* MapmyIndia-Feedback-Kit.md */,
+				472EB1952779AB6A003BB42A /* Set-MapmyIndia-Style.md */,
+				472EB1962779AB6A003BB42A /* MapmyIndiaUIWidgets.md */,
+				472EB1972779AB6A003BB42A /* MapmyIndiaGeofenceUI-Plugin.md */,
+				472EB1982779AB6A003BB42A /* MapmyIndia-Safety-Plugin.md */,
+				472EB1992779AB6A003BB42A /* MapmyIndiaNearbyUIDetails.md */,
+				472EB19A2779AB6A003BB42A /* MapmyIndiaGeoanalytics.md */,
+				472EB19B2779AB6A003BB42A /* MapmyIndiaDirections.md */,
+			);
+			path = v1.0.2;
+			sourceTree = "<group>";
+		};
+		472EB19C2779AB6A003BB42A /* v1.0.3 */ = {
+			isa = PBXGroup;
+			children = (
+				472EB19D2779AB6A003BB42A /* MapmyIndia-Interactive-Layers.md */,
+				472EB19E2779AB6A003BB42A /* Set-Regions.md */,
+				472EB19F2779AB6A003BB42A /* MapmyIndiaDirectionsUIWidget.md */,
+				472EB1A02779AB6A003BB42A /* MapmyIndiaNearbyUI.md */,
+				472EB1A12779AB6A003BB42A /* REST-API-Kit.md */,
+				472EB1A22779AB6A003BB42A /* Troubleshooting.md */,
+				472EB1A32779AB6A003BB42A /* MapmyIndiaMaps-E-Location-Strategy.md */,
+				472EB1A42779AB6A003BB42A /* MapmyIndia-Safety-Strip.md */,
+				472EB1A52779AB6A003BB42A /* Home.md */,
+				472EB1A62779AB6A003BB42A /* README.md */,
+				472EB1A72779AB6A003BB42A /* AnnotationExtension.md */,
+				472EB1A82779AB6A003BB42A /* VersionHistory.md */,
+				472EB1A92779AB6A003BB42A /* MapmyIndia-Feedback-Kit.md */,
+				472EB1AA2779AB6A003BB42A /* Set-MapmyIndia-Style.md */,
+				472EB1AB2779AB6A003BB42A /* MapmyIndiaUIWidgets.md */,
+				472EB1AC2779AB6A003BB42A /* MapmyIndiaGeofenceUI-Plugin.md */,
+				472EB1AD2779AB6A003BB42A /* MapmyIndia-Safety-Plugin.md */,
+				472EB1AE2779AB6A003BB42A /* MapmyIndiaNearbyUIDetails.md */,
+				472EB1AF2779AB6A003BB42A /* MapmyIndiaGeoanalytics.md */,
+				472EB1B02779AB6A003BB42A /* MapmyIndiaDirections.md */,
+			);
+			path = v1.0.3;
+			sourceTree = "<group>";
+		};
 		47BB1A382722CA0C0050597E /* Nearby reports */ = {
 			isa = PBXGroup;
 			children = (
@@ -636,6 +835,7 @@
 		68A6BF0A2106E03C00547929 = {
 			isa = PBXGroup;
 			children = (
+				472EB15C2779AB6A003BB42A /* docs */,
 				009EA37F243B3B0D00EBD9EE /* Dependencies */,
 				18894B8D230438B3005DC142 /* ReverseGPX.gpx */,
 				68A6BF152106E03C00547929 /* MapDemo */,
@@ -739,6 +939,7 @@
 				68A6BF112106E03C00547929 /* Resources */,
 				181F977F2429CEA300D996EA /* Embed Frameworks */,
 				47AB0D70260B0C890055B864 /* ShellScript */,
+				98BAE9D569090E20ACDC4E99 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -854,6 +1055,23 @@
 			shellPath = /bin/sh;
 			shellScript = "
 ";
+		};
+		98BAE9D569090E20ACDC4E99 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MapDemo/Pods-MapDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MapDemo/Pods-MapDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MapDemo/Pods-MapDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 		B11ED326B4FECF552A19ED5C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
