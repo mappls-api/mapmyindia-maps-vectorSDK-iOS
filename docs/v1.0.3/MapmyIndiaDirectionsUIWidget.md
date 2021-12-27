@@ -45,6 +45,7 @@ Below are list of dependcies which are required to run this SDK:
 
 | Version | Dated | Description |
 | :---- | :---- | :---- |
+| `0.0.6` | 27 Dec, 2021 | Added support for xcode 13|
 | `0.0.5` | 30 May, 2021 | Added support for xcode 12.5|
 | `0.0.4` | 01 March, 2021 | Added current location button and UI improvements. And added some new properties |
 | `0.0.3` | 28 Jan, 2021 | Added support for xcode 12.2 and eLoc Strategy. |

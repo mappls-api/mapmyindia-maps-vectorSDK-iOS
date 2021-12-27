@@ -34,6 +34,7 @@ To integrate Geofence SDK, it is important to pass an object of **MapmyIndiaMapV
 
 | Version | Dated | Description |
 | :---- | :---- | :---- |
+| `0.9.9` | 27 Dec, 2021 | Added support for xcode 13.2.1 |
 | `0.9.8` | 29 Sep, 2021 | Added support for xcode 13. |
 | `0.9.7` | 28 jan, 2021 | Added support for xcode 12.5. |
 | `0.9.6` | 28 jan, 2021 | Added Marker anchor point property. |
