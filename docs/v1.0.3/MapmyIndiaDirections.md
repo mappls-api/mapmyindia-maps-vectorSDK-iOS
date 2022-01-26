@@ -2,6 +2,8 @@
 
 | Version | Dated | Description |
 | :---- | :---- | :---- |
+| `0.23.21` | 26 Jan, 2022 | Code imporvement and bug fixes.|
+| `0.23.20` | 29 Dec, 2021 | Removed the dependency of Polyline.|
 | `0.23.19` | 24 Dec, 2021 | Added support for xcode 13.2.1|
 | `0.23.18` | 24 Dec, 2021 | Introduced a property in `Route` object i.e `geometry` to get the encoded polyline.|
 | `0.23.17` | 28 Sep, 2021 | Added support for xcode 13 |
