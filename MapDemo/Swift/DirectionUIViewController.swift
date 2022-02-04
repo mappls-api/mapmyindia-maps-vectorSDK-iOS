@@ -468,6 +468,12 @@ extension DirectionUIViewController: MapmyIndiaAutocompleteViewControllerDelegat
     func wasCancelled(viewController: MapmyIndiaAutocompleteViewController) {
         self.navigationController?.navigationBar.isHidden = true
     }
+    func didAutocomplete(tableDataSource: MapmyIndiaAutocompleteTableDataSource, withSuggestion suggestion: MapmyIndiaSearchPrediction) {
+        
+    }
+    func didAutocomplete(viewController: MapmyIndiaAutocompleteViewController, withSuggestion suggestion: MapmyIndiaSearchPrediction) {
+        
+    }
 }
 
 
@@ -518,6 +524,10 @@ extension DirectionUIViewController: LocationChooserTableViewDirectionUIPluginDe
     }
 }
 extension DirectionUIViewController : MapmyIndiaDirectionsViewControllerDelegate {
+    func didRequestForPreviewRoute(for steps: [RouteStep]?) {
+        
+    }
+    
     func didRequestForPreviewRoute(for routes: [Route], locations: [MapmyIndiaDirectionsLocation]) {
         
     }

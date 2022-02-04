@@ -101,6 +101,11 @@ extension AutosuggestCustomUISearchControllerVC: MapmyIndiaAutocompleteResultsVi
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
     }
     
+    func didAutocomplete(resultsController: MapmyIndiaAutocompleteResultsViewController, withSuggestion suggestion: MapmyIndiaSearchPrediction) {
+        
+    }
+    
+    
 }
 
 

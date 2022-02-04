@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Polyline
 import MapmyIndiaMaps
 import MapmyIndiaAPIKit
 import MapmyIndiaDirections
@@ -1145,6 +1144,9 @@ extension mapVC: UISearchBarDelegate {
 }
 
 extension mapVC: MapmyIndiaAutocompleteViewControllerDelegate {
+    func didAutocomplete(viewController: MapmyIndiaAutocompleteViewController, withSuggestion suggestion: MapmyIndiaSearchPrediction) {
+        
+    }
     func didAutocomplete(viewController: MapmyIndiaAutocompleteViewController, withPlace place: MapmyIndiaAtlasSuggestion) {
         self.dismiss(animated: false) {
             self.place = place

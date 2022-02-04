@@ -649,6 +649,12 @@ extension LocationsChooserTableViewController {
 }
 
 extension LocationsChooserTableViewController: MapmyIndiaAutocompleteViewControllerDelegate {
+    func didAutocomplete(viewController: MapmyIndiaAutocompleteViewController, withSuggestion suggestion: MapmyIndiaSearchPrediction) {
+        
+    }
+    
+    
+    
     func didAutocomplete(viewController: MapmyIndiaAutocompleteViewController, withPlace place: MapmyIndiaAtlasSuggestion) {
         self.dismiss(animated: false) {
             if let _ = place.latitude, let _ = place.longitude {

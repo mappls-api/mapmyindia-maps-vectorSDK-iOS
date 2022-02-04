@@ -8,7 +8,7 @@
 
 import UIKit
 import MapmyIndiaAPIKit
-import Polyline
+
 import MapmyIndiaMaps
 import MapmyIndiaDirections
 
@@ -101,7 +101,7 @@ class POIsAlongTheRouteVC: UIViewController {
             self.mapView.removeAnnotations(poiMarkers)
         }
         
-        let routePath = Polyline(coordinates: coordinates, precision: 1e5).encodedPolyline
+        guard let routePath = routes.first?.geometry else { return }
         let poiAlongTheRouteOptions = MapmyIndiaPOIAlongTheRouteOptions(path: routePath, category: "FODCOF")
         poiAlongTheRouteOptions.buffer = 1000
         let poiAlongTheRouteManager = MapmyIndiaPOIAlongTheRouteManager(restKey: MapmyIndiaAccountManager.restAPIKey(), clientId: MapmyIndiaAccountManager.atlasClientId(), clientSecret: MapmyIndiaAccountManager.atlasClientSecret(), grantType: MapmyIndiaAccountManager.atlasGrantType())

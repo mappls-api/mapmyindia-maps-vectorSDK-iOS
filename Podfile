@@ -5,13 +5,19 @@ target 'MapDemo' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
+  # Xcode 13.2.1
   # Pods for MapDemo
-  pod 'MapmyIndiaAPIKit', '~> 1.4.15'
-  pod 'MapmyIndiaMaps', '5.7.17'
-  pod 'MapmyIndiaDirections', '~> 0.23.11'
+  pod 'MapmyIndiaAPIKit'
+  pod 'MapmyIndiaMaps'
+  pod 'MapmyIndiaDirections'
   pod 'MapmyIndiaFeedbackKit'
-  pod 'MapmyIndiaUIWidgets', '~> 0.3.6'
+  pod 'MapmyIndiaUIWidgets'
   pod 'MapmyIndiaDirectionsUI'
+  pod 'MapmyIndiaSafetyPlugin'
+  pod 'MapmyIndiaNearbyUI/Base', '0.1.5'
+  pod 'MapmyIndiaGeofenceUI'
+  pod 'MapmyIndiaGeoanalytics'
+  pod 'MapmyIndiaDrivingRangePlugin'
 end
 
 target 'MapmyIndiaFeedbackUIKit' do

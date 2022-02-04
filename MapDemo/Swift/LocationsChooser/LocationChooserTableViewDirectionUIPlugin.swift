@@ -570,4 +570,7 @@ extension LocationChooserTableViewDirectionUIPlugin: MapmyIndiaAutocompleteViewC
     func wasCancelled(viewController: MapmyIndiaAutocompleteViewController) {
         
     }
+    func didAutocomplete(viewController: MapmyIndiaAutocompleteViewController, withSuggestion suggestion: MapmyIndiaSearchPrediction) {
+        
+    }
 }

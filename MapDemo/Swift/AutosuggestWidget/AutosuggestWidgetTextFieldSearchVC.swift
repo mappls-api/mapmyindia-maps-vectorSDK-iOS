@@ -98,6 +98,9 @@ extension AutosuggestWidgetTextFieldSearchVC: MapmyIndiaAutocompleteTableDataSou
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
         tableViewController.tableView.reloadData()
     }
+    func didAutocomplete(tableDataSource: MapmyIndiaAutocompleteTableDataSource, withSuggestion suggestion: MapmyIndiaSearchPrediction) {
+        
+    }
 }
 
 extension AutosuggestWidgetTextFieldSearchVC: UITextFieldDelegate {

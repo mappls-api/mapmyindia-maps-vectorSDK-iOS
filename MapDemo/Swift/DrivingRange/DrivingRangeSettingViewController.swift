@@ -458,6 +458,8 @@ extension DrivingRangeSettingViewController {
     
 }
 extension DrivingRangeSettingViewController: MapmyIndiaAutocompleteViewControllerDelegate {
+    
+    
     func didAutocomplete(viewController: MapmyIndiaAutocompleteViewController, withPlace place: MapmyIndiaAtlasSuggestion) {
         self.dismiss(animated: false) {
             if let _ = place.latitude, let _ = place.longitude {
@@ -473,6 +475,13 @@ extension DrivingRangeSettingViewController: MapmyIndiaAutocompleteViewControlle
     func wasCancelled(viewController: MapmyIndiaAutocompleteViewController) {
         
     }
+    func didAutocomplete(tableDataSource: MapmyIndiaAutocompleteTableDataSource, withSuggestion suggestion: MapmyIndiaSearchPrediction) {
+        
+    }
+    func didAutocomplete(viewController: MapmyIndiaAutocompleteViewController, withSuggestion suggestion: MapmyIndiaSearchPrediction) {
+        
+    }
+    
 }
 
 

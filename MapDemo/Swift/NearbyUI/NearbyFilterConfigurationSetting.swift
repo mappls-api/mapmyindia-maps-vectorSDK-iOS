@@ -522,4 +522,10 @@ extension NearbyFilterConfigurationSetting: MapmyIndiaAutocompleteViewController
     func wasCancelled(viewController: MapmyIndiaAutocompleteViewController) {
         
     }
+    func didAutocomplete(tableDataSource: MapmyIndiaAutocompleteTableDataSource, withSuggestion suggestion: MapmyIndiaSearchPrediction) {
+        
+    }
+    func didAutocomplete(viewController: MapmyIndiaAutocompleteViewController, withSuggestion suggestion: MapmyIndiaSearchPrediction) {
+        
+    }
 }
