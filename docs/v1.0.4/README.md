@@ -25,17 +25,17 @@ Powered with India's most comprehensive and robust mapping functionalities.
 
 ## [Version History](#Version-History)
 
-| Version | Dated | Description |
-| :---- | :---- | :---- |
-| `5.7.22` | 30 Sep, 2021 | Bug fixes and improvements. |
-| `5.7.21` | 08 Sep, 2021 | Improvements.|
-| `5.7.20` | 23 Aug, 2021 | Fixed a crash and some code improvements.|
-| `5.7.19` | 21 May, 2021 | Fixed a crash. Integrated a style API which will help in rendering specific style as well as facilitate the switching of style themes. A default style is set for all account users to start with.|
-| `5.7.18` | 29 Apr, 2021 | Fixed a crash which was due to key observer. <br> Some UI Optimization has been made where current location view stucks while packaging app using xcode 12. <br> A dependency `MapmyIndiaSafetyPlugin` removed from podspec file.|
-| `5.7.17` | 18 Feb, 2021 | Performance optimization. |
-| `5.7.16` | 27 Jan, 2021 | Fixed an issue where on failing of Session initialization due to token expiry, it will refresh token and reinitialize session. |
-| `5.7.15` | 03 Dec, 2020 | Xcode 12.2 compatibility. Functions are added for e-Loc Strategy. See wiki pages. |
-| `5.7.14` | 20 Oct, 2020 | ReactNative related issues are fixed.|
+| Version  | Dated        | Description                                                                                                                                                                                                                       |
+|:---------|:-------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `5.7.22` | 30 Sep, 2021 | Bug fixes and improvements.                                                                                                                                                                                                       |
+| `5.7.21` | 08 Sep, 2021 | Improvements.                                                                                                                                                                                                                     |
+| `5.7.20` | 23 Aug, 2021 | Fixed a crash and some code improvements.                                                                                                                                                                                         |
+| `5.7.19` | 21 May, 2021 | Fixed a crash. Integrated a style API which will help in rendering specific style as well as facilitate the switching of style themes. A default style is set for all account users to start with.                                |
+| `5.7.18` | 29 Apr, 2021 | Fixed a crash which was due to key observer. <br> Some UI Optimization has been made where current location view stucks while packaging app using xcode 12. <br> A dependency `MapmyIndiaSafetyPlugin` removed from podspec file. |
+| `5.7.17` | 18 Feb, 2021 | Performance optimization.                                                                                                                                                                                                         |
+| `5.7.16` | 27 Jan, 2021 | Fixed an issue where on failing of Session initialization due to token expiry, it will refresh token and reinitialize session.                                                                                                    |
+| `5.7.15` | 03 Dec, 2020 | Xcode 12.2 compatibility. Functions are added for e-Loc Strategy. See wiki pages.                                                                                                                                                 |
+| `5.7.14` | 20 Oct, 2020 | ReactNative related issues are fixed.                                                                                                                                                                                             |
 
 ## [Table Of Content](#Table-Of-Content)
 - [Vector iOS Map](./mapmyindia-maps-vectorSDK-iOS)
@@ -117,6 +117,11 @@ Powered with India's most comprehensive and robust mapping functionalities.
 	- [Launching with default configuration](./MapmyIndiaNearbyUI.md#Launching-with-default-configuration)
 	- [MapmyIndiaNearbyCategoriesViewControllerDelegate](./MapmyIndiaNearbyUI.md#MapmyIndiaNearbyCategoriesViewControllerDelegate)
 
+- [MapmyIndia Driving Range plugin](./DrivingRangePlugin.md)
+	- [Introduction](./DrivingRangePlugin.md#Introduction)
+	- [Installation](./DrivingRangePlugin.md#Installation)
+        - [Version History](./DrivingRangePlugin.md#Version-History)
+        - 
 - [MapmyIndiaAnnotationExtension](./AnnotationExtension.md)
 
 - [MapmyIndia GeofenceUI Plugin](./MapmyIndiaGeofenceUI-Plugin.md)
