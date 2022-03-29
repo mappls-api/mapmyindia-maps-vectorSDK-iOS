@@ -4,18 +4,18 @@
 
 ## [List of problems related to Map integration:-](#List-of-problems-related-to-Map-integration:-)
 
-### **Problem 1: `Mapbox.framework damaged`**
-   Sometimes an error `Mapbox.framework damaged` shows on opening a **storyboard** file.
+### **Problem 1: `MapmyIndia.framework damaged`**
+   Sometimes an error `MapmyIndia.framework damaged` shows on opening a **storyboard** file.
 
 **Screenshot:-**
 
-   ![Problem 1](https://s3-ap-south-1.amazonaws.com/mmi-api-team/moveSDK/GithubDocs/VectorSDK/Wiki/TroubleshootingAssets/Problem1_MapboxFrameworkDamaged.png)
+   ![Problem 1](https://s3-ap-south-1.amazonaws.com/mmi-api-team/moveSDK/GithubDocs/VectorSDK/Wiki/TroubleshootingAssets/Problem1_MapmyIndiaFrameworkDamaged.png)
     
 ### **Solution:**
 
-Use `xattr` on the framework Throwing the Damaged Error.With the command line you can use xattr to remove error message “mapbox.framework is damaged and can’t be opened. It may be due to  application downloaded from the internet. So `Launch Terminal` and then issue the following command:
+Use `xattr` on the framework Throwing the Damaged Error.With the command line you can use xattr to remove error message “MapmyIndia.framework is damaged and can’t be opened. It may be due to  application downloaded from the internet. So `Launch Terminal` and then issue the following command:
 ```
-xattr -cr /path/to/mapbox.framework
+xattr -cr /path/to/MapmyIndia.framework
 ```
 
 <br/>
@@ -30,7 +30,7 @@ Facing the issue of `Reason:image not found` on launch of application after inte
 
 ### **Solution:**
 - First confirm required framework added to your project.
-- Go to `General` tab in project settings and under the section `Frameworks,Libraries and Embedded Content` select `Embed & Sign` for each MapmyIndia's framework like MapmyIndiaAPIKit, MapboxDirections etc.
+- Go to `General` tab in project settings and under the section `Frameworks,Libraries and Embedded Content` select `Embed & Sign` for each MapmyIndia's framework like MapmyIndiaAPIKit, MapmyIndiaDirections etc.
 
 **Screenshot:-**
 
@@ -40,23 +40,23 @@ Facing the issue of `Reason:image not found` on launch of application after inte
 
 ### **Problem 3: `App Store submission with the Maps SDK for iOS`**
 
-If you have installed the Mapbox Maps SDK for iOS manually, you may see an App Store bug that results in the following error when submitting your application to the App Store:
+If you have installed the MapmyIndia Maps SDK for iOS manually, you may see an App Store bug that results in the following error when submitting your application to the App Store:
 
-_ERROR ITMS-90087: Unsupported Architectures. The executable for YourApp.app/Frameworks/Mapbox.framework contains unsupported architectures '[x86_64, i386]'_
+_ERROR ITMS-90087: Unsupported Architectures. The executable for YourApp.app/Frameworks/MapmyIndia.framework contains unsupported architectures '[x86_64, i386]'_
 
 ### **Solution:**
 
 To avoid this, you'll need to add the following script in the Build Phases tab of your project. This script will remove architectures for simulators, which is not necessary for App Store submission.
 
 ```
-"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mapbox.framework/strip-frameworks.sh"
+"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/MapmyIndia.framework/strip-frameworks.sh"
 ```
 <br/>
 
 ### **Problem 4: `PhaseScriptExecution failed`**
 
 Such types of errors occur due to script failure of the project.
-`strip-frameworks.sh` is a script file, that is embedded in `Mapbox.framework` and used to remove simulator architectures from the application package.
+`strip-frameworks.sh` is a script file, that is embedded in `MapmyIndia.framework` and used to remove simulator architectures from the application package.
 Below is dynamic path to above mentioned script file:
 `bash "${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/strip-frameworks.sh"`
 

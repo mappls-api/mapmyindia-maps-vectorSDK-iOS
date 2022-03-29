@@ -47,6 +47,7 @@ On running `pod install` command it will automatically download and setup `Mapmy
 
 | Version | Dated | Description |
 | :---- | :---- | :---- |
+| `0.3.10` | 28 Mar, 2022 | Added support for xcode 13+|
 | `0.3.10` | 24 Dec, 2021 | Added support for xcode 13.2.1 <br> Added a global parameter `MinimumNumberOfCharacterToStartSearch` to controll number of char before search.|
 | `0.3.9` | 28 Sep, 2021 | Added support for xcode 13. |
 | `0.3.8` | 30 Apr, 2021 | Added support for xcode 12.5. A parameter `eLoc` added in response of Autosuggest  on launching Autocomplete View Controller  from PlacePicker. A feature is added to show history in Autocomplete control which were previously chosen by user. An option of choosing `Current Location` is added in Autocomplete control. This can be hide based on configuration. A delegate function `didRequestForCurrentLocation` will be called on click on `Current Location`. |

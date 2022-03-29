@@ -26,18 +26,19 @@ This plugin can be installed using CocoaPods. It is available with name `MapmyIn
 Create a Podfile with the following specification:
 
 ```cocoapods
-pod 'MapmyIndiaDrivingRangePlugin', '0.1.2'
+pod 'MapmyIndiaDrivingRangePlugin', '0.2.0'
 ```
 
 Run `pod repo update && pod install` and open the resulting Xcode workspace.
 
 ### [Version History](#Version-History)
 
-| Version | Dated | Description |
-| :---- | :---- | :---- |
-| `0.1.3` | 1 Feb, 2022 | Initial version release compatible to 13.2.1 |
-| `0.1.2` | 1 Feb, 2022 | Initial version release compatible to 13 |
-| `0.1.1` | 1 Feb, 2022 | Initial version release compatible to 12.5 |
+| Version | Dated        | Description                                  |
+|:--------|:-------------|:---------------------------------------------|
+| `0.2.0` | 28 Mar, 2022 | Added support for xocde 13+                  |
+| `0.1.3` | 1 Feb, 2022  | Initial version release compatible to 13.2.1 |
+| `0.1.2` | 1 Feb, 2022  | Initial version release compatible to 13     |
+| `0.1.1` | 1 Feb, 2022  | Initial version release compatible to 12.5   |
 
 #### [Dependencies](#Dependencies)
 
@@ -52,19 +53,19 @@ Below are list of dependcies which are required to run this SDK:
 
 ### [MapmyIndiaDrivingRangePlugin](#MapmyIndiaDrivingRangePlugin)
 
-`MapmyIndiaDrivingRangePlugin` is the main class which is need to initialize to use different functionality of plugin. It requires an instance of MapmyIndiaMapView.
+`MapmyIndiaDrivingRange` is the main class which is need to initialize to use different functionality of plugin. It requires an instance of MapmyIndiaMapView.
 
 It allows you to plot driving range area to drive based on time or distance.
 
 ```swift
-var drivingRangePlugin = MapmyIndiaDrivingRangePlugin(mapView: self.mapView)
+var drivingRangePlugin = MapmyIndiaDrivingRange(mapView: self.mapView)
 
 self.drivingRangePlugin.delegate = self // optional
 ```
 
 ## Step 3 :-  [Get And Plot Driving Range](#Get-And-Plot-Driving-Range)
 
-A function `getAndPlotDrivingRange` of instance of `MapmyIndiaDrivingRangePlugin` will be used to get driving range and plot on map. This function will accept an instance of `MapmyIndiaDrivingRangeOptions` as request to get driving range.
+A function `getAndPlotDrivingRange` of instance of `MapmyIndiaDrivingRange` will be used to get driving range and plot on map. This function will accept an instance of `MapmyIndiaDrivingRangeOptions` as request to get driving range.
 
 Below is code for reference:
 
@@ -114,7 +115,7 @@ self.drivingRangePlugin.getAndPlotDrivingRange(options: drivingRangeOptions)
 
 ### [MapmyIndiaDrivingRangePluginDelegate](#MapmyIndiaDrivingRangePluginDelegate)
 
-It is a protocol class which provides different callbacks of events of `MapmyIndiaDrivingRangePlugin`.
+It is a protocol class which provides different callbacks of events of `MapmyIndiaDrivingRange`.
 
 Below are different callback functions avaialble:
 
@@ -125,7 +126,7 @@ Called when the plugin fails to get and plot driving range.
 **DECLARATION**
 
 ```swift
-optional func drivingRange(_ plugin: MapmyIndiaDrivingRangePlugin, didFailToGetAndPlotDrivingRange error: Error)
+optional func drivingRange(_ plugin: MapmyIndiaDrivingRange, didFailToGetAndPlotDrivingRange error: Error)
 ```
 
 **PARAMETERS**
@@ -142,7 +143,7 @@ Called when the plugin succeed to get and plot driving range on map.
 **DECLARATION**
 
 ```
-@objc optional func drivingRangeDidSuccessToGetAndPlotDrivingRange(_ plugin: MapmyIndiaDrivingRangePlugin)
+@objc optional func drivingRangeDidSuccessToGetAndPlotDrivingRange(_ plugin: MapmyIndiaDrivingRange)
 ```
 
 **PARAMETERS**

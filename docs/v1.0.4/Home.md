@@ -41,9 +41,9 @@ shared between platforms, so the API hits you make from a web application, Andro
 - Install libraries to your project which can be done in two ways either Manual or using Cocoapods.
 
   Manual Procedure:
-  -   Drag and drop the MapmyIndia Map SDK Framework (Mapbox.framework) to your project. It must be added in embedded binaries.
+  -   Drag and drop the MapmyIndia Map SDK Framework (MapmyIndia.framework) to your project. It must be added in embedded binaries.
   -   Drag and drop the `MapmyIndiaAPIKit` Framework to your project. It must be added in embedded binaries. It is a dependent framework.
-  -   In the Build Phases tab of the project editor, click the + button at the top and select .New Run Script Phase.. Enter the following code into the script text field: bash `${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mapbox.framework/strip-frameworks.sh`
+  -   In the Build Phases tab of the project editor, click the + button at the top and select .New Run Script Phase.. Enter the following code into the script text field: bash `${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/MapmyIndia.framework/strip-frameworks.sh`
 
   **Note:** History of frameworks can be found [here](https://github.com/MapmyIndia/mapmyindia-maps-vectorSDK-iOS#Version-History)
 
@@ -127,7 +127,7 @@ To add map on view Controller create an instance of `MapmyIndiaMapView`. and add
 ```
 #### Swift
 ```swift
-import Mapbox
+import MapmyIndia
   class ViewController: UIViewController, MapmyIndiaMapViewDelegate {
   override func viewDidLoad() {
   super.viewDidLoad()
@@ -873,4 +873,4 @@ Need support? contact us!
 Read about the latest updates & customer stories
 
 > © Copyright 2019. CE Info Systems Pvt. Ltd. All Rights Reserved. | [Terms & Conditions](http://www.mapmyindia.com/api/terms-&-conditions)
-> mapbox-gl-native copyright (c) 2014-2019 Mapbox.
+> MapmyIndia-gl-native copyright (c) 2014-2019 MapmyIndia.

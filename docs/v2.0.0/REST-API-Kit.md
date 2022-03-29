@@ -19,6 +19,7 @@ Powered with India's most comprehensive and robust mapping functionalities.
 
 | Version | Dated | Description |
 | :---- | :---- | :---- |
+| `1.5.0` | 24 Dec 2021 | Added support for xcode 13+.|
 | `1.4.24` | 24 Dec 2021 | Added support for xcode 13.2.1.|
 | `1.4.23` | 01 Nov 2021 | `isBridgeEnabled` parameter in Autosuggest. API wrapper of `Traffic Details`. |
 | `1.4.22` | 28 Sep 2021 | Added support for xcode 13|
