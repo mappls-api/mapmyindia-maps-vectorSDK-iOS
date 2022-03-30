@@ -180,15 +180,15 @@ MapmyIndiaAutoSearchAtlasOptions * autoSuggestOptions =
 [[MapmyIndiaAutoSearchAtlasOptions alloc] initWithQuery:@"mmi000"
 withRegion:MMIRegionTypeIdentifierDefault];
 
-[autoSuggestManager getAutoSuggestionsWithOptions:autoSearchOptions
+[autoSuggestManager getAutoSuggestionResultsWithOptions:autoSearchOptions
 completionHandler:^(NSArray<MapmyIndiaAtlasSuggestion *> * _Nullable
 suggestions, NSError * _Nullable error) {
 		if (error) {
 			NSLog(@"%@", error);
-				} else if (suggestions.count > 0) {
+				} else if (suggestions.suggestions.count > 0) {
 			NSLog(@"Auto Suggest %@%@",
-			suggestions[0].latitude,suggestions[0].longitude);
-			self.resultsLabel.text = suggestions[0].placeAddress;
+			suggestions[0].latitude,suggestions.suggestions[0].longitude);
+			self.resultsLabel.text = suggestions.suggestions[0].placeAddress;
 		} else {
 			self.resultsLabel.text = @"No results";
 		}
