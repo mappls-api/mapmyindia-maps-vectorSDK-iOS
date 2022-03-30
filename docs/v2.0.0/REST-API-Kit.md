@@ -208,10 +208,10 @@ let autoSuggestOptions = MapmyIndiaAutoSearchAtlasOptions(query: "mmi000",
 withRegion: .india)
 	autoSuggestOptions.location = CLLocation(latitude: 28.2323234, longitude: 72.3434123)
 	autoSuggestOptions.zoom = 5
-	autoSuggestManager.getAutoSuggestions(autoSuggestOptions) { (suggestions, error) in
+	autoSuggestManager.getAutoSuggestionResults(autoSuggestOptions) { (suggestions, error) in
 		if let error = error {
 			NSLog("%@", error)
-		} else if let suggestions = suggestions, !suggestions.isEmpty {
+		} else if let suggestions = suggestions?.suggestions, !suggestions.isEmpty {
 			print("Auto Suggest: \(suggestions[0].latitude ?? 0),\
 			(suggestions[0].longitude ?? 0)")
 			self.resultsLabel.text = suggestions[0].placeAddress
