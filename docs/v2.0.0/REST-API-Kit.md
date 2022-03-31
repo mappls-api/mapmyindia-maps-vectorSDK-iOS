@@ -180,15 +180,15 @@ MapmyIndiaAutoSearchAtlasOptions * autoSuggestOptions =
 [[MapmyIndiaAutoSearchAtlasOptions alloc] initWithQuery:@"mmi000"
 withRegion:MMIRegionTypeIdentifierDefault];
 
-[autoSuggestManager getAutoSuggestionResultsWithOptions:autoSearchOptions
+[autoSuggestManager getAutoSuggestionWithOptions:autoSearchOptions
 completionHandler:^(NSArray<MapmyIndiaAtlasSuggestion *> * _Nullable
 suggestions, NSError * _Nullable error) {
 		if (error) {
 			NSLog(@"%@", error);
-				} else if (suggestions.suggestions.count > 0) {
+				} else if (suggestions.count > 0) {
 			NSLog(@"Auto Suggest %@%@",
-			suggestions[0].latitude,suggestions.suggestions[0].longitude);
-			self.resultsLabel.text = suggestions.suggestions[0].placeAddress;
+			suggestions[0].latitude,suggestions[0].longitude);
+			self.resultsLabel.text = suggestions[0].placeAddress;
 		} else {
 			self.resultsLabel.text = @"No results";
 		}
@@ -208,10 +208,10 @@ let autoSuggestOptions = MapmyIndiaAutoSearchAtlasOptions(query: "mmi000",
 withRegion: .india)
 	autoSuggestOptions.location = CLLocation(latitude: 28.2323234, longitude: 72.3434123)
 	autoSuggestOptions.zoom = 5
-	autoSuggestManager.getAutoSuggestionResults(autoSuggestOptions) { (suggestions, error) in
+	autoSuggestManager.getAutoSuggestion(autoSuggestOptions) { (suggestions, error) in
 		if let error = error {
 			NSLog("%@", error)
-		} else if let suggestions = suggestions?.suggestions, !suggestions.isEmpty {
+		} else if let suggestions = suggestions, !suggestions.isEmpty {
 			print("Auto Suggest: \(suggestions[0].latitude ?? 0),\
 			(suggestions[0].longitude ?? 0)")
 			self.resultsLabel.text = suggestions[0].placeAddress
